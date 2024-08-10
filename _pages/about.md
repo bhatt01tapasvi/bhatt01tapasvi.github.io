@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-As a PhD student at [NTU, Singapore](https://www.ntu.edu.sg/), I am at the forefront of exploring the dynamic intersection of artificial intelligence and machine learning within the field of cold chain logistics. My research is dedicated to optimizing the transportation of temperature-sensitive goods, ensuring they arrive in perfect condition, thereby enhancing supply chain efficiency.
+Hi there! Thanks for visiting my profile. As a PhD student at [NTU, Singapore](https://www.ntu.edu.sg/), I am at the forefront of exploring the dynamic intersection of artificial intelligence and machine learning within the field of cold chain logistics. My research is dedicated to optimizing the transportation of temperature-sensitive goods, ensuring they arrive in perfect condition, thereby enhancing supply chain efficiency.
 
 Beyond my primary focus, I am actively engaged in several interdisciplinary projects. One of my key interests lies in heat transfer enhancement, where I investigate innovative active methods, such as utilizing vibrations and magnetic fields to improve thermal efficiency.
 
