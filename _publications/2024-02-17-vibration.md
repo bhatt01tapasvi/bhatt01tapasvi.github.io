@@ -1,7 +1,7 @@
 ---
 title: "Effect of mechanical vibration and its influence on thermal performance of a nanofluid heat exchanger"
 collection: publications
-permalink: https://www.sciencedirect.com/science/article/abs/pii/S1359431124016302
+permalink: https://www.tandfonline.com/doi/abs/10.1080/10407782.2024.2331589
 excerpt: 'Vibrations affect the heat transfer and they are readily available, why not utilize them?'
 venue: 'Numerical Heat Transfer, Part A'
 ---
