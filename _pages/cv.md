@@ -17,13 +17,11 @@ Education
 
 Work experience
 ======
-* May-July 2022: Thermal Power Plant Intern
-  * JSW Energy, Mumbai
+* May-July 2022: Thermal Power Plant Intern at JSW Energy, Mumbai
   * Duties included: Suggesting measures to prevent Boiler Tube Leakages (BTL), resulting in annual savings up to 16 million dollars
   * Supervisor: [Name of Supervisor, if available]
 
-* May-June 2020: Machine Learning Intern
-  * Bharat Petroleum Corporation Limited, Mumbai
+* May-June 2020: Machine Learning Intern at Bharat Petroleum Corporation Limited, Mumbai
   * Duties included: Preparing Machine Learning models for various refinery units, working extensively with Python and its libraries for data visualization, manipulation, and analysis
   * Supervisor: [Name of Supervisor, if available]
 
