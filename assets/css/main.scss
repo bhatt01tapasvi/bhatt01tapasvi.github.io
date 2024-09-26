@@ -1,3 +1,16 @@
+
+---
+---
+
+/*
+ *    Minimal Mistakes Jekyll Theme
+ *
+ *  - Michael Rose
+ *  - mademistakes.com
+ *  - https://twitter.com/mmistakes
+ *
+*/
+
 @import "vendor/breakpoint/breakpoint"; // media query mixins
 @import "variables";
 @import "mixins";
@@ -26,33 +39,4 @@
 @import "vendor/font-awesome/solid";
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
-
-// Dark theme styles
-body {
-    background-color: #000000; /* Set background color to black */
-    color: #ffffff; /* Set text color to white */
-}
-
-a {
-    color: #1e90ff; /* Change link color for visibility */
-}
-
-.navbar {
-    background-color: #111111; /* Adjust navbar color */
-}
-
-.footer {
-    background-color: #111111; /* Adjust footer color */
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: #ffffff; /* Ensure all heading colors are white */
-}
-
-button, .btn {
-    background-color: #333333; /* Set button background to dark gray */
-    color: #ffffff; /* Set button text to white */
-    border: none; /* Remove border */
-}
-
-@import "print"; // keep this at the end
+@import "print";
