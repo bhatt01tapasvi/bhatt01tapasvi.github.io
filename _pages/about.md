@@ -7,10 +7,12 @@ redirect_from:
   - /about.html
 ---
 
-Hi there! Thanks for visiting my profile. As a PhD student at [NTU, Singapore](https://www.ntu.edu.sg/) with my supervisor [Prof. Eddie](https://scholar.google.com.sg/citations?user=9QW1LYAAAAAJ), I am exploring the dynamic intersection of artificial intelligence and machine learning within the field of cold chain logistics. My research is dedicated to optimizing the transportation of temperature-sensitive goods, ensuring they arrive in perfect condition, thereby enhancing supply chain efficiency.
+Hey! Thanks for checking out my page. I’m doing my PhD at [NTU, Singapore](https://www.ntu.edu.sg/) with [Prof. Eddie](https://scholar.google.com.sg/citations?user=9QW1LYAAAAAJ). My work? Making sure stuff like food and vaccines stay cool during delivery. Because nobody wants warm ice cream or spoiled medicine, right?
 
-Beyond my primary focus, I am actively engaged in several interdisciplinary projects. One of my key interests lies in heat transfer enhancement, where I investigate innovative active methods, such as utilizing vibrations and magnetic fields to improve thermal efficiency.
+I also mess around with vibrations and magnets to make heat move faster (enhance heat transfer). Yeah, it sounds fancy, but basically, it’s just trying to make things heat up or cool down quicker.
 
-Looking to the future, I am excited to delve into the realm of underwater robotics, aiming to contribute to significant advancements in marine technology. Additionally, I aspire to revolutionize traditional Computational Fluid Dynamics (CFD) practices by integrating machine learning techniques with finite element methods, paving the way for more efficient and accurate simulations.
+In the future, I’ve got my eyes set on underwater robots (who wouldn’t want to play with robots underwater?). Plus, I want to make computer programs faster so they don’t take forever to figure out heat and fluid problems.
 
-Originally from Jaipur, I relocated to Pilani to pursue my Bachelors in Mechanical from [BITS Pilani](https://www.bits-pilani.ac.in/) with [Prof. Suvanjan](https://scholar.google.co.in/citations?user=IaZolwcAAAAJ&hl=en) as my thesis supervisor. After completing my degree, I had a very brief stint at [IISc Bangalore](https://iisc.ac.in/) after which, I moved to Singapore to pursue my PhD. An avid music person, I enjoy learning various instruments and singing.
+I’m from Jaipur, went to [BITS Pilani](https://www.bits-pilani.ac.in/) where [Prof. Suvanjan](https://scholar.google.co.in/citations?user=IaZolwcAAAAJ&hl=en) was my mentor. After a quick stop at [IISc Bangalore](https://iisc.ac.in/), I ended up in Singapore for my PhD adventure.
+
+When I’m not buried in research, you’ll probably find me jamming on some instruments or singing (usually in my room, and often late at night).
