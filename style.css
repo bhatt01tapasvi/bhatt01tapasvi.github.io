@@ -326,79 +326,48 @@ nav {
     position: relative;
     width: 100%;
     padding-top: 50px;
-    overflow: auto;
     padding-bottom: 50px;
+    overflow: auto;
 }
 
 .projects h1 {
     color: whitesmoke;
-}
-
-.projects .projects-content {
-    position: relative;
-    width: 100%;
-    padding-top: 100px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.projects .projects-content .col1 {
-    max-width: 50%;
-    height: auto;
-    float: left;
-    padding-left: 5px;
-    padding-right: 30px;
-}
-
-.projects .projects-content .col2 {
-    max-width: 50%;
-    height: auto;
-    float: right;
-    padding-left: 30px;
-    padding-right: 5px;
-}
-
-.col1 h1,
-.col2 h1 {
-    color: whitesmoke;
-}
-
-.col1 h2,
-.col2 h2 {
-    color: whitesmoke;
-    font-size: 20px;
-    font-weight: 40;
-    word-spacing: 5px;
-    letter-spacing: 2px;
-}
-
-.col1 h2 a,
-.col2 h2 a {
-    color: rgb(174, 235, 255);
-    text-decoration: none;
-}
-
-.col1 h2 a:hover,
-.col2 h2 a:hover {
-    text-decoration: underline;
-}
-
-.projects-sep {
-    position: relative;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    width: 100%;
-    height: 100px;
-    background-color: transparent;
-}
-
-.projects-sep p {
-    color: white;
-    text-shadow: 5px 5px 10px rgb(114, 217, 252);
-    font-size: 80px;
     text-align: center;
-    letter-spacing: 20px;
+    padding-bottom: 30px;
+}
+
+.flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flowchart .group {
+    width: 80%;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: rgba(174, 235, 255, 0.1);
+    box-shadow: 0px 5px 15px rgba(0, 128, 255, 0.2);
+    text-align: center;
+}
+
+.flowchart .group h2 {
+    color: whitesmoke;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.flowchart .group p {
+    color: #b0e0e6;
+    font-size: 18px;
+}
+
+.flowchart .connector {
+    width: 4px;
+    height: 50px;
+    background-color: rgb(174, 235, 255);
+    margin: 0 auto;
 }
 
 .cv {
