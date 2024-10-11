@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Inter', sans-serif;
     justify-content: center;
 }
 
