@@ -273,6 +273,7 @@ nav {
     float: right;
     padding-top: 100px;
     background-color: transparent;
+    position: relative; /* Added for absolute positioning of images */
 }
 
 .bio-divider a img {
@@ -280,6 +281,28 @@ nav {
     width: 80%;
     padding-right: 20px;
     padding-left: 10px;
+    position: absolute; /* Ensures both images overlap */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Default image on top */
+}
+
+.default-image {
+    z-index: 1; /* Default image */
+}
+
+.hover-image {
+    z-index: 2; /* Hover image will appear on top */
+    opacity: 0; /* Hide hover image by default */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.bio-divider a:hover .hover-image {
+    opacity: 1; /* Show hover image on hover */
+}
+
+.bio-divider a:hover .default-image {
+    opacity: 0; /* Hide default image on hover */
 }
 
 .bio-sep {
