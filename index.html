@@ -94,7 +94,7 @@
         </div>
 
         <div class='bio-divider'>
-            <a href='https://mars.nasa.gov/msl/home/'><img src='assets/mars.png' /></a>
+            <img src='assets/mars.png' id='mars-image' />
         </div>
 
     </div>
@@ -142,6 +142,20 @@
         </div>
     </div>
 </body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const marsImage = document.getElementById('mars-image');
+
+            marsImage.addEventListener('mouseenter', function() {
+                this.src = 'assets/mars2.png'; // Change to the hover image
+            });
+
+            marsImage.addEventListener('mouseleave', function() {
+                this.src = 'assets/mars.png'; // Change back to the original image
+            });
+        });
+    </script>
 
 <footer>
     <h1>CONTACT</h1>
