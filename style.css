@@ -359,7 +359,7 @@ nav {
 }
 
 .flowchart .group p {
-    color: #b0e0e6;
+    color: whitesmoke;
     font-size: 18px;
     text-align: justify; /* Added for justified alignment */
 }
