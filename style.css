@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
-
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Playfair Display', sans-serif; /* Changed to Playfair Display */
+    font-family: sans-serif;
     justify-content: center;
 }
 
@@ -187,7 +185,7 @@ nav {
 }
 
 .home .content h2 a {
-    color: rgb(174, 235, 255);
+    color: greenyellow;
     text-decoration: none;
 }
 
@@ -261,7 +259,7 @@ nav {
 }
 
 .bio-content h2 a {
-    color: rgb(174, 235, 255);
+    color: greenyellow;
     text-decoration: none;
 }
 
@@ -369,7 +367,7 @@ nav {
 .flowchart .connector {
     width: 4px;
     height: 50px;
-    background-color: rgb(174, 235, 255);
+    background-color: greenyellow;
     margin: 0 auto;
 }
 
@@ -399,7 +397,7 @@ nav {
 }
 
 .cv-content h2 a {
-    color: rgb(174, 235, 255);
+    color: greenyellow;
     text-decoration: none;
 }
 
