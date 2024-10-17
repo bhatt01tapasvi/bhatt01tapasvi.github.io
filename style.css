@@ -356,12 +356,15 @@ nav {
 }
 
 .video-section {
-    width: 45%; /* Video Column */
+    width: 20%; /* Video Column */
 }
 
 .content-section {
-    width: 50%; /* Text Content Column */
+    width: 75%; /* Text Content Column */
     padding-left: 20px; /* Space between video and text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the content */
 }
 
 video {
