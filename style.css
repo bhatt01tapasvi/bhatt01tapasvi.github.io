@@ -357,8 +357,6 @@ nav {
 
 .video-section {
     width: 20%; /* Video Column */
-    position: relative; /* Needed for absolute positioning of pseudo-element */
-    overflow: hidden; /* Ensure the blur effect does not extend beyond the video */
 }
 
 .content-section {
@@ -368,34 +366,8 @@ nav {
 
 video {
     width: 100%; /* Make video fill left column */
-    height: auto; /* Preserve aspect ratio */
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 128, 255, 0.2);
-    position: relative; /* For stacking context of pseudo-element */
-    z-index: 1; /* Keep the video on top of the blur */
-}
-
-/* Apply the blur effect when the video does not fit */
-.video-section::before {
-    content: ''; /* Empty content to create the pseudo-element */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit; /* Inherit the background from the parent */
-    filter: blur(10px); /* Apply blur effect */
-    z-index: 0; /* Place the blur effect behind the video */
-    border-radius: 10px; /* Optional: Matches the video border radius */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease; /* Smooth transition for blur appearance */
-}
-
-/* Media Query to apply blur when video overflows */
-@media (max-width: 1200px) { /* Adjust for your needs */
-    .video-section::before {
-        opacity: 1; /* Show the blur effect when video is larger than container */
-    }
 }
 
 .content-section h2 {
