@@ -322,14 +322,7 @@ nav {
     letter-spacing: 20px;
 }
 
-.projects {
-    position: relative;
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    overflow: auto;
-}
-
+/* Flowchart layout */
 .flowchart {
     display: flex;
     flex-direction: column;
@@ -337,46 +330,13 @@ nav {
 }
 
 .flowchart .group {
-    width: 100%;
+    display: flex;
+    width: 80%;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
     background-color: rgba(174, 235, 255, 0.1);
     box-shadow: 0px 5px 15px rgba(0, 128, 255, 0.2);
-    display: flex;
-    justify-content: space-between;
-}
-
-.columns {
-    display: flex;
-    width: 100%;
-}
-
-.video-container {
-    width: 50%; /* 50% width for the video */
-    padding-right: 20px; /* Some padding to create space between video and description */
-}
-
-.description-container {
-    width: 50%; /* 50% width for the description */
-    text-align: left;
-}
-
-.video-container video {
-    width: 100%; /* Ensure the video takes up the full width of its container */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.flowchart .group h2 {
-    color: whitesmoke;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.flowchart .group p {
-    color: whitesmoke;
-    font-size: 18px;
-    text-align: justify;
 }
 
 .flowchart .connector {
@@ -384,6 +344,42 @@ nav {
     height: 50px;
     background-color: greenyellow;
     margin: 0 auto;
+}
+
+/* Research Areas Two Column Layout */
+.research-area {
+    display: flex;
+    flex-direction: row; /* Splits into two columns */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Make sure it stretches fully */
+}
+
+.video-section {
+    width: 45%; /* Video Column */
+}
+
+.content-section {
+    width: 50%; /* Text Content Column */
+    padding-left: 20px; /* Space between video and text */
+}
+
+video {
+    width: 100%; /* Make video fill left column */
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 128, 255, 0.2);
+}
+
+.content-section h2 {
+    color: whitesmoke;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content-section p {
+    color: whitesmoke;
+    font-size: 18px;
+    text-align: justify;
 }
 
 .cv {
