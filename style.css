@@ -362,9 +362,6 @@ nav {
 .content-section {
     width: 75%; /* Text Content Column */
     padding-left: 20px; /* Space between video and text */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Vertically centers the content */
 }
 
 video {
