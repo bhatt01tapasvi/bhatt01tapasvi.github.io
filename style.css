@@ -330,12 +330,6 @@ nav {
     overflow: auto;
 }
 
-.projects h1 {
-    color: whitesmoke;
-    text-align: center;
-    padding-bottom: 30px;
-}
-
 .flowchart {
     display: flex;
     flex-direction: column;
@@ -343,13 +337,34 @@ nav {
 }
 
 .flowchart .group {
-    width: 80%;
+    width: 100%;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
     background-color: rgba(174, 235, 255, 0.1);
     box-shadow: 0px 5px 15px rgba(0, 128, 255, 0.2);
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.columns {
+    display: flex;
+    width: 100%;
+}
+
+.video-container {
+    width: 50%; /* 50% width for the video */
+    padding-right: 20px; /* Some padding to create space between video and description */
+}
+
+.description-container {
+    width: 50%; /* 50% width for the description */
+    text-align: left;
+}
+
+.video-container video {
+    width: 100%; /* Ensure the video takes up the full width of its container */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .flowchart .group h2 {
@@ -361,7 +376,7 @@ nav {
 .flowchart .group p {
     color: whitesmoke;
     font-size: 18px;
-    text-align: justify; /* Added for justified alignment */
+    text-align: justify;
 }
 
 .flowchart .connector {
