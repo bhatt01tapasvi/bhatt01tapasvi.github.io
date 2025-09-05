@@ -1436,7 +1436,6 @@
     </div>
 
     <div class="portfolio-modal modal fade" id="portfolioModal13" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -1460,11 +1459,9 @@
             </div>
         </div>
     </div>
-    </div>
 
     <div class="portfolio-modal modal fade" id="portfolioModal14" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-            <div class="modal-content">
+        <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
                     <div class="rl"></div>
@@ -1486,11 +1483,9 @@
             </div>
         </div>
     </div>
-    </div>
 
     <div class="portfolio-modal modal fade" id="portfolioModal15" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-            <div class="modal-content">
+        <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
                     <div class="rl"></div>
@@ -1519,7 +1514,6 @@
             </div>
         </div>
     </div>
-    </div>
 
 
      <!-- jQuery Version 1.11.0 -->
@@ -1543,11 +1537,20 @@
     <!-- Modal JavaScript -->
     <script>
         $(document).ready(function() {
-            var hash = window.location.hash;
-            if (hash) {
-                $(hash).modal('show');
-            }
-        });
+    var hash = window.location.hash;
+    if (hash && $(hash).length) {  // Added existence check
+        $(hash).modal('show');
+    }
+    
+    // Prevent default click behavior for portfolio links
+    $('.portfolio-link[data-toggle="modal"]').on('click', function(e) {
+        e.preventDefault();  // Stop default link behavior
+        var target = $(this).attr('href');
+        if ($(target).length) {  // Check if modal exists
+            $(target).modal('show');  // Manually show the modal
+        }
+    });
+});
     </script>
     </body>
 </html>
