@@ -173,7 +173,7 @@
                         <p class="text-muted">Vibration, Magnets</p>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal14" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
@@ -188,7 +188,7 @@
                         <p class="text-muted">Flocking Models and Algos</p>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal13" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
@@ -208,8 +208,7 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="bg-light-gray">
+    <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -314,7 +313,7 @@
     </section>
 
     <!--Miscellaneous section-->
-    <section id="misc" class="bg-light-gray">
+    <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -1535,25 +1534,14 @@
     <!-- Custom Theme JavaScript -->
     <script src="/js/agency.js"></script>
 
-<!-- Modal JavaScript -->
-
+    <!-- Modal JavaScript -->
     <script>
         $(document).ready(function() {
-    var hash = window.location.hash;
-    if (hash && $(hash).length) {  // Added existence check
-        $(hash).modal('show');
-    }
-    
-    // Prevent default click behavior for portfolio links
-    $('.portfolio-link[data-toggle="modal"]').on('click', function(e) {
-        e.preventDefault();  // Stop default link behavior
-        var target = $(this).attr('href');
-        if ($(target).length) {  // Check if modal exists
-            $(target).modal('show');  // Manually show the modal
-        }
-    });
-});
+            var hash = window.location.hash;
+            if (hash) {
+                $(hash).modal('show');
+            }
+        });
     </script>
-
     </body>
 </html>
