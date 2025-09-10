@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-  
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,16 +54,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#skills">Skills</a>
+                        <a class="page-scroll" href="#services">Skills</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#research">Research</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#projects">Projects</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#miscellaneous">Miscellaneous</a>
+                        <a class="page-scroll" href="#portfolio">Work</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">Story</a>
@@ -72,6 +65,9 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
+                    <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+
+                    <li>
                         <a class="page-scroll" href="files/CV_Tapasvi_Bhatt (Sept 2024).pdf">CV</a>
                     </li>
 
@@ -82,6 +78,7 @@
         <!-- /.container-fluid -->
     </nav>
 
+    <!-- Intro Section -->
     <section id = "intro" class="bg-black">
         <div class="container">
             <div class="row">
@@ -117,7 +114,7 @@
 
 
     <!-- Services Section -->
-    <section id="skills">
+    <section id="services">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -132,7 +129,7 @@
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Programming</h4>
-                    <p class="text-muted">I’ve worked with Python, C, ANSYS, COMSOL, and various open-source CFD platforms, while also exploring applications of AI, machine learning, and IoT in engineering and research workflows.</p>
+                    <p class="text-muted">I work with Python, C, ANSYS, COMSOL, and various open-source CFD platforms, while also exploring applications of AI/ML/Language models, and IoT in engineering and research workflows.</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -154,8 +151,8 @@
         </div>
     </section>
 
-    <!-- Research Section -->
-    <section id="research" class="bg-light-gray">
+    <!-- Work Section -->
+    <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -209,12 +206,149 @@
                         <p class="text-muted">ML, IoT, Real-time</p>
                     </div>
                 </div>
+
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/twitch.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Twitch</h4>
+                        <p class="text-muted">System design, Golang, AWS</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="https://youtu.be/VyZDZbk1ebU" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/escapebot.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Escape!Bot</h4>
+                        <p class="text-muted">Human-robot interaction, Game design, Unity</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="https://dancingwithai.media.mit.edu/about" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/dancing.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Dancing with AI</h4>
+                        <p class="text-muted">AI education, Curriculum design, Teaching</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal10" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/edc.png" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>EDC</h4>
+                        <p class="text-muted">Curriculum design, activity design, R</p>
+                    </div>
+                </div>
+            
+                
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/genai.JPG" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>GenAI</h4>
+                        <p class="text-muted">Web design, UI/UX design</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/aied.JPG" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>AI Education Websites</h4>
+                        <p class="text-muted">Web design, UI design, HTML/CSS</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/gow.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>PlayStation</h4>
+                        <p class="text-muted">C++, Game tools, UI design</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/taleblazer.png" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>TaleBlazer</h4>
+                        <p class="text-muted">Game tools, UX design, Prototyping</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/blogs.JPG" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>MIT Admissions Blogs</h4>
+                        <p class="text-muted">Blogging, Writing</p>
+                    </div>
+                </div>
             
             </div>
         </div>
     </section>
 
-    <section id="projects" class="bg-light-gray">
+    <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -319,7 +453,7 @@
     </section>
 
     <!--Miscellaneous section-->
-    <section id="miscellaneous" class="bg-light-gray">
+    <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -1069,33 +1203,33 @@
                 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
-                            <h2>Teaching</h2>
+                            <h2>Art</h2>
                             <div class="left-align">
                                 <hr class="star-primary">
-                                <p>I’m passionate about teaching and engaging students in a way that makes complex concepts click. Over the years, I’ve had the privilege of teaching a range of engineering courses, from Mechanisms and Machines to Fluid Mechanics and Heat Transfer. I love creating an interactive classroom where students feel inspired to dive into the material alongside me. Below are some highlights of my teaching journey so far, and I’ll keep updating as I continue to teach!</p>
-            
-                                <h3>My Teaching Adventures</h3>
-                                <ul>
-                                    <li><strong>Fall 2021: Mechanisms and Machines, BITS Pilani</strong><br>
-                                        Taught this course as a Teaching Assistant at BITS Pilani. Unfortunately, the recordings were lost, but the experience of breaking down mechanical concepts for students was unforgettable.</li>
-                                    <li><strong>2021-2022: AutoCAD Sessions, BITS Pilani</strong><br>
-                                        Led some AutoCAD workshops. Majorly as a part of the M&M course.</li>
-                                    <li><strong>Fall 2024: Fluid Mechanics, NTU Singapore</strong><br>
-                                        Taught in-person Fluid Mechanics sessions at NTU, focusing on interactive discussions and real-world applications to make the subject engaging and approachable.</li>
-                                    <li><strong>Spring 2025: Heat Transfer, NTU Singapore</strong><br>
-                                        Delivered Heat Transfer lectures at NTU, emphasizing problem-solving and conceptual clarity to help students grasp thermal systems.</li>
-                                    <li><strong>Fall 2025: Heat Transfer (Round Two), NTU Singapore</strong><br>
-                                        Back with Heat Transfer at NTU. Going all in to make it a party. Check the <a href="https://www.youtube.com/embed/videoseries?list=PL1SY5NzQUT1k48yDNJFPJyiEqj06x3Poy" target="_blank">YouTube playlist</a> for the Fall 2025 tutorials!</li>
-                                </ul>
-            
-                                <h3>Fall 2025 Heat Transfer Playlist</h3>
-                                <h3><a href="https://github.com/bhatt01tapasvi/Heat-Transfer-Fall-2025-" target="_blank">Lecture Notes</a></h3>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL1SY5NzQUT1k48yDNJFPJyiEqj06x3Poy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            
-                                <p>Teaching’s a wild ride, and I’m all in for it. More classroom tales coming as I keep dragging students into the engineering deep end!</p>
-            
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            
+                            <p>I'm not an artist by any means, but I do enjoy dabbling in modeling and animation. The works shown here are almost exclusively done from the summer that I learned Blender, but I'd like my future to contain more visual art as well.</p>
+                                
+
+                                <figure>
+
+                                    <img src="img/portfolio/ballBounceGif.gif" class="img-responsive" alt="blender chessboard">
+                                    <figcaption>Learning the basics of animation.</figcaption>
+                                </figure>
+                      
+                                <figure>
+                                    <img src="img/portfolio/chess.png" class="img-responsive" alt="blender chessboard">
+                                    <figcaption>A poorly lit and trippy looking chessboard.</figcaption>
+                                </figure>
+                                <br><br><br>
+                                <figure>
+                                    <img src="img/portfolio/busterSwordGif.gif" class="img-responsive" alt="blender buster sword">
+                                    <figcaption>My pride and joy: a rendering of the Buster Sword from Final Fantasy 7.</figcaption>
+                                </figure>
+                            
+                            <br><br><br>
+                            
                             </div>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
@@ -1170,19 +1304,37 @@
             </div>
             <div class="container">
                 <div class="row">
-                  <div class="col-lg-10 col-lg-offset-1">
-                    <div class="modal-body">
-                      <h2>Bike Rides</h2>
-                      <div class="left-align">
-                        <hr class="star-primary">
-                        <p>I’m really into bike rides — they’re one of my biggest passions. It all started with my Glamour back in Jaipur, then I upgraded to an Ignitor that took me through Jaipur and Pilani. Sadly, the Ignitor got stolen (yeah, that sucked).</p>
-                        <p>Right now, as I write this, I’m riding a Honda CB190X Tourism here in Singapore. I love the rush of speed, especially late at night with the cool breeze—it’s simply unbeatable.</p>
-                        <p>Here’s a little glimpse of me riding at night:</p>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/CBJwe_eEXx4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                      </div>
-                      <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="modal-body">
+                            <h2>Teaching</h2>
+                            <div class="left-align">
+                                <hr class="star-primary">
+                                <p>I’m passionate about teaching and engaging students in a way that makes complex concepts click. Over the years, I’ve had the privilege of teaching a range of engineering courses, from Mechanisms and Machines to Fluid Mechanics and Heat Transfer. I love creating an interactive classroom where students feel inspired to dive into the material alongside me. Below are some highlights of my teaching journey so far, and I’ll keep updating as I continue to teach!</p>
+            
+                                <h3>My Teaching Adventures</h3>
+                                <ul>
+                                    <li><strong>Fall 2021: Mechanisms and Machines, BITS Pilani</strong><br>
+                                        Taught this course as a Teaching Assistant at BITS Pilani. Unfortunately, the recordings were lost, but the experience of breaking down mechanical concepts for students was unforgettable.</li>
+                                    <li><strong>2021-2022: AutoCAD Sessions, BITS Pilani</strong><br>
+                                        Led some AutoCAD workshops. Majorly as a part of the M&M course.</li>
+                                    <li><strong>Fall 2024: Fluid Mechanics, NTU Singapore</strong><br>
+                                        Taught in-person Fluid Mechanics sessions at NTU, focusing on interactive discussions and real-world applications to make the subject engaging and approachable.</li>
+                                    <li><strong>Spring 2025: Heat Transfer, NTU Singapore</strong><br>
+                                        Delivered Heat Transfer lectures at NTU, emphasizing problem-solving and conceptual clarity to help students grasp thermal systems.</li>
+                                    <li><strong>Fall 2025: Heat Transfer (Round Two), NTU Singapore</strong><br>
+                                        Back with Heat Transfer at NTU. Going all in to make it a party. Check the <a href="https://www.youtube.com/embed/videoseries?list=PL1SY5NzQUT1k48yDNJFPJyiEqj06x3Poy" target="_blank">YouTube playlist</a> for the Fall 2025 tutorials!</li>
+                                </ul>
+            
+                                <h3>Fall 2025 Heat Transfer Playlist</h3>
+                                <h3><a href="https://github.com/bhatt01tapasvi/Heat-Transfer-Fall-2025-" target="_blank">Lecture Notes</a></h3>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL1SY5NzQUT1k48yDNJFPJyiEqj06x3Poy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+                                <p>Teaching’s a wild ride, and I’m all in for it. More classroom tales coming as I keep dragging students into the engineering deep end!</p>
+            
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
             </div>
         </div>
@@ -1385,18 +1537,39 @@
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
-                    <div class="rl"></div>
+                    <div class="rl">
+                    </div>
                 </div>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
-                            <h2>Cold Chain Logistics</h2>
+                            <h2>Teaching</h2>
                             <div class="left-align">
                                 <hr class="star-primary">
-                                <p>Vaccines are super picky about staying cold, and if they get too warm, they’re done for. That’s where my work in cold chain logistics kicks in. I mess around with Phase Change Materials (PCM) to keep vaccine boxes at just the right temp, no matter how crazy the outside weather gets. Using tools like ANSYS Fluent, I simulate how PCM behaves under different conditions, tracking stuff like Melt Fraction to make sure things stay chill.</p>
-                                <p>But it’s not just number-crunching. I’ve got Artificial Neural Networks (ANNs) in the mix, trained to predict how long the PCM will hold up based on real-time temp data from the boxes. This setup runs in the cloud, giving cold chain managers a heads-up to act fast if things start heating up. It’s like giving vaccines a smart bodyguard. Plus, this tech isn’t just for vaccines—think food, pharma, anything that needs to stay cool on the move. It’s practical, it’s nerdy, and it’s what I do.</p>
+                                <p>I’m passionate about teaching and engaging students in a way that makes complex concepts click. Over the years, I’ve had the privilege of teaching a range of engineering courses, from Mechanisms and Machines to Fluid Mechanics and Heat Transfer. I love creating an interactive classroom where students feel inspired to dive into the material alongside me. Below are some highlights of my teaching journey so far, and I’ll keep updating as I continue to teach!</p>
+            
+                                <h3>My Teaching Adventures</h3>
+                                <ul>
+                                    <li><strong>Fall 2021: Mechanisms and Machines, BITS Pilani</strong><br>
+                                        Taught this course as a Teaching Assistant at BITS Pilani. Unfortunately, the recordings were lost, but the experience of breaking down mechanical concepts for students was unforgettable.</li>
+                                    <li><strong>2021-2022: AutoCAD Sessions, BITS Pilani</strong><br>
+                                        Led some AutoCAD workshops. Majorly as a part of the M&M course.</li>
+                                    <li><strong>Fall 2024: Fluid Mechanics, NTU Singapore</strong><br>
+                                        Taught in-person Fluid Mechanics sessions at NTU, focusing on interactive discussions and real-world applications to make the subject engaging and approachable.</li>
+                                    <li><strong>Spring 2025: Heat Transfer, NTU Singapore</strong><br>
+                                        Delivered Heat Transfer lectures at NTU, emphasizing problem-solving and conceptual clarity to help students grasp thermal systems.</li>
+                                    <li><strong>Fall 2025: Heat Transfer (Round Two), NTU Singapore</strong><br>
+                                        Back with Heat Transfer at NTU. Going all in to make it a party. Check the <a href="https://www.youtube.com/embed/videoseries?list=PL1SY5NzQUT1k48yDNJFPJyiEqj06x3Poy" target="_blank">YouTube playlist</a> for the Fall 2025 tutorials!</li>
+                                </ul>
+            
+                                <h3>Fall 2025 Heat Transfer Playlist</h3>
+                                <h3><a href="https://github.com/bhatt01tapasvi/Heat-Transfer-Fall-2025-" target="_blank">Lecture Notes</a></h3>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL1SY5NzQUT1k48yDNJFPJyiEqj06x3Poy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+                                <p>Teaching’s a wild ride, and I’m all in for it. More classroom tales coming as I keep dragging students into the engineering deep end!</p>
+            
                                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
                         </div>
@@ -1410,7 +1583,8 @@
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
-                    <div class="rl"></div>
+                    <div class="rl">
+                    </div>
                 </div>
             </div>
             <div class="container">
@@ -1434,7 +1608,8 @@
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
-                    <div class="rl"></div>
+                    <div class="rl">
+                    </div>
                 </div>
             </div>
             <div class="container">
@@ -1448,9 +1623,9 @@
                                 <p>I’ve been geeking out over how nanoparticles suspended in fluids can supercharge heat transfer, especially when you shake things up—literally—with vibrations or apply a magnetic field to make those particles dance. For instance, we found that tweaking vibration frequency in a mini-channel can boost thermal performance by generating secondary flows that disrupt boring old boundary layers. Add a magnetic field, and the nanofluid starts behaving like it’s auditioning for a sci-fi movie, enhancing heat transfer coefficients like nobody’s business. This work has been a wild ride, from solar panel cooling to EV battery management, and it’s landed in journals like <a href="https://doi.org/10.1016/j.rineng.2023.101473">Results in Engineering</a> and <a href="https://doi.org/10.1080/10407782.2024.2382492">Numerical Heat Transfer</a>.</p>
                                 <p>Oh, and the exergy analysis? That’s where we get nerdy about energy quality, figuring out how to minimize waste in these systems. It’s like teaching a heat exchanger to be less of a slacker. Currently, we’re pushing the boundaries further, exploring how these techniques can make industrial systems greener and more efficient. Stay tuned—I’m probably in a lab right now, trying not to overheat myself while cooling something else.</p>
                                 <ul class="list-inline item-details">
-                                    <li><b>Timeline</b>: January 2023 - Present</li>
-                                    <li><b>Mentors</b>: Dr. Suvanjan Bhattacharyya, Dr. Eddie Yin Kwee Ng</li>
-                                    <li><b>Collaborators</b>: Nikhil Jain, Nitish Maurya, Soumen Ghosh, Ali Cemal Benim</li>
+                                    <li><b>Timeline</b>: January 2022 - Present</li>
+                                    <li><b>Mentors</b>: Dr. Suvanjan Bhattacharyya</li>
+                                    <li><b>Collaborators</b>: Naman Jain, Ali Cemal Benim</li>
                                 </ul>
                                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
@@ -1480,14 +1655,6 @@
     <!-- Custom Theme JavaScript -->
     <script src="/js/agency.js"></script>
 
-    <!-- Modal JavaScript -->
-    <script>
-        $(document).ready(function() {
-            var hash = window.location.hash;
-            if (hash) {
-                $(hash).modal('show');
-            }
-        });
-    </script>
+
     </body>
 </html>
