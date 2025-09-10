@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-  
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,16 +54,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#skills">Skills</a>
+                        <a class="page-scroll" href="#services">Skills</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#research">Research</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#projects">Projects</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#miscellaneous">Miscellaneous</a>
+                        <a class="page-scroll" href="#portfolio">Work</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">Story</a>
@@ -72,6 +65,9 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
+                    <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+
+                    <li>
                         <a class="page-scroll" href="files/CV_Tapasvi_Bhatt (Sept 2024).pdf">CV</a>
                     </li>
 
@@ -82,6 +78,7 @@
         <!-- /.container-fluid -->
     </nav>
 
+    <!-- Intro Section -->
     <section id = "intro" class="bg-black">
         <div class="container">
             <div class="row">
@@ -117,7 +114,7 @@
 
 
     <!-- Services Section -->
-    <section id="skills">
+    <section id="services">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -132,7 +129,7 @@
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Programming</h4>
-                    <p class="text-muted">I’ve worked with Python, C, ANSYS, COMSOL, and various open-source CFD platforms, while also exploring applications of AI, machine learning, and IoT in engineering and research workflows.</p>
+                    <p class="text-muted">I work with Python, C, ANSYS, COMSOL, and various open-source CFD platforms, while also exploring applications of AI/ML/Language models, and IoT in engineering and research workflows.</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -154,8 +151,8 @@
         </div>
     </section>
 
-    <!-- Research Section -->
-    <section id="research" class="bg-light-gray">
+    <!-- Work Section -->
+    <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -209,12 +206,149 @@
                         <p class="text-muted">ML, IoT, Real-time</p>
                     </div>
                 </div>
+
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/twitch.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Twitch</h4>
+                        <p class="text-muted">System design, Golang, AWS</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="https://youtu.be/VyZDZbk1ebU" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/escapebot.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Escape!Bot</h4>
+                        <p class="text-muted">Human-robot interaction, Game design, Unity</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="https://dancingwithai.media.mit.edu/about" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/dancing.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Dancing with AI</h4>
+                        <p class="text-muted">AI education, Curriculum design, Teaching</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal10" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/edc.png" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>EDC</h4>
+                        <p class="text-muted">Curriculum design, activity design, R</p>
+                    </div>
+                </div>
+            
+                
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/genai.JPG" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>GenAI</h4>
+                        <p class="text-muted">Web design, UI/UX design</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/aied.JPG" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>AI Education Websites</h4>
+                        <p class="text-muted">Web design, UI design, HTML/CSS</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/gow.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>PlayStation</h4>
+                        <p class="text-muted">C++, Game tools, UI design</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/taleblazer.png" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>TaleBlazer</h4>
+                        <p class="text-muted">Game tools, UX design, Prototyping</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/blogs.JPG" class="img-responsive img-centered" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>MIT Admissions Blogs</h4>
+                        <p class="text-muted">Blogging, Writing</p>
+                    </div>
+                </div>
             
             </div>
         </div>
     </section>
 
-    <section id="projects" class="bg-light-gray">
+    <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -319,7 +453,7 @@
     </section>
 
     <!--Miscellaneous section-->
-    <section id="miscellaneous" class="bg-light-gray">
+    <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -1069,33 +1203,33 @@
                 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
-                            <h2>Teaching</h2>
+                            <h2>Art</h2>
                             <div class="left-align">
                                 <hr class="star-primary">
-                                <p>I’m passionate about teaching and engaging students in a way that makes complex concepts click. Over the years, I’ve had the privilege of teaching a range of engineering courses, from Mechanisms and Machines to Fluid Mechanics and Heat Transfer. I love creating an interactive classroom where students feel inspired to dive into the material alongside me. Below are some highlights of my teaching journey so far, and I’ll keep updating as I continue to teach!</p>
-            
-                                <h3>My Teaching Adventures</h3>
-                                <ul>
-                                    <li><strong>Fall 2021: Mechanisms and Machines, BITS Pilani</strong><br>
-                                        Taught this course as a Teaching Assistant at BITS Pilani. Unfortunately, the recordings were lost, but the experience of breaking down mechanical concepts for students was unforgettable.</li>
-                                    <li><strong>2021-2022: AutoCAD Sessions, BITS Pilani</strong><br>
-                                        Led some AutoCAD workshops. Majorly as a part of the M&M course.</li>
-                                    <li><strong>Fall 2024: Fluid Mechanics, NTU Singapore</strong><br>
-                                        Taught in-person Fluid Mechanics sessions at NTU, focusing on interactive discussions and real-world applications to make the subject engaging and approachable.</li>
-                                    <li><strong>Spring 2025: Heat Transfer, NTU Singapore</strong><br>
-                                        Delivered Heat Transfer lectures at NTU, emphasizing problem-solving and conceptual clarity to help students grasp thermal systems.</li>
-                                    <li><strong>Fall 2025: Heat Transfer (Round Two), NTU Singapore</strong><br>
-                                        Back with Heat Transfer at NTU. Going all in to make it a party. Check the <a href="https://www.youtube.com/embed/videoseries?list=PL1SY5NzQUT1k48yDNJFPJyiEqj06x3Poy" target="_blank">YouTube playlist</a> for the Fall 2025 tutorials!</li>
-                                </ul>
-            
-                                <h3>Fall 2025 Heat Transfer Playlist</h3>
-                                <h3><a href="https://github.com/bhatt01tapasvi/Heat-Transfer-Fall-2025-" target="_blank">Lecture Notes</a></h3>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL1SY5NzQUT1k48yDNJFPJyiEqj06x3Poy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            
-                                <p>Teaching’s a wild ride, and I’m all in for it. More classroom tales coming as I keep dragging students into the engineering deep end!</p>
-            
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            
+                            <p>I'm not an artist by any means, but I do enjoy dabbling in modeling and animation. The works shown here are almost exclusively done from the summer that I learned Blender, but I'd like my future to contain more visual art as well.</p>
+                                
+
+                                <figure>
+
+                                    <img src="img/portfolio/ballBounceGif.gif" class="img-responsive" alt="blender chessboard">
+                                    <figcaption>Learning the basics of animation.</figcaption>
+                                </figure>
+                      
+                                <figure>
+                                    <img src="img/portfolio/chess.png" class="img-responsive" alt="blender chessboard">
+                                    <figcaption>A poorly lit and trippy looking chessboard.</figcaption>
+                                </figure>
+                                <br><br><br>
+                                <figure>
+                                    <img src="img/portfolio/busterSwordGif.gif" class="img-responsive" alt="blender buster sword">
+                                    <figcaption>My pride and joy: a rendering of the Buster Sword from Final Fantasy 7.</figcaption>
+                                </figure>
+                            
+                            <br><br><br>
+                            
                             </div>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
@@ -1118,39 +1252,57 @@
                             <h2>Music</h2>
                             <div class="left-align">
                                 <hr class="star-primary">
-                                <p>I started messing around with music pretty early on, learning harmonium and singing when I was just a kid. Then I kinda dropped it for a bit. Later, I got this huge Yamaha synth as a gift and from then on, I just kept dabbling with it whenever I could. Picked up guitar in College 1st year, learnt from Arjun Sir, in Jaipur (don't have a link to his profile, sorry!), that's all. Performed a bit here and there... I've got a couple of videos here below if you wanna see!</p>
-                                
-                                <h3>Performances (Public and Personal)</h3>
-                                
+                            <!-- <img src="img/portfolio/startup-framework.png" class="img-responsive img-centered" alt="image-alt"> -->
+                            <p>I’ve been playing music for most of my life - piano from ages 5-8, and violin from 8-18. While those first two ventures didn’t really stick, they did leave behind a lifelong love for music, and a passion for singing and playing the guitar.</p>
+                            <h3>A Cappella</h3>
+                            <p>I had a year long stint of college a cappella, in which I had the absolute privilege of singing some phenomenal South Asian fusion arrangements with my friends. Some of my favorite performances were:
+                            <div class="portfolio-list">
+                                <ul>
+                                    <li><a href="https://www.youtube.com/watch?v=Onsm0CUrgZM">Mayya Mayya/Emperor’s New Clothes</a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=mlsJ4aArx3Q">Yeh Jo Des Hai Tera</a></li>
+                                    <li>...and of course, me living out my dream and soloing the Phantom’s part from Phantom of the Opera</li>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vzsVvUXqhyg?start=135" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                                    (photo creds for the thumbnail, taken at this performance, go to <a href="https://www.instagram.com/kyujustin">Justin Yu</a>)
+                                </ul>
+                            
+                             </div>
+                             </p>
+                            <h3>Covers</h3>
+                            <p>My friend and I have a Soundcloud with various covers that we’ve done of our favorite songs. Recording is an arduous process, so there’s not too much on there, but we’re hoping to continue our journey together and write a few of our own sad songs.
+                            <br>
+                            <iframe width="35%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1168802503&color=%23b8cef5&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-266622162" title="Jake &amp; Nisha" target="_blank" style="color: #cccccc; text-decoration: none;">Jake &amp; Nisha</a> · <a href="https://soundcloud.com/user-266622162/sets/covers" title="Covers" target="_blank" style="color: #cccccc; text-decoration: none;">Covers</a></div>
+                            <br><br>
+
+                            <ul>
+                                <li>My first real test of my own recording setup: Akatonbo, a folk song from Japan, where I sang the soprano, alto, and tenor parts and mixed them.
+                                        <br>
+                                        <audio controls>
+                                          <source src="files/akatonbo.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                        </audio>
+                                    </li>
+                            </ul>
+                            </p>
+                            <h3>Arrangements</h3>
+                            <p>I’ve only dabbled in arranging, and what I’ve managed to do so far has been pretty simple. Hopefully I’ll have time to do some cooler stuff in the future.
                                 <div class="portfolio-list">
-                                    <ul>
-                                        <li>
-                                            Here is me performing Despacito at BITS. My sidekick here is 
-                                            <a href="https://www.linkedin.com/in/umang-jain-09273b1aa/" target="_blank" rel="noopener noreferrer">Umang Jain</a>.
-                                        </li>
-
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Md-GjchfDAo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                                        <li>
-                                            (The ones who are hilariously shouting out curses in Hindi in the background are my wingmates: 
-                                            <a href="https://www.linkedin.com/in/siddharth-gupta3001/" target="_blank" rel="noopener noreferrer">Siddharth Gupta (aka Siddhu/Rajjo)</a>, 
-                                            <a href="https://www.linkedin.com/in/ananya-varma-8b7157186/" target="_blank" rel="noopener noreferrer">Ananya Varma (aka Madhya Pradesh)</a>, 
-                                            <a href="https://www.linkedin.com/in/muhtashim-rafiqi-9483ab187/" target="_blank" rel="noopener noreferrer">Muhtashim Rafiqi (aka Mushi)</a>, and 
-                                            <a href="https://www.linkedin.com/in/pranav-pranav/" target="_blank" rel="noopener noreferrer">Pranav (Naam hi kaafi hai, haina?)</a>).
-                                        </li>
+                                <ul>
+                                    <li>An extremely emo, and extremely unplayable variation on Twinkle Twinkle Little Star (starts halfway in). I’m really fond of it.
                                         <br>
-                                        <li>
-                                            Here is a sample of music videos which I record late at night, when I don't sleep.
-                                        </li>
-
-                                            <iframe width="315" height="560" src="https://www.youtube.com/embed/Bcnjws-iEIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                                        <br>
-                                        <li>
-                                            Honestly, I have hundreds of such videos/audios with guitar, keyboard, just vocals, and beatboxing attempts. I’ll update here when I find time.
-                                        </li>
-                                    </ul>
-                                </div>
+                                        <audio controls>
+                                          <source src="files/twinkle.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                        </audio>
+                                    </li>
+                                    <li>A more tame, and somewhat stilted, arrangement of <a href="https://www.youtube.com/watch?v=Eze6-eHmtJg">Cherry by Spitz</a>. 
+                                    <br>
+                                    <audio controls>
+                                          <source src="files/thebettercherry.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                        </audio>
+                                    </li>
+                                </ul>
+                            </p>
                             </div>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
@@ -1170,19 +1322,55 @@
             </div>
             <div class="container">
                 <div class="row">
-                  <div class="col-lg-10 col-lg-offset-1">
-                    <div class="modal-body">
-                      <h2>Bike Rides</h2>
-                      <div class="left-align">
-                        <hr class="star-primary">
-                        <p>I’m really into bike rides — they’re one of my biggest passions. It all started with my Glamour back in Jaipur, then I upgraded to an Ignitor that took me through Jaipur and Pilani. Sadly, the Ignitor got stolen (yeah, that sucked).</p>
-                        <p>Right now, as I write this, I’m riding a Honda CB190X Tourism here in Singapore. I love the rush of speed, especially late at night with the cool breeze—it’s simply unbeatable.</p>
-                        <p>Here’s a little glimpse of me riding at night:</p>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/CBJwe_eEXx4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                      </div>
-                      <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="modal-body">
+                            <h2>Writing</h2>
+                            <div class="left-align">
+                                <hr class="star-primary">
+                                <p>As a blogger and humanities major, I’ve generated a decent amount of writing over the years. The selected pieces below showcase some of the work that I’ve done, spanning a wide range of writing styles and topics. These do not include my publications, which you can find in their rightful place on my CV.</p>
+                                <h3>Blogging</h3>
+                                <p>I was an MIT Admissions blogger for my 3.5 years of undergrad and wrote on the order of ~100 posts on my life and experiences as an MIT student. There were a couple of blogs I wrote that resonated with a fairly large audience:
+                                <div class="portfolio-list">
+                                    <ul>
+                                        <li><a href="https://mitadmissions.org/blogs/entry/a-comprehensive-guide-to-applying-to-internships/">Applying to College vs. Applying to Jobs</a> - A rundown of the college job application process in comparison to the college app process that most of the readers were experiencing at the time.</li>
+                                        <li><a href="https://mitadmissions.org/blogs/entry/a-comprehensive-guide-to-vending-machines-at-mit/">A Comprehensive Guide to Vending Machines at MIT</a> -  Some friends and I walked all over campus to put every single vending machine that existed at the time on a map. To this day, I still occasionally get a message from a friend saying how helpful this was, even though it just seemed like a dumb and random idea at the time.</li>
+                                        <li><a href="https://mitadmissions.org/blogs/entry/a-comprehensive-guide-to-crying-on-campus/">A Comprehensive Guide to Crying on Campus</a> -   Inspired by a poll done by Casie C. ‘17. This post went minorly viral, inspiring a decent amount of (some literally word for word) copycat posts and a particularly horrendous <a href="https://www.dailymail.co.uk/femail/article-4989974/MIT-s-best-places-sob-campus.html">Daily Mail article</a>.</li>
+                                    </ul>
+                                </div>
+                                </p>
+                                <h3>Gaming</h3>
+                                <p>My interest in video games led me to take nearly all of the gaming adjacent classes that MIT had to offer. I got to live my dream and write several academic papers on various facets of the gaming world. This prepared me well to write semi-professionally about games - I have two chapters upcoming in the <i>Psychgeist of Pop Culture</i> series, which explores our favorite video games through academic analyses written for a general audience.
+                                <div class="portfolio-list">
+                                    <ul>
+                                        <li><i>Psychgeist of Pop Culture: Final Fantasy VII</i>: Getting to write a chapter about Final Fantasy VII that will be published in an actual book is definitely a dream come true. My chapter, titled <i>Shinra at the Intersection of Science, Technology, and Society</i>, explores the Shinra company as a technocapitalist entity that has evolved in meaning and significance in the three decades since the game's release.</li>
+                                        <li><i>Psychgeist of Pop Culture: Stardew Valley</i>": Stardew Valley was the game that helped my partner and I transition to a long distance relationship when I started my PhD. In my chapter titled <i>Domesticating Bliss: Facilitating Long-Distance Relationships Through Stardew Valley Co-op Mode</i>, I write about the mechanics and design affordances that make Stardew Valley such a compelling game for couples in LDRs.</li>
+                                    </ul>
+                                </div>
+                                </p>
+                                <h3>Ethnographic</h3>
+                                <p>As a comparative media studies major, I occasionally had to go out into the field to investigate the effect of media on the people around me, and learn to use the data gathered to form research questions and create narratives. As a positive result, I was pushed farther out of my comfort zone than I could have ever gone by myself. 
+                                <div class="portfolio-list">
+                                    <ul>
+                                        <li><a href="files/cms614_final.pdf">Manifesto</a> on the usage of dating apps within my predominantly queer living community</li>
+                                        <li><a href="files/cms616_midterm.pdf">Observations from the field</a> on gendered spaces within a gaming cafe</li>
+                                        <li><a href="files/cms362.pdf">Story</a> based on an interview conducted with an amazing individual, who was the sole carer for his aging grandmother for almost a decade</li>
+                                    </ul>
+                                </div>
+                                </p>
+                                <h3>Creative</h3>
+                                <p>As a senior at MIT, I had the great privilege of taking a class with <a href="http://www.junotdiaz.com/">Junot Díaz</a>, which rekindled my long dormant love for creative writing. I would love to do more in the future, and expand upon some of the work I started in this class.
+                                <div class="portfolio-list">
+                                    <ul>
+                                        <li><a href="files/creative_1.pdf">I'll Follow You Into the Dark</a></li>
+                                        <li><a href="files/creative_2.pdf">The Way of the Wolf</a></li>
+                                    </ul>
+                                </div>
+                                </p>
+
+                            </div>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
                     </div>
-                  </div>
                 </div>
             </div>
         </div>
@@ -1328,113 +1516,53 @@
                 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
-                            <h2>Smart 3-in-1 Physical Separation Device for Plastic Recycling</h2>
+                            <h2>Open Collectives: Architecture for an Equitable Digital Economy</h2>
                             <div class="left-align">
                             <hr class="star-primary">
-    
-                            <p>
-                            So, July 2025. I found myself at the University of Tokyo’s International Research Camp, right next to the scenic Yamanaka River with Mount Fuji casually photobombing every group selfie. The camp gathered 46 participants - two seasoned researchers from the industry and a caffeine-charged squad of 44 PhD students hailing from ten universities across several countries and regions. Our mission? In teams of eight, dream up and design an innovative device for future factories.
-                            </p>
-    
-                            <figure>
-                                <img src="img/portfolio/japan5.png" class="img-responsive" alt="Device schematic">
-                            </figure>
-    
+                           
+                            <p>As part of the Civic Media Codesign Studio, I learned theory and practice of codesign, including methods for community participation in iterative stages of project ideation, design, prototyping, testing, launch, and stewardship. I was part of the research team that investigated collectives throughout history, and conducted sensory ethnographic interviews to construct transmedia narratives for community partners. Our work was part of a display at the <a href="https://www.labiennale.org/en/architecture/2021/stations/rafi-segal-sarah-williams">Venice Biennale 2021</a>.</p>
+                            </div>
                             <ul class="list-inline item-details">
-                                <li><b>Event</b>:
-                                    University of Tokyo International Summer Camp, July 2025
-                                </li>
                                 <li><b>Project</b>:
-                                    Smart 3-in-1 Physical Separation Device
+                                    <a href="http://opencollectives.mit.edu/">Open Collectives</a>
+                                    
+                                </li>
+                                <li><b>Timeline</b>:
+                                    February 2020 - May 2020
+                                    
                                 </li>
                                 <li><b>Team</b>:
-                                    Nadia Oktiarsy (UTokyo), Takumi Endo (UTokyo), <b>Yours Truly ☺ (NTU)</b>, Ting-Wei Emily Chang (Rice University), Zheng Zhou (ZJU)
+                                    Sarah Rege, Adiel Benitez, Darla Earl
                                 </li>
+                                
                             </ul>
-    
-                            <figure>
-                                <img src="img/portfolio/japan1.jpg" class="img-responsive" alt="Device schematic">
-                            </figure>
-    
-                            <p>
-                            So what’s this “Smart 3-in-1 Physical Separation Device”? Glad you asked. It’s a high-tech plastic sorting wizard that combines three physical separation methods—electrostatic, acoustic resonance, and electromagnetic (EM) fields—to pull apart mixed plastics with over 90-95% accuracy. While commercial systems often rely on Near-Infrared (NIR) or visible light spectra, they stumble on dark or dirty plastics. Our device? It laughs in the face of moisture, darkness, and contamination.
-                            </p>
-    
-                            <p>
-                            Here’s how it works, step-by-step on the conveyor belt of fame:
-                            </p>
-    
-                            <ul>
-                                <li><b>Electrostatic Separation:</b> Plastics get triboelectrically charged as they slide along the belt. Then, they pass through a high-voltage horizontal electric field (~40 kV), where their charge differences cause lateral deflection. This stage alone hits >95% sorting accuracy for many plastics.</li>
-                                <li><b>Acoustic Resonance Separation:</b> Plastics vibrate differently based on their stiffness (Young’s modulus). We pump ~40 Hz acoustic waves, and their resonance amplitudes vary. Acoustic modules use these subtle shifts to split plastics, achieving around ~90% accuracy.</li>
-                                <li><b>Electromagnetic (EM) Separation:</b> The real magic spark. A pulsed EM field at frequencies around 60 kHz and 100 kHz targets differential dielectric polarization dynamics. PET and PVC, for example, resonate with these frequencies differently—PVC, with chlorine atoms in its polymer chain, has higher dielectric loss and sticks to the belt longer at 100 kHz, while PET slides off. This stick-slip control lets us separate these plastics with >95% accuracy.</li>
-                            </ul>
-    
-                            <p>
-                            Why does this matter? Global plastics use is exploding—expected to nearly triple by 2060—and recycling rates still lag behind other materials. Mixed or contaminated waste often gets rejected or downcycled, losing valuable recyclable content. Our device aims to fix that by boosting sorting accuracy, reducing contamination, and enabling smarter factories without sacrificing throughput. Plus, it works well in real-world messy conditions—rain or shine, sticky or not.
-                            </p>
-    
-                            <figure>
-                                <img src="img/portfolio/japan3.JPG" class="img-responsive" alt="EM field tuning">
-                            </figure>
-    
-                            <p>
-                            From my side, I dove deep into the physics and system modelling for the electromagnetic module, tuning the pulsed field frequencies and stick-slip parameters to cleanly separate PET and PVC. While the team built the device, I pinged external APAC collaborators to help validate the models and coordinated testing plans. It’s no small feat handling dielectric polarization with ionic dynamics on a conveyor belt!
-                            </p>
-    
-                            <p>
-                            Our prototype processes 50–1,500 kg/hour depending on configuration, with a modest footprint that can scale up for industrial recycling lines. Budget-wise, setup costs range from US$118k to 195k, including maintenance. Not bad for a device that could significantly cut landfill waste, improve recycled polymer purity, and ramp up factory efficiency.
-                            </p>
-    
-                            <figure>
-                                <img src="img/portfolio/japan2.JPG" class="img-responsive" alt="System prototype">
-                            </figure>
-    
-                            <p>
-                            After weeks of whiteboards packed with equations, sushi breaks, and late-night rapid prototyping, we had a working system that could sort plastics reliably, fast, and with minimal fuss—even sometimes shocking the professors in the best way.
-                            </p>
-    
-                            <p>
-                            The best part? This isn’t just lab curiosity. It’s a stepping stone for circular economies, a boost to sustainable manufacturing, and a meaningful contribution to tackling one of the biggest waste challenges globally. Plus, I now inspect every plastic bottle like a hawk. No escape.
-                            </p>
+                            <div class="left-align">
+                                <p>Open Collectives is ana initiative that seeks to "leverage the power of solidarity in order to strengthen economic sovereignty, housing affordability, communal self-determination, and mutual aid". As part of the class working on the initiative, I worked on the CarePod project (now Carehaus) team to develop stories and visual media for the initiative. The goal of CarePod is to developing intergenerational co-housing where caregivers live alongside and care for older adults and disabled people.</p>
+                                <br>
 
-                            <p>
-                            What's bettter? We won award for Best Innovation.
-                            </p>
-
-                            <figure>
-                                <img src="img/portfolio/japan_award.jpg" class="img-responsive" alt="System prototype">
-                            </figure>                            
-                            
-                            <p>
-                                Update: Adding more pics, taken majorly by Prof. Yang Jianfei (the showman - who arranged it all for us NTU students)
-                            </p>
-    
+                                <p>We started our project by conducting an in-depth sensory ethnographic interview with an individual who gave up his career to take care of his grandmother, both out of familial obligation and a lack of other options. From this interview, we were told to construct a story told from the point of view of an object important to the interviewee's experience with their aging relative. We chose to focus on a rocking chair that was a prized possession of the interviewee's grandmother, but unfortunately, as she aged, she no longer was able to stand up if she sat down in it.</p>
+                                
                                 <figure>
-                                    <img src="img/portfolio/japan6.jpg" class="img-responsive" alt="System prototype">
-                                </figure> 
+                                    <img src="img/portfolio/carepod-2.PNG" class="img-responsive" alt="">
+                                    <figcaption>I wrote the rocking chair story which this excerpt is from, and a talented teammate (Sarah Rege) created the art for it.</figcaption>
+                                </figure>
+
+                                <p>In addition to the media we created, we conducted research on the aging population in the United States and how we could rethink elder care in times of crisis. The class was being run right at the onset of the COVID-19 pandemic, so finding affordable housing models for both the elderly and their care workers was a particularly salient issue.</p>
+                                <br>
+
+                                <p>Over the course of the semester, our team produced five stories, to which I contributed two. Our research and the visual/written media that we produced were part of a display at the Venice Biennale in 2021.</p>
 
                                 <figure>
-                                    <img src="img/portfolio/japan7.jpg" class="img-responsive" alt="System prototype">
-                                </figure>                                 
-                                <figure>
-                                    <img src="img/portfolio/japan_NTU2.jpg" class="img-responsive" alt="System prototype">
-                                </figure>                                 
-                                <figure>
-                                    <img src="img/portfolio/japan_NTU3.jpg" class="img-responsive" alt="System prototype">
-                                </figure>                                 
-                                <figure>
-                                    <img src="img/portfolio/japan_NTU5.jpg" class="img-responsive" alt="System prototype">
-                                </figure>                                 
-                                <figure>
-                                    <img src="img/portfolio/japan_NTU6.jpg" class="img-responsive" alt="System prototype">
-                                </figure>  
+                                    <img src="img/portfolio/carepod-3.PNG" class="img-responsive" alt="">
+                                    <figcaption>The second of the two stories that I wrote, in which two sisters tour a CarePod apartment for their aging mother. </figcaption>
+                                </figure>
 
-
-                            <br>
-    
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                                
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
+                            
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1445,20 +1573,75 @@
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
-                    <div class="rl"></div>
+                    <div class="rl">
+                    </div>
                 </div>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
-                            <h2>Cold Chain Logistics</h2>
+                            <h2>Teaching misinformation literacy worldwide</h2>
                             <div class="left-align">
-                                <hr class="star-primary">
-                                <p>Vaccines are super picky about staying cold, and if they get too warm, they’re done for. That’s where my work in cold chain logistics kicks in. I mess around with Phase Change Materials (PCM) to keep vaccine boxes at just the right temp, no matter how crazy the outside weather gets. Using tools like ANSYS Fluent, I simulate how PCM behaves under different conditions, tracking stuff like Melt Fraction to make sure things stay chill.</p>
-                                <p>But it’s not just number-crunching. I’ve got Artificial Neural Networks (ANNs) in the mix, trained to predict how long the PCM will hold up based on real-time temp data from the boxes. This setup runs in the cloud, giving cold chain managers a heads-up to act fast if things start heating up. It’s like giving vaccines a smart bodyguard. Plus, this tech isn’t just for vaccines—think food, pharma, anything that needs to stay cool on the move. It’s practical, it’s nerdy, and it’s what I do.</p>
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <hr class="star-primary">
+                           
+                            <p>Part of my research appointment as a PhD student is with the Universty of Washington's <a href="https://cip.uw.edu">Center for an Informed Public</a>, one of the premier centers for misinformation research. As part of the <a href="https://lokisloop.org/">Loki's Loop</a> team, I help create and co-design media literacy games with stakeholders all over the world. As belief in misinformation is a cultural and socioemotional phenomenon, we believe that co-design helps us tailor educational experiences to specific contexts. Below are a few of the sub-projects I've worked on for the team.</p>
                             </div>
+                            <h3>Developing portable co-design curriculum and workshop</h3>
+                            <ul class="list-inline item-details">
+                                <li><b>Project</b>:
+                                    <a href="https://lokisloop.org/">Loki's Loop</a>
+                                </li>
+                                <li><b>Timeline</b>:
+                                    January 2025 - present
+                                </li>
+                                <li><b>Mentors</b>:
+                                    Chris Coward, Jin Ha Lee
+                                </li>
+                                
+                            </ul>
+
+                            <div class="left-align">
+                                <p>While our team has used co-design methods in the past to 'reskin' our games for different cultural contexts (published in the DiGRA 2025 proceedings), we desired a method to efficiently design game scenarios from the ground up with input from our stakeholders. I worked with a capstone team from the MLIS program to create a curriculum based off of my design framework (described below). We currently plan to test this curriculum in a 2-day workshop format in the Netherlands and at the NextLibrary festival in Denmark.</p>
+                            </div>
+
+                             <h3>Mixed-methods comparison of narrative engagement in our games</h3>
+                            <ul class="list-inline item-details">
+                                <li><b>Project</b>:
+                                    <a href="https://lokisloop.org/">Loki's Loop</a>
+                                </li>
+                                <li><b>Timeline</b>:
+                                    March 2024 - September 2024
+                                </li>
+                                <li><b>Mentors</b>:
+                                    Jin Ha Lee
+                                </li>
+                                
+                            </ul>
+
+                            <div class="left-align">
+                                <p>Building on my hypothesis that the narrative mechanic in misinformation education games <i>must</i> be of some consequence, I conducted a 2x2 between-subjects study using two of the Loki's Loop games, which are identical except for their narrative framings. The participants were split by how much they identified with the subject matter of the second game (online fandom and Twitter usage). The study was primarily quantitative, measuring narrative engagement as the dependent variable. There were indeed differences of consequence, which I discuss in my <a href="https://arxiv.org/pdf/2503.02135">paper</a> accepted to CHI 2025, the premier conference in human-computer interaction.</p>
+                            </div>
+                            <h3>Narrative design framework for misinformation education games</h3>
+                            <ul class="list-inline item-details">
+                                <li><b>Project</b>:
+                                    <a href="https://lokisloop.org/">Loki's Loop</a>
+                                </li>
+                                <li><b>Timeline</b>:
+                                    November 2023 - September 2024
+                                    
+                                </li>
+                                <li><b>Mentors</b>:
+                                    Jin Ha Lee
+                                </li>
+                                
+                            </ul>
+
+                            <div class="left-align">
+                                <p>The narrative mechanics of educational games are often overlooked. In misinformation education, I believed this to be a particularly large miss, as the stories we tell ourselves become what we believe (and in many cases, what we believe is misinformation). This led me to believe that most misinformation education games are focusing on the wrong thing: using rational processes to discern what is and isn't misinformation, rather than exploring how sociocultural narratives may affect our own beliefs. I did a deep dive into narrative theory, and performed a systematic review on the current body of misinformation education games to see how they use narratives to teach about misinformation. The discussion, as well as the resulting design framework, was published in the <a href="https://misinforeview.hks.harvard.edu/article/the-role-of-narrative-in-misinformation-games/">Harvard Misinformation Review</a>.</p>
+                            </div>
+                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
@@ -1470,19 +1653,93 @@
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
-                    <div class="rl"></div>
+                    <div class="rl">
+                    </div>
                 </div>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
-                            <h2>Particle Image Velocimetry</h2>
+                            <h2>Designing for playing games together in long-distance relationships</h2>
                             <div class="left-align">
-                                <hr class="star-primary">
-                                <p>Applied Particle Image Velocimetry (PIV) techniques to analyze emergent flocking patterns in biological systems using Vicsek models and cross-correlation algorithms. The research focused on quantifying collective motion dynamics in bird flocks, fish schools, and bacterial colonies.</p>
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <hr class="star-primary">
+                           
+                            <p>When I started grad school, I moved 1000 miles and 2 states away from my partner doing his PhD at Stanford. To cope with the sudden change in distance, we started playing a lot of Stardew Valley together. As a researcher, I wanted to know what my field had to say about technology and long distance relationships, as this was now my only way of staying in contact. Surprisingly, there wasn't much that was applicable outside of a lab format, or custom artifacts that had been built in research settings. There wasn't much on the use of <i>existing</i> technologies that people use to stay connected, most notably games. Almost everybody I know in an LDR plays games with their partner as quality time together. This was the beginning of what I consider to be my most passion-driven research project. </p>
                             </div>
+                            <h3>Qualitative investigation of how couples in LDRs play games together</h3>
+                            <ul class="list-inline item-details">
+                                <li><b>Timeline</b>:
+                                    January 2024 - June 2024
+                                </li>
+                                <li><b>Mentors</b>:
+                                    Julie Kientz
+                                </li>
+                                
+                            </ul>
+
+                            <div class="left-align">
+                                <p>In my first ever self-initiated project as a PhD student, I conducted a diary study and semi-structured interviews with 13 couples from all over the world in LDRs. Through a combination of inductive and deductive analysis, we extracted key themes surrounding the affordances of cooperative vs. competitive multiplayer games, the liminality between in-person and in-game social interactions, and the appropriation of game mechanics to express affection.</p>
+                                <p>I also conducted a <a href="https://www.figma.com/board/wfzTs5UIxY6j9U01s7RSua/MDA-activity--template-?node-id=0-1&t=TmJcYAuWFJRUMUUb-1">design activity</a> based on the <a href="https://users.cs.northwestern.edu/~hunicke/MDA.pdf">MDA framework</a> where I had couples assemble game elements to envision their ideal game to play together. This led to some wholesome brainstorming sessions, shown below. This work is published in the DIS conference proceedings and you can read the full paper <a href="https://dl.acm.org/doi/pdf/10.1145/3715336.3735773">here</a>. </p>
+                            </div>
+
+                            <figure>
+
+                                <img src="img/portfolio/mda_1.JPG" class="img-responsive" alt="Example from output of MDA activity">
+                          
+                            </figure>
+
+                            <figure>
+
+                                <img src="img/portfolio/mda_2.JPG" class="img-responsive" alt="Example from output of MDA activity">
+                          
+                            </figure>
+
+                            <br><br>
+
+                             <h3>Prototyping apps for couples in LDRs to use while gaming</h3>
+                            <ul class="list-inline item-details">
+                                <li><b>Timeline</b>:
+                                    April 2024 - June 2024
+                                </li>
+                                <li><b>Collaborators</b>:
+                                    Tiffany Streitenberger, Caleigh Holmes, Adrian Rodriguez, Flynn Robinson, Oscar Chen, Mengqi Shi, Nila Ragu, Diana Thiamtisak, Logan Tuttle
+                                </li>
+                                
+                            </ul>
+
+                            <div class="left-align">
+                                <p>As a software engineer by training, I'm comfortable with implementing apps and websites, but not at all with ideating or designing them. This is where the undergraduates and masters students in my department, who are trained to become interaction and UX designers, are an invaluable resource. I ran my first Directed Research Group (DRG), and we used the data that I collected from couples to ideate on various prototypes that couples who play games together could use to increase their sense of connection. The final prototype was a "digital diary" that couples could use to document virtual memories made together in game worlds.</p>
+                            </div>
+                            <figure>
+
+                                <img src="img/portfolio/dd_init.JPG" class="img-responsive" alt="Initial wireframe of digital diary">
+                                <figcaption>I then passed off the group's ideation to Nupur G. '26, who designed the <a href="https://www.figma.com/design/UnxJPWG79iETq8rsoEnFda/digitaldiary?m=auto&t=PUBo0drILc7wNV4Z-1">initial wireframe</a> during her time as a REU student in my lab over the summer of 2024.</figcaption>
+                            </figure>
+
+                            <br><br>
+                            <h3>Building a digital diary application</h3>
+                            <ul class="list-inline item-details">
+                                <li><b>Timeline</b>:
+                                    January 2025 - present
+                                </li>
+                                <li><b>Collaborators</b>:
+                                    Bella Buchanan, Jimin Lee, Ruoqing Cheng, Sophia Tang, Joey Choi
+                                </li>
+                                
+                            </ul>
+
+                            <div class="left-align">
+                                <p>I'm currently working with another Directed Research Group to build out the prototype into an actual desktop application. The current version is built with Flask, React, and Electron with media uploads to AWS S3. A preliminary demo can be found <a href="https://youtu.be/HCvDsTdg3I8">here</a>. Deployment study coming whenever I feel that the full app is acceptable enough to give to users...</p>
+                            </div>
+
+                            <figure>
+
+                                <img src="img/portfolio/digitaldiary.JPG" class="img-responsive" alt="Initial wireframe of digital diary">
+                                <figcaption>The current working version of our app, upgraded visually from the initial wireframe.</figcaption>
+                            </figure>
+                            <br><br>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
@@ -1494,26 +1751,52 @@
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
-                    <div class="rl"></div>
+                    <div class="rl">
+                    </div>
                 </div>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
-                            <h2>Heat Transfer Enhancement</h2>
+                            <h2>How games support mental health and eudaimonic well-being</h2>
                             <div class="left-align">
-                                <hr class="star-primary">
-                                <p>Okay, let’s talk about making things hot—well, technically, making them cool down faster. My research in heat transfer enhancement is all about squeezing every bit of efficiency out of systems like mini-channels, whether it’s for solar panels, electric vehicle batteries, or industrial heat exchangers. The secret sauce? Magnetic nanofluids, mechanical vibrations, and a sprinkle of magnetic fields to stir things up.</p>
-                                <p>I’ve been geeking out over how nanoparticles suspended in fluids can supercharge heat transfer, especially when you shake things up—literally—with vibrations or apply a magnetic field to make those particles dance. For instance, we found that tweaking vibration frequency in a mini-channel can boost thermal performance by generating secondary flows that disrupt boring old boundary layers. Add a magnetic field, and the nanofluid starts behaving like it’s auditioning for a sci-fi movie, enhancing heat transfer coefficients like nobody’s business. This work has been a wild ride, from solar panel cooling to EV battery management, and it’s landed in journals like <a href="https://doi.org/10.1016/j.rineng.2023.101473">Results in Engineering</a> and <a href="https://doi.org/10.1080/10407782.2024.2382492">Numerical Heat Transfer</a>.</p>
-                                <p>Oh, and the exergy analysis? That’s where we get nerdy about energy quality, figuring out how to minimize waste in these systems. It’s like teaching a heat exchanger to be less of a slacker. Currently, we’re pushing the boundaries further, exploring how these techniques can make industrial systems greener and more efficient. Stay tuned—I’m probably in a lab right now, trying not to overheat myself while cooling something else.</p>
-                                <ul class="list-inline item-details">
-                                    <li><b>Timeline</b>: January 2023 - Present</li>
-                                    <li><b>Mentors</b>: Dr. Suvanjan Bhattacharyya, Dr. Eddie Yin Kwee Ng</li>
-                                    <li><b>Collaborators</b>: Nikhil Jain, Nitish Maurya, Soumen Ghosh, Ali Cemal Benim</li>
-                                </ul>
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <hr class="star-primary">
+                           
+                            <p>I'm only in my mid 20s, but people my age have lived through a huge amount of unrest - the first Trump administration, COVID, and the second - much more fascist - Trump administration, with very little mental break in between. In both personal and environmental times of darkness, I find myself going back to the games that have taught me strength, given me characters to model myself after, and given me a place where I feel like I can fight back against evil. I firmly believe that playing games like Final Fantasy VII in my formative years - all about how a giant corporation destroys the world through capitalism and greed - has been key to shaping my own will to live on and fight on. With that in mind, the area I hope to write my dissertation on someday is in how playing games can support eudaimonic well-being, human flourishing, and mental health. Games for mental health are often discussed in the language of escapism, but I think there are a lot of important lessons we can learn from our ability to agentically interact with stories of resistance, resilience, and heroism within games.</p>
                             </div>
+                            <h3>Investigating the effects of eudaimonic gaming experiences</h3>
+                            <ul class="list-inline item-details">
+                                <li><b>Timeline</b>:
+                                    October 2024 - present
+                                </li>
+                                <li><b>Mentors</b>:
+                                    Julie Kientz, Jin Ha Lee
+                                </li>
+                                
+                            </ul>
+
+                            <div class="left-align">
+                                <p>After wading around in readings about self-determination theory, narrative games, and eudaimonic well-being, I identified a theoretical gap that had mysteriously gone unfilled. Media studies scholars have elaborated extensively on why a person may seek out a eudaimonic gaming experience, but the long lasting effects of such experiences were unknown. Partly motivated by getting to read about peoples' positive and life-changing experiences with games, I conducted a large survey that received 100+ responses, and conducted a structured deductive analysis to identify pathways to certain types of changes that people believed these gaming experiences had on their broader lives. Our findings support conjectures floating around in the HCI game space, namely that 1. often, meaningful experiences are incidental rather than intentional 2. people undergoing times of stress may actively be seeking meaning in their gaming experiences and 3. narrative elements in games are influential on people's perceptions of themselves and the world. The full paper is upcoming in CHI PLAY 2025, and a preprint can be found <a href="https://arxiv.org/pdf/2507.18084">here</a>. </p>
+
+                            </div>
+
+                             <h3>Systematic review on narrative games for mental health</h3>
+                            <ul class="list-inline item-details">
+                                <li><b>Timeline</b>:
+                                    June 2024 - present
+                                </li>
+                                <li><b>Mentors</b>:
+                                    Julie Kientz
+                                </li>
+                                
+                            </ul>
+
+                            <div class="left-align">
+                                <p>The games that have supported my mental health have always been narrative heavy RPGs. In my first year, I took a particular interest in narrative games, and like a good junior PhD student, I decided to do my first systematic review on how narrative game-based interveions are used in mental health research. Myself and Jamie Espinosa-Briones (DUB REU '24) reduced almost 2000 papers down to 17 games for analysis. A preliminary analysis (presented at DiGRA '25) revealed that a majority of the games surrounded treatment for depression and anxiety; however, how these constructs were measured differed significantly between studies. In addition, theoretical underpinnings such as narrative theory (popuarlized by communications scholars) were often overlooked in the design of these games. In future discussion (journal paper coming soon), we intend to suggest design guidelines for further cross-collaboration between communication studies, mental health, and human-computer interaction. </p>
+                            </div>
+                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
@@ -1540,14 +1823,6 @@
     <!-- Custom Theme JavaScript -->
     <script src="/js/agency.js"></script>
 
-    <!-- Modal JavaScript -->
-    <script>
-        $(document).ready(function() {
-            var hash = window.location.hash;
-            if (hash) {
-                $(hash).modal('show');
-            }
-        });
-    </script>
+
     </body>
 </html>
