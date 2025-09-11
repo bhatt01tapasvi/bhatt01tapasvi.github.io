@@ -1571,6 +1571,16 @@
     <!-- Custom Theme JavaScript -->
     <script src="/js/agency.js"></script>
 
+    <!-- Modal JavaScript -->
+    <script>
+        $(document).ready(function() {
+            var hash = window.location.hash;
+            if (hash) {
+                $(hash).modal('show');
+            }
+        });
+    </script>
+
 
     </body>
 </html>
