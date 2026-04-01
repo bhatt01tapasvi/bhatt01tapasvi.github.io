@@ -1486,14 +1486,25 @@ section,
     margin-right: auto;
 }
 
+.portfolio-item .portfolio-link {
+    display: block;
+}
+
 .portfolio-item .img-responsive {
     width: 100%;
     max-width: 280px;
+    height: 180px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
 .portfolio-caption {
     padding: 12px 8px;
+    text-align: center;
+    min-height: 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .portfolio-caption h4 {
@@ -1505,9 +1516,31 @@ section,
     display: none;
 }
 
+/* Keep row alignment stable for each section grid. */
+#research .portfolio-item:nth-child(3n + 1),
+#misc .portfolio-item:nth-child(3n + 1) {
+    clear: left;
+}
+
+#projects .portfolio-item:nth-child(4n + 1) {
+    clear: left;
+}
+
 @media (max-width: 767px) {
     .theme-toggle {
         margin: 8px 15px;
+    }
+
+    #research .portfolio-item:nth-child(3n + 1),
+    #misc .portfolio-item:nth-child(3n + 1),
+    #projects .portfolio-item:nth-child(4n + 1) {
+        clear: none;
+    }
+
+    #research .portfolio-item:nth-child(2n + 1),
+    #misc .portfolio-item:nth-child(2n + 1),
+    #projects .portfolio-item:nth-child(2n + 1) {
+        clear: left;
     }
 }
 
