@@ -30,7 +30,7 @@
     }
 
     var preferred = getStoredTheme();
-    applyTheme(preferred || "light");
+    applyTheme(preferred || "dark");
 
     if (toggleButton) {
         toggleButton.addEventListener("click", function () {

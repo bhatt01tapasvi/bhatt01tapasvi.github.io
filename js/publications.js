@@ -203,28 +203,26 @@
             var venue = item.venue ? item.venue : "Venue not listed";
             var authors = item.authors ? item.authors : "Authors not listed";
             var absoluteIndex = start + index + 1;
-            var detailId = "pub-detail-" + absoluteIndex;
             var paperLink = item.url
                 ? '<a class="publication-link" href="' + item.url + '" target="_blank" rel="noopener noreferrer">Open paper</a>'
                 : '<span class="text-muted">Link not available</span>';
 
             return [
-                '<article class="pub-row">',
-                '<button type="button" class="pub-row-main" data-pub-toggle="' + detailId + '" aria-expanded="false">',
-                '<span class="pub-row-index">#' + absoluteIndex + '</span>',
-                '<span class="pub-row-title">' + escapeHtml(item.title) + '</span>',
-                '<span class="pub-row-tags">' + escapeHtml(String(year)) + ' | ' + citations + ' cites</span>',
-                '</button>',
-                '<div class="pub-row-detail" id="' + detailId + '" hidden>',
-                '<p><strong>Authors:</strong> ' + escapeHtml(authors) + '</p>',
-                '<p><strong>Venue:</strong> ' + escapeHtml(venue) + '</p>',
-                '<p>' + paperLink + '</p>',
+                '<article class="pub-card-alt">',
+                '<div class="pub-card-top">',
+                '<span class="pub-pill">#' + absoluteIndex + '</span>',
+                '<span class="pub-pill">' + escapeHtml(String(year)) + '</span>',
+                '<span class="pub-pill">' + citations + ' cites</span>',
                 '</div>',
+                '<h4 class="pub-card-title">' + escapeHtml(item.title) + '</h4>',
+                '<p class="pub-card-journal">Journal / Venue: ' + escapeHtml(venue) + '</p>',
+                '<p class="pub-card-authors">' + escapeHtml(authors) + '</p>',
+                '<div class="pub-card-actions">' + paperLink + '</div>',
                 '</article>'
             ].join("");
         });
 
-        listContainer.innerHTML = '<div class="publication-compact-list">' + items.join("") + '</div>';
+        listContainer.innerHTML = '<div class="publication-card-grid">' + items.join("") + '</div>';
 
         if (countNode) {
             countNode.textContent = 'Showing ' + (start + 1) + '-' + (start + shownPublications.length) + ' of ' + filteredPublications.length + ' papers';
@@ -254,7 +252,6 @@
             return [
                 '<figure class="gallery-card">',
                 '<img src="' + path + '" alt="' + filename + '" loading="lazy" data-gallery-item="true" tabindex="0">',
-                '<figcaption>' + escapeHtml(filename) + '</figcaption>',
                 '</figure>'
             ].join("");
         });
@@ -312,24 +309,7 @@
             });
         }
 
-        if (listContainer) {
-            listContainer.addEventListener("click", function (event) {
-                var toggleButton = event.target.closest("[data-pub-toggle]");
-                if (!toggleButton) {
-                    return;
-                }
-
-                var detailId = toggleButton.getAttribute("data-pub-toggle");
-                var detailNode = detailId ? document.getElementById(detailId) : null;
-                if (!detailNode) {
-                    return;
-                }
-
-                var expanded = toggleButton.getAttribute("aria-expanded") === "true";
-                toggleButton.setAttribute("aria-expanded", expanded ? "false" : "true");
-                detailNode.hidden = expanded;
-            });
-        }
+        // Alternate layout does not use expandable rows.
     }
 
     function setupGalleryLightbox() {
@@ -358,7 +338,7 @@
 
             lightboxImage.src = target.src;
             lightboxImage.alt = target.alt;
-            lightboxCaption.textContent = target.alt;
+            lightboxCaption.textContent = "";
             lightbox.classList.add("is-open");
             lightbox.setAttribute("aria-hidden", "false");
         });
