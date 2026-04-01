@@ -107,7 +107,7 @@
     
                         <br><br>
     
-                        <p style="font-size : 20px" class="text-intro">Hey there, I'm Tapasvi! I'm curious about everything from cold chain logistics to particle image velocimetry, and I change research fields almost as often as my playlists. I did Mechanical from BITS Pilani, where I worked with <a href="https://www.bits-pilani.ac.in/pilani/suvanjan-bhattacharyya/" target="_blank">Dr. Suvanjan Bhattacharyya</a> on thermal system analysis. Now I'm pursuing my PhD in Mechanical and Aerospace Engineering at NTU Singapore with <a href="https://scholar.google.com/citations?user=9QW1LYAAAAAJ&hl=en" target="_blank">Prof. Eddie</a>, focusing on phase-change materials and AI for vaccine cold chains. What's next? Honestly, I'm figuring it out as I go. Stay tuned!</p>
+                        <p style="font-size : 20px" class="text-intro">Hey, I am Tapasvi. I did Mechanical from BITS Pilani, where I worked with <a href="https://www.bits-pilani.ac.in/pilani/suvanjan-bhattacharyya/" target="_blank">Dr. Suvanjan Bhattacharyya</a> on thermal systems. Now I am doing a PhD in Mechanical and Aerospace Engineering at NTU Singapore with <a href="https://scholar.google.com/citations?user=9QW1LYAAAAAJ&hl=en" target="_blank">Prof. Eddie</a>. My current stack is cold-chain logistics, phase-change materials, sensor data, and ML models for prediction. I like mixing hardcore heat transfer with practical deployment work.</p>
     
                         <br>
     
@@ -218,20 +218,20 @@
             <div class="row research-narrative-row">
                 <div class="col-lg-10 col-lg-offset-1">
                     <div class="research-narrative">
-                        <h3>Detailed Research Focus</h3>
-                        <p>My current research combines thermal engineering fundamentals with data-driven modeling and practical deployment constraints. The objective is to improve the reliability of thermally sensitive systems, especially in low-resource and highly variable environments.</p>
+                        <h3>Research Stack In Detail</h3>
+                        <p>I work at the overlap of thermal science, data science, and field deployment. Main goal: keep temperature-sensitive systems stable in messy real-world conditions, not just in clean lab setups.</p>
                         <div class="research-pillars">
                             <article>
-                                <h4>1. Physics of Heat Transfer Enhancement</h4>
-                                <p>Studying magnetically actuated nanofluids, channel-scale vibration effects, and coupled transport mechanisms to improve heat transfer coefficients while controlling pressure and exergy penalties.</p>
+                                <h4>1. Heat Transfer Core Physics</h4>
+                                <p>I study magnetic nanofluids, vibration-driven flow control, and transport coupling in mini channels. The focus is high heat transfer coefficient with low pressure drop and better exergy behavior.</p>
                             </article>
                             <article>
-                                <h4>2. Predictive Cold Chain Intelligence</h4>
-                                <p>Building machine learning models for phase change material state estimation and thermal holdover prediction from sparse sensor streams, with a focus on decisions that can be taken before failure.</p>
+                                <h4>2. Predictive Cold-Chain Intelligence</h4>
+                                <p>I build ML pipelines that estimate PCM state, remaining holdover time, and failure risk from sparse IoT signals. Idea is early warning, so teams can act before temperature excursions happen.</p>
                             </article>
                             <article>
-                                <h4>3. Translational Research and Validation</h4>
-                                <p>Running simulation-to-experiment loops with real box tests, materials benchmarking, and environmental perturbation studies so that model claims remain deployment-ready.</p>
+                                <h4>3. Simulation To Field Validation</h4>
+                                <p>I run Fluent simulations, then validate with box tests, material benchmarking, and stressed environment cases. If a model cannot survive field noise, it does not make the final pipeline.</p>
                             </article>
                         </div>
                     </div>
@@ -245,17 +245,33 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Publications</h2>
-                    <h3 class="section-subheading text-muted">Auto-synced from Google Scholar (hourly) with live metrics and latest papers.</h3>
+                    <h3 class="section-subheading text-muted">Auto synced from Google Scholar every hour. Search, filter, and sort the list below.</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div id="scholar-stats" class="metric-grid"></div>
                     <p id="scholar-sync-info" class="scholar-sync-note"></p>
+                    <div class="publication-controls">
+                        <input id="pub-search" type="text" placeholder="Search by title, authors, venue" aria-label="Search publications">
+                        <select id="pub-year-filter" aria-label="Filter by year">
+                            <option value="all">All years</option>
+                        </select>
+                        <select id="pub-sort" aria-label="Sort publications">
+                            <option value="newest">Sort: newest first</option>
+                            <option value="cited">Sort: most cited</option>
+                            <option value="title">Sort: title A to Z</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12" id="publication-list"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <button id="pub-load-more" class="btn btn-default" type="button">Load more papers</button>
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center scholar-cta-wrap">
@@ -451,7 +467,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Photo Gallery</h2>
-                    <h3 class="section-subheading text-muted">A compiled wall of photos from the repository. You can remove any image later by deleting its path from the gallery list.</h3>
+                    <h3 class="section-subheading text-muted">All photos in one place. Tap any image to open full view.</h3>
                 </div>
             </div>
             <div class="row">
@@ -461,6 +477,12 @@
             </div>
         </div>
     </section>
+
+    <div id="gallery-lightbox" class="gallery-lightbox" aria-hidden="true">
+        <button id="gallery-lightbox-close" class="gallery-lightbox-close" type="button" aria-label="Close image">&times;</button>
+        <img id="gallery-lightbox-image" src="" alt="Expanded gallery image">
+        <p id="gallery-lightbox-caption"></p>
+    </div>
 
     <!-- About Section -->
     <section id="about">
@@ -655,7 +677,7 @@
                                     <h4 class="subheading">Research Camp, Tokyo/Yamanaka</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Research camp near Mount Fuji, University of Tokyo, Japan, working on a Smart 3-in-1 Plastic Separation Device for future recycling factories because someone’s gotta save the planet, right? <a href="https://bhatt01tapasvi.github.io/#portfolioModal12">Here are details and pictures.</a> PS: If the link doesn't work, pls find this content in my Projects Section.</p>
+                                    <p class="text-muted">Research camp near Mount Fuji, University of Tokyo, Japan. We built a Smart 3-in-1 plastic separation device for next-gen recycling lines. <a href="https://bhatt01tapasvi.github.io/#portfolioModal12">Details and photos are here.</a></p>
                                 </div>
                             </div>
                         </li>
@@ -695,7 +717,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; (Stolen from) - Nisha Devasia 2023</span>
+                    <span class="copyright">Copyright &copy; Tapasvi Bhatt 2026</span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
@@ -943,7 +965,7 @@
                                     <figcaption>Website for DoodleBot and associated educational material.</figcaption>
                                 </figure>
                                 <br><br>
-                                <p>DoodleBot was the first website that I actually created mostly myself. I got my first actual exposure to HTML and learned how to make websites using github.io, an invaluable skill that has carried me far in life.</p>
+                                <p>DoodleBot was the first site I built mostly on my own. That is where I learned core HTML and github.io deployment, which became my base for web projects.</p>
                                 <h3><a href="https://aieducation.mit.edu/">aieducation.mit.edu</a></h3>
                                 <figure>
 
@@ -1264,7 +1286,7 @@
                             <h2>Teaching</h2>
                             <div class="left-align">
                                 <hr class="star-primary">
-                                <p>I’m passionate about teaching and engaging students in a way that makes complex concepts click. Over the years, I’ve had the privilege of teaching a range of engineering courses, from Mechanisms and Machines to Fluid Mechanics and Heat Transfer. I love creating an interactive classroom where students feel inspired to dive into the material alongside me. Below are some highlights of my teaching journey so far, and I’ll keep updating as I continue to teach!</p>
+                                <p>I enjoy teaching because it forces clean thinking. I have taught Mechanisms and Machines, Fluid Mechanics, and Heat Transfer. My style is simple: concept first, equations next, then problem-solving reps.</p>
             
                                 <h3>My Teaching Adventures</h3>
                                 <ul>
@@ -1284,7 +1306,7 @@
                                 <h3><a href="https://github.com/bhatt01tapasvi/Heat-Transfer-Fall-2025-" target="_blank">Lecture Notes</a></h3>
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL1SY5NzQUT1k48yDNJFPJyiEqj06x3Poy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             
-                                <p>Teaching’s a wild ride, and I’m all in for it. More classroom tales coming as I keep dragging students into the engineering deep end!</p>
+                                <p>More course notes and teaching content will keep coming as each semester moves.</p>
             
                                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
@@ -1329,7 +1351,7 @@
                                 
                             </ul>
                             <div class="left-align">
-                                <p>The Science+C project is a collaboration between the Massachusetts Department of Elementary and Secondary Education to create an alternate pathway to college and science careers for high school students by developing and testing three new computational science courses. These courses—Computational Biology, Computational Chemistry, and Computational Physics—will be available to all Massachusetts high schools beginning in the 2022-2023 school year.</p>
+                                <p>Science+C is a collaboration with the Massachusetts Department of Elementary and Secondary Education. The goal is simple: give high school students a practical path into computational science. The three courses are Computational Biology, Computational Chemistry, and Computational Physics, and they are designed for statewide use.</p>
                                 <br>
                                 <p>I specifically worked as a design collaborator on the Data Science + Machine Learning units. The units were divided into data science, decision trees, clustering algorithms, and neural networks. I designed the data science curriculum, a 3 day workshop with a lesson and associated activities for each day.</p>
                                 <figure>
@@ -1359,7 +1381,7 @@
                                 </div>
                 
                                 <br>
-                                <p>I ran this curriculum in a workshop with several high school science educators and iterated on the activities with them. Their feedback was invaluable for iterating and improving on the activities.</p>
+                                <p>I ran this curriculum with high school science educators, then iterated using their feedback. That cycle helped us simplify the lessons and improve student flow.</p>
 
                                 <figure>
                                     <img src="img/portfolio/colab_1.PNG" class="img-responsive" alt="colab pre teacher PD">
@@ -1439,7 +1461,7 @@
                         <div class="left-align">
                         <hr class="star-primary">
                        
-                        <p>At the University of Tokyo's International Research Camp in July 2025, nestled next to the scenic Yamanaka River with Mount Fuji as our backdrop, I joined 46 participants from ten universities across several countries. Our mission was ambitious: design an innovative device for future factories that could revolutionize plastic recycling.</p>
+                        <p>At the University of Tokyo International Research Camp (July 2025), I worked with 46 participants from 10 universities. Our target was to design a practical separation device for high-throughput recycling plants.</p>
                         </div>
                         <ul class="list-inline item-details">
                             <li><b>Event</b>:
@@ -1460,7 +1482,7 @@
                                 <img src="img/portfolio/japan_award.jpg" class="img-responsive" alt="Award ceremony">
                             </figure>
 
-                            <p>Our "Smart 3-in-1 Physical Separation Device" is a high-tech plastic sorting system that combines three physical separation methods—electrostatic, acoustic resonance, and electromagnetic (EM) fields—to achieve over 90-95% accuracy in separating mixed plastics. Unlike commercial systems that rely on Near-Infrared (NIR) or visible light spectra and struggle with dark or contaminated plastics, our device works effectively even in messy real-world conditions.</p>
+                            <p>Our Smart 3-in-1 Physical Separation Device combines electrostatic separation, acoustic resonance, and electromagnetic fields. It reached 90-95% accuracy for mixed plastic sorting. Unlike many optical systems that struggle with dark or dirty feed, this setup still works in rough real-world input conditions.</p>
                             
                             <figure>
                                 <img src="img/portfolio/japan1.jpg" class="img-responsive" alt="Device schematic">
@@ -1487,7 +1509,7 @@
                                 <img src="img/portfolio/japan4.JPG" class="img-responsive" alt="Team presentation">
                             </figure>
 
-                            <p><strong>Impact and Specifications:</strong> Our prototype processes 50–1,500 kg/hour depending on configuration, with setup costs ranging from US$118k to 195k including maintenance. With global plastics use expected to nearly triple by 2060, this device addresses a critical need by boosting sorting accuracy, reducing contamination, and enabling smarter factories without sacrificing throughput.</p>
+                            <p><strong>Impact and Specifications:</strong> Our prototype processes 50 to 1,500 kg/hour depending on setup, with estimated cost around US$118k to 195k including maintenance. As global plastic use grows, this system can reduce contamination, improve sorting quality, and keep industrial throughput practical.</p>
 
                             <figure>
                                 <img src="img/portfolio/japan5.png" class="img-responsive" alt="EM field tuning">
@@ -1497,7 +1519,7 @@
                                 <img src="img/portfolio/japan6.jpg" class="img-responsive" alt="Complete system">
                             </figure>
 
-                            <p>After weeks of whiteboard equations, collaborative brainstorming, and late-night rapid prototyping, we created a working system that sorts plastics reliably, fast, and with minimal complexity. This isn't just academic curiosity—it's a stepping stone for circular economies, sustainable manufacturing, and a meaningful contribution to tackling global waste challenges.</p>
+                            <p>After weeks of equations, design reviews, and rapid prototyping, we built a working system that sorts plastic reliably with manageable complexity. This is not just a campus demo. It is a practical step toward circular manufacturing and lower waste.</p>
 
                             <figure>
                                 <img src="img/portfolio/japan7.jpg" class="img-responsive" alt="Final prototype">
@@ -1521,7 +1543,7 @@
                                 <img src="img/portfolio/japan_NTU6.jpg" class="img-responsive" alt="Final presentation">
                             </figure>
 
-                            <p>This experience not only resulted in an award-winning innovation but also strengthened international research collaborations and provided invaluable insights into sustainable technology development. The project represents a significant step forward in addressing one of our most pressing environmental challenges through engineering innovation.</p>
+                            <p>This project won Best Innovation and helped build strong cross-lab collaboration. It also gave us a practical blueprint for scaling better plastic sorting systems.</p>
                             
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
@@ -1547,10 +1569,10 @@
                             <h2>Cold Chain Logistics, in Real Time</h2>
                             <div class="left-align">
                                 <hr class="star-primary">
-                                <p>I'm passionate about revolutionizing cold chain logistics through cutting-edge technology. My research focuses on developing intelligent systems that ensure the integrity of temperature-sensitive products, from life-saving vaccines to perishable foods. By combining machine learning, IoT sensors, and advanced thermal modeling, I'm working to create a future where cold chain failures are predicted and prevented before they happen.</p>
+                                <p>I work on cold-chain logistics for temperature-sensitive products like vaccines and food. The core approach is thermal modeling plus IoT sensing plus ML prediction. We try to detect risk early and prevent failures before payload quality drops.</p>
             
-                                <h3>CRYOMOVE: The Future of Cold Chain Management</h3>
-                                <p>At the heart of my research is <strong>CRYOMOVE</strong>, a groundbreaking machine learning-based system that monitors and predicts Phase Change Material (PCM) behavior in real-time. This isn't just another monitoring system – it's a proactive guardian of cold chain integrity.</p>
+                                <h3>CRYOMOVE: Cold-Chain Prediction Stack</h3>
+                                <p>At the center of this work is <strong>CRYOMOVE</strong>, an ML system that tracks and predicts PCM behavior in real time. It is built for proactive decisions, not passive dashboard viewing.</p>
                                 
                                 <h4>How CRYOMOVE Works:</h4>
                                 <ul>
@@ -1562,18 +1584,18 @@
                                 </ul>
 
                                 <h3>Experimental Breakthroughs</h3>
-                                <p>Theory meets reality in our comprehensive experimental validation program. We're not just simulating – we're building and testing real cold chain solutions.</p>
+                                <p>We do full simulation-to-test loops. It is not only simulation work, we build and validate real cold-box configurations.</p>
                                 
                                 <h4>Current Achievements:</h4>
                                 <ul>
                                     <li><strong>Extended Performance:</strong> Successfully extended cold box performance to 6-7 days, nearly doubling the industry standard of 3-4 days</li>
-                                    <li><strong>Advanced Materials Testing:</strong> Evaluating cutting-edge insulation foils and thermal paints for enhanced thermal protection</li>
+                                    <li><strong>Advanced Materials Testing:</strong> Evaluating insulation foils and thermal paints for stronger thermal protection</li>
                                     <li><strong>Environmental Control:</strong> Investigating the effects of humidifiers and desiccants on cold box performance</li>
                                     <li><strong>Glycerol-Modified PCMs:</strong> Developing enhanced phase change materials for superior thermal regulation</li>
                                 </ul>
 
-                                <h3>Future Innovations</h3>
-                                <p>The next frontier involves pushing the boundaries of what's possible in predictive cold chain management.</p>
+                                <h3>Next Build Phase</h3>
+                                <p>Next phase is stronger forecasting and robust deployment in variable field conditions.</p>
                                 
                                 <h4>Advanced Neural Network Development:</h4>
                                 <ul>
@@ -1591,10 +1613,10 @@
                                     <li>Dynamic environmental factors for predictive performance modeling</li>
                                 </ul>
 
-                                <h3>Impact Beyond Research</h3>
-                                <p>This work represents more than academic achievement – it's about saving lives and reducing waste. Every vaccine that maintains its potency, every batch of medicine that reaches patients safely, and every ton of food saved from spoilage represents real-world impact. CRYOMOVE is designed to scale from local clinics to global supply chains, ensuring that temperature-sensitive products maintain their integrity wherever they're needed.</p>
+                                <h3>Why This Matters</h3>
+                                <p>The impact is direct: better vaccine potency retention, safer medicine delivery, and lower food spoilage. The system is designed to scale from local clinics to larger logistics networks.</p>
 
-                                <p>The cold chain revolution is here, and it's powered by intelligent prediction, real-time monitoring, and proactive intervention. Welcome to the future of logistics.</p>
+                                <p>In short, this is predictive thermal logistics with practical ops value.</p>
             
                                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
@@ -1645,9 +1667,9 @@
                             <h2>Heat Transfer Enhancement</h2>
                             <div class="left-align">
                                 <hr class="star-primary">
-                                <p>Okay, let’s talk about making things hot—well, technically, making them cool down faster. My research in heat transfer enhancement is all about squeezing every bit of efficiency out of systems like mini-channels, whether it’s for solar panels, electric vehicle batteries, or industrial heat exchangers. The secret sauce? Magnetic nanofluids, mechanical vibrations, and a sprinkle of magnetic fields to stir things up.</p>
-                                <p>I’ve been geeking out over how nanoparticles suspended in fluids can supercharge heat transfer, especially when you shake things up—literally—with vibrations or apply a magnetic field to make those particles dance. For instance, we found that tweaking vibration frequency in a mini-channel can boost thermal performance by generating secondary flows that disrupt boring old boundary layers. Add a magnetic field, and the nanofluid starts behaving like it’s auditioning for a sci-fi movie, enhancing heat transfer coefficients like nobody’s business. This work has been a wild ride, from solar panel cooling to EV battery management, and it’s landed in journals like <a href="https://doi.org/10.1016/j.rineng.2023.101473">Results in Engineering</a> and <a href="https://doi.org/10.1080/10407782.2024.2382492">Numerical Heat Transfer</a>.</p>
-                                <p>Oh, and the exergy analysis? That’s where we get nerdy about energy quality, figuring out how to minimize waste in these systems. It’s like teaching a heat exchanger to be less of a slacker. Currently, we’re pushing the boundaries further, exploring how these techniques can make industrial systems greener and more efficient. Stay tuned—I’m probably in a lab right now, trying not to overheat myself while cooling something else.</p>
+                                <p>This work is about faster and smarter cooling in mini-channel thermal systems for solar, EV batteries, and industrial exchangers. The toolbox includes magnetic nanofluids, controlled vibration, and external magnetic forcing.</p>
+                                <p>We study how vibration frequency and magnetic field strength change boundary-layer behavior and secondary flow structures. That helps us improve heat transfer while tracking pressure penalty and energy efficiency. Some results are published in <a href="https://doi.org/10.1016/j.rineng.2023.101473">Results in Engineering</a> and <a href="https://doi.org/10.1080/10407782.2024.2382492">Numerical Heat Transfer</a>.</p>
+                                <p>We also run exergy analysis to check energy quality, not just raw temperature reduction. End goal is robust thermal design that works in actual operating constraints.</p>
                                 <ul class="list-inline item-details">
                                     <li><b>Timeline</b>: January 2022 - Present</li>
                                     <li><b>Mentors</b>: Dr. Suvanjan Bhattacharyya</li>

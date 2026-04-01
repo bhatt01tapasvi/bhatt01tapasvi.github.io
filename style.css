@@ -996,6 +996,32 @@ body {
     margin-bottom: 24px;
 }
 
+.publication-controls {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.publication-controls input,
+.publication-controls select {
+    width: 100%;
+    min-height: 42px;
+    border: 1px solid #dcc5a6;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #4a341a;
+    background: #fff;
+}
+
+.publication-controls input:focus,
+.publication-controls select:focus {
+    outline: none;
+    border-color: #ce8e47;
+    box-shadow: 0 0 0 2px rgba(206, 142, 71, 0.15);
+}
+
 .publication-card {
     background: #fff;
     border: 1px solid #eddcc8;
@@ -1036,6 +1062,10 @@ body {
     margin-top: 16px;
 }
 
+#pub-load-more {
+    margin-top: 8px;
+}
+
 .gallery-section {
     background-color: #f8fbfd;
 }
@@ -1057,12 +1087,56 @@ body {
 .gallery-card img {
     width: 100%;
     display: block;
+    cursor: zoom-in;
 }
 
 .gallery-card figcaption {
     font-size: 12px;
     color: #6c7d86;
     padding: 8px 10px;
+}
+
+.gallery-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 9, 15, 0.88);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    flex-direction: column;
+}
+
+.gallery-lightbox.is-open {
+    display: flex;
+}
+
+.gallery-lightbox img {
+    max-width: min(1100px, 92vw);
+    max-height: 78vh;
+    border-radius: 10px;
+    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.45);
+}
+
+.gallery-lightbox p {
+    margin-top: 12px;
+    color: #dbe7f0;
+    font-size: 14px;
+}
+
+.gallery-lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-size: 28px;
+    line-height: 1;
 }
 
 @media (max-width: 991px) {
@@ -1072,6 +1146,10 @@ body {
 
     .metric-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .publication-controls {
+        grid-template-columns: 1fr;
     }
 }
 
