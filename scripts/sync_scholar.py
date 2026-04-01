@@ -121,30 +121,65 @@ def main():
         )
     }
 
-    with requests.Session() as session:
-        session.headers.update(headers)
-
-        profile_html = fetch_html(
-            session,
-            {
-                "user": USER_ID,
-                "hl": "en",
-                "view_op": "list_works",
-                "sortby": "pubdate",
-            },
-        )
-        profile_soup = BeautifulSoup(profile_html, "html.parser")
-        profile = parse_profile(profile_soup)
-        publications = fetch_publications(session)
-
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    data = {
-        "profile": profile,
-        "publications": publications,
-    }
-    OUTPUT_FILE.write_text(json.dumps(data, indent=2), encoding="utf-8")
 
-    print(f"Synced {len(publications)} publications to {OUTPUT_FILE}")
+    existing_data = None
+    if OUTPUT_FILE.exists():
+        try:
+            existing_data = json.loads(OUTPUT_FILE.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            existing_data = None
+
+    try:
+        with requests.Session() as session:
+            session.headers.update(headers)
+
+            profile_html = fetch_html(
+                session,
+                {
+                    "user": USER_ID,
+                    "hl": "en",
+                    "view_op": "list_works",
+                    "sortby": "pubdate",
+                },
+            )
+            profile_soup = BeautifulSoup(profile_html, "html.parser")
+            profile = parse_profile(profile_soup)
+            publications = fetch_publications(session)
+
+        data = {
+            "profile": profile,
+            "publications": publications,
+        }
+        OUTPUT_FILE.write_text(json.dumps(data, indent=2), encoding="utf-8")
+        print(f"Synced {len(publications)} publications to {OUTPUT_FILE}")
+    except requests.RequestException as exc:
+        now_utc = datetime.now(timezone.utc).isoformat()
+        if existing_data:
+            existing_data.setdefault("profile", {})
+            existing_data["profile"].setdefault("user_id", USER_ID)
+            existing_data["profile"].setdefault("url", f"https://scholar.google.com/citations?user={USER_ID}&hl=en")
+            existing_data["profile"]["last_sync_attempt_utc"] = now_utc
+            existing_data["profile"]["sync_error"] = f"{type(exc).__name__}: {exc}"
+            OUTPUT_FILE.write_text(json.dumps(existing_data, indent=2), encoding="utf-8")
+            print(f"Warning: Scholar sync blocked ({exc}). Kept existing data from {OUTPUT_FILE}.")
+        else:
+            fallback = {
+                "profile": {
+                    "name": "",
+                    "user_id": USER_ID,
+                    "url": f"https://scholar.google.com/citations?user={USER_ID}&hl=en",
+                    "total_citations": None,
+                    "h_index": None,
+                    "i10_index": None,
+                    "last_synced_utc": None,
+                    "last_sync_attempt_utc": now_utc,
+                    "sync_error": f"{type(exc).__name__}: {exc}",
+                },
+                "publications": [],
+            }
+            OUTPUT_FILE.write_text(json.dumps(fallback, indent=2), encoding="utf-8")
+            print(f"Warning: Scholar sync blocked ({exc}). Wrote fallback file to {OUTPUT_FILE}.")
 
 
 if __name__ == "__main__":
