@@ -1,7 +1,7 @@
 (function () {
     var scholarDataUrl = "/assets/data/google-scholar.json";
-    var pageSize = 12;
-    var visibleCount = pageSize;
+    var pageSize = 8;
+    var currentPage = 1;
     var allPublications = [];
 
     var galleryImages = [
@@ -160,7 +160,10 @@
 
     function renderPublications() {
         var listContainer = document.getElementById("publication-list");
-        var loadMoreButton = document.getElementById("pub-load-more");
+        var prevButton = document.getElementById("pub-prev");
+        var nextButton = document.getElementById("pub-next");
+        var pageIndicator = document.getElementById("pub-page-indicator");
+        var countNode = document.getElementById("pub-count");
 
         if (!listContainer) {
             return;
@@ -170,40 +173,73 @@
 
         if (!filteredPublications.length) {
             listContainer.innerHTML = '<p class="text-muted">Publications are syncing. Please check back in a few minutes.</p>';
-            if (loadMoreButton) {
-                loadMoreButton.style.display = "none";
+            if (countNode) {
+                countNode.textContent = "No papers found for this filter.";
+            }
+            if (pageIndicator) {
+                pageIndicator.textContent = "0 / 0";
+            }
+            if (prevButton) {
+                prevButton.disabled = true;
+            }
+            if (nextButton) {
+                nextButton.disabled = true;
             }
             return;
         }
 
-        var shownPublications = filteredPublications.slice(0, visibleCount);
+        var totalPages = Math.max(1, Math.ceil(filteredPublications.length / pageSize));
+        if (currentPage > totalPages) {
+            currentPage = totalPages;
+        }
+
+        var start = (currentPage - 1) * pageSize;
+        var end = start + pageSize;
+        var shownPublications = filteredPublications.slice(start, end);
 
         var items = shownPublications.map(function (item, index) {
             var year = item.year ? item.year : "In progress";
             var citations = typeof item.citations === "number" ? item.citations : 0;
             var venue = item.venue ? item.venue : "Venue not listed";
             var authors = item.authors ? item.authors : "Authors not listed";
-            var linkStart = item.url ? '<a class="publication-link" href="' + item.url + '" target="_blank" rel="noopener noreferrer">' : "";
-            var linkEnd = item.url ? "</a>" : "";
+            var absoluteIndex = start + index + 1;
+            var detailId = "pub-detail-" + absoluteIndex;
+            var paperLink = item.url
+                ? '<a class="publication-link" href="' + item.url + '" target="_blank" rel="noopener noreferrer">Open paper</a>'
+                : '<span class="text-muted">Link not available</span>';
 
             return [
-                '<article class="publication-card">',
-                '<div class="publication-meta">',
-                '<span class="pub-index">' + (index + 1) + '</span>',
-                '<span class="pub-year">' + year + '</span>',
-                '<span class="pub-citations">' + citations + ' citations</span>',
+                '<article class="pub-row">',
+                '<button type="button" class="pub-row-main" data-pub-toggle="' + detailId + '" aria-expanded="false">',
+                '<span class="pub-row-index">#' + absoluteIndex + '</span>',
+                '<span class="pub-row-title">' + escapeHtml(item.title) + '</span>',
+                '<span class="pub-row-tags">' + escapeHtml(String(year)) + ' | ' + citations + ' cites</span>',
+                '</button>',
+                '<div class="pub-row-detail" id="' + detailId + '" hidden>',
+                '<p><strong>Authors:</strong> ' + escapeHtml(authors) + '</p>',
+                '<p><strong>Venue:</strong> ' + escapeHtml(venue) + '</p>',
+                '<p>' + paperLink + '</p>',
                 '</div>',
-                '<h4>' + linkStart + escapeHtml(item.title) + linkEnd + '</h4>',
-                '<p class="pub-authors">' + escapeHtml(authors) + '</p>',
-                '<p class="pub-venue">' + escapeHtml(venue) + '</p>',
                 '</article>'
             ].join("");
         });
 
-        listContainer.innerHTML = items.join("");
+        listContainer.innerHTML = '<div class="publication-compact-list">' + items.join("") + '</div>';
 
-        if (loadMoreButton) {
-            loadMoreButton.style.display = filteredPublications.length > shownPublications.length ? "inline-block" : "none";
+        if (countNode) {
+            countNode.textContent = 'Showing ' + (start + 1) + '-' + (start + shownPublications.length) + ' of ' + filteredPublications.length + ' papers';
+        }
+
+        if (pageIndicator) {
+            pageIndicator.textContent = currentPage + ' / ' + totalPages;
+        }
+
+        if (prevButton) {
+            prevButton.disabled = currentPage <= 1;
+        }
+
+        if (nextButton) {
+            nextButton.disabled = currentPage >= totalPages;
         }
     }
 
@@ -230,10 +266,13 @@
         var searchInput = document.getElementById("pub-search");
         var yearSelect = document.getElementById("pub-year-filter");
         var sortSelect = document.getElementById("pub-sort");
-        var loadMoreButton = document.getElementById("pub-load-more");
+        var pageSizeSelect = document.getElementById("pub-page-size");
+        var prevButton = document.getElementById("pub-prev");
+        var nextButton = document.getElementById("pub-next");
+        var listContainer = document.getElementById("publication-list");
 
         function rerenderFromStart() {
-            visibleCount = pageSize;
+            currentPage = 1;
             renderPublications();
         }
 
@@ -249,10 +288,46 @@
             sortSelect.addEventListener("change", rerenderFromStart);
         }
 
-        if (loadMoreButton) {
-            loadMoreButton.addEventListener("click", function () {
-                visibleCount += pageSize;
+        if (pageSizeSelect) {
+            pageSizeSelect.addEventListener("change", function () {
+                pageSize = Number(pageSizeSelect.value) || 8;
+                currentPage = 1;
                 renderPublications();
+            });
+        }
+
+        if (prevButton) {
+            prevButton.addEventListener("click", function () {
+                if (currentPage > 1) {
+                    currentPage -= 1;
+                    renderPublications();
+                }
+            });
+        }
+
+        if (nextButton) {
+            nextButton.addEventListener("click", function () {
+                currentPage += 1;
+                renderPublications();
+            });
+        }
+
+        if (listContainer) {
+            listContainer.addEventListener("click", function (event) {
+                var toggleButton = event.target.closest("[data-pub-toggle]");
+                if (!toggleButton) {
+                    return;
+                }
+
+                var detailId = toggleButton.getAttribute("data-pub-toggle");
+                var detailNode = detailId ? document.getElementById(detailId) : null;
+                if (!detailNode) {
+                    return;
+                }
+
+                var expanded = toggleButton.getAttribute("aria-expanded") === "true";
+                toggleButton.setAttribute("aria-expanded", expanded ? "false" : "true");
+                detailNode.hidden = expanded;
             });
         }
     }

@@ -1022,48 +1022,117 @@ body {
     box-shadow: 0 0 0 2px rgba(206, 142, 71, 0.15);
 }
 
-.publication-card {
+.publication-compact-list {
+    border: 1px solid #ead6bd;
+    border-radius: 12px;
+    overflow: hidden;
     background: #fff;
-    border: 1px solid #eddcc8;
-    border-left: 4px solid #ce8e47;
-    border-radius: 10px;
-    padding: 16px;
-    margin-bottom: 12px;
 }
 
-.publication-card h4 {
-    margin: 8px 0;
-    text-transform: none;
-    line-height: 1.4;
+.pub-row {
+    border-bottom: 1px solid #f1e5d6;
 }
 
-.publication-meta {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    font-size: 12px;
-    color: #6b4f2d;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
+.pub-row:last-child {
+    border-bottom: none;
 }
 
-.pub-index {
+.pub-row-main {
+    width: 100%;
+    border: none;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 64px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    text-align: left;
+}
+
+.pub-row-main:hover,
+.pub-row-main:focus {
+    background: #fff8f0;
+    outline: none;
+}
+
+.pub-row-index {
     font-weight: 700;
     color: #ce8e47;
+    font-size: 12px;
+    letter-spacing: 0.6px;
 }
 
-.pub-authors,
-.pub-venue {
+.pub-row-title {
+    color: #2f2417;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.pub-row-tags {
+    font-size: 12px;
+    color: #7d6243;
+    white-space: nowrap;
+}
+
+.pub-row-detail {
+    padding: 0 14px 12px 90px;
+    color: #624c33;
+}
+
+.pub-row-detail p {
+    margin: 0 0 4px;
+}
+
+.pub-row-detail a {
+    color: #c1792d;
+    font-weight: 600;
+}
+
+.publication-footer {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.publication-count {
     margin: 0;
-    color: #6f6f6f;
+    color: #7f6545;
+    font-size: 13px;
+}
+
+.pub-page-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pub-page-controls label {
+    margin: 0;
+    color: #7f6545;
+    font-size: 12px;
+}
+
+#pub-page-size {
+    min-height: 34px;
+    border: 1px solid #dcc5a6;
+    border-radius: 8px;
+    padding: 6px 10px;
+    background: #fff;
+    color: #4a341a;
+}
+
+.pub-page-indicator {
+    min-width: 74px;
+    text-align: center;
+    font-size: 12px;
+    color: #7f6545;
 }
 
 .scholar-cta-wrap {
     margin-top: 16px;
-}
-
-#pub-load-more {
-    margin-top: 8px;
 }
 
 .gallery-section {
@@ -1151,6 +1220,15 @@ body {
     .publication-controls {
         grid-template-columns: 1fr;
     }
+
+    .pub-row-main {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .pub-row-detail {
+        padding: 0 14px 12px;
+    }
 }
 
 @media (max-width: 575px) {
@@ -1160,6 +1238,179 @@ body {
 
     .research-narrative {
         padding: 18px;
+    }
+}
+
+:root {
+    --bg: #f5f7fb;
+    --surface: #ffffff;
+    --surface-soft: #eef3fb;
+    --text: #202938;
+    --muted: #66748a;
+    --line: #d8e0ec;
+    --brand: #2f80ed;
+    --brand-2: #12b3a8;
+    --nav-bg: rgba(255, 255, 255, 0.92);
+    --shadow: 0 14px 35px rgba(18, 35, 66, 0.08);
+}
+
+[data-theme="dark"] {
+    --bg: #0c111b;
+    --surface: #121a27;
+    --surface-soft: #0f1724;
+    --text: #e6edf8;
+    --muted: #9fb0ca;
+    --line: #24334c;
+    --brand: #63a1ff;
+    --brand-2: #21d4bb;
+    --nav-bg: rgba(10, 16, 27, 0.9);
+    --shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+}
+
+body {
+    background: radial-gradient(circle at top right, rgba(47, 128, 237, 0.1), transparent 40%), var(--bg);
+    color: var(--text);
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.navbar-default {
+    background: var(--nav-bg);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+    color: var(--text);
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-brand:hover {
+    color: var(--brand);
+}
+
+.theme-toggle {
+    margin-top: 12px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+section,
+.portfolio-modal .modal-content,
+.metric-card,
+.publication-compact-list,
+.gallery-card,
+.research-narrative {
+    box-shadow: var(--shadow);
+}
+
+.bg-light-gray,
+.gallery-section,
+.publication-section {
+    background: transparent;
+}
+
+.portfolio-caption,
+.metric-card,
+.publication-compact-list,
+.gallery-card,
+.research-narrative {
+    background: var(--surface);
+    border-color: var(--line);
+}
+
+.text-muted,
+.scholar-sync-note,
+.publication-count,
+.pub-page-indicator,
+.portfolio-caption p,
+.timeline-body .text-muted {
+    color: var(--muted);
+}
+
+.research-narrative {
+    color: var(--text);
+    border: 1px solid var(--line);
+}
+
+.research-narrative h3 {
+    color: var(--text);
+}
+
+.research-tags {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.research-tags span {
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--text);
+    font-size: 12px;
+    padding: 5px 10px;
+    letter-spacing: 0.2px;
+}
+
+.publication-controls input,
+.publication-controls select,
+#pub-page-size {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--line);
+}
+
+.pub-row-main,
+.pub-row-main:hover,
+.pub-row-main:focus {
+    background: var(--surface);
+}
+
+.pub-row-title,
+.metric-value,
+.portfolio-caption h4 {
+    color: var(--text);
+}
+
+.pub-row-tags,
+.metric-label,
+.pub-row-detail,
+.pub-authors,
+.pub-venue {
+    color: var(--muted);
+}
+
+.pub-row {
+    border-color: var(--line);
+}
+
+.portfolio-modal .modal-content {
+    background: var(--surface);
+    color: var(--text);
+}
+
+.portfolio-modal .modal-content p,
+.portfolio-modal .modal-content li,
+.portfolio-modal .modal-content figcaption {
+    color: var(--muted);
+}
+
+.portfolio-modal .close-modal .lr,
+.portfolio-modal .close-modal .lr .rl {
+    background-color: var(--text);
+}
+
+@media (max-width: 767px) {
+    .theme-toggle {
+        margin: 8px 15px;
     }
 }
 
