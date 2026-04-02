@@ -56,8 +56,15 @@ figure img {
 
 
 .text-intro {
-	color: white;
+	color: var(--site-text);
 	text-align:center;
+}
+
+.intro-contact {
+    color: var(--site-text);
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
 }
 
 .text-primary {
