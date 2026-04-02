@@ -1544,4 +1544,378 @@ section,
     }
 }
 
+/* Final visual refresh: unified palette, stronger link affordance, modern modal UI */
+:root {
+    --site-bg: #f4f7fb;
+    --site-bg-soft: #e9eff7;
+    --site-surface: #ffffff;
+    --site-surface-elevated: #ffffff;
+    --site-text: #1a2230;
+    --site-muted: #5b687b;
+    --site-border: #d2dceb;
+    --site-brand: #0d6efd;
+    --site-brand-strong: #0757d1;
+    --site-accent: #13b0a2;
+    --site-link: #0059d8;
+    --site-link-hover: #003b8f;
+    --site-shadow: 0 16px 40px rgba(15, 32, 58, 0.12);
+    --site-shadow-soft: 0 8px 22px rgba(15, 32, 58, 0.08);
+}
+
+[data-theme="dark"] {
+    --site-bg: #0b1220;
+    --site-bg-soft: #0f1a2d;
+    --site-surface: #141f34;
+    --site-surface-elevated: #1a2740;
+    --site-text: #eaf0ff;
+    --site-muted: #9eb0d2;
+    --site-border: #2d3f62;
+    --site-brand: #5ea1ff;
+    --site-brand-strong: #8dbbff;
+    --site-accent: #4dd7c7;
+    --site-link: #8ec2ff;
+    --site-link-hover: #c4deff;
+    --site-shadow: 0 18px 45px rgba(0, 0, 0, 0.42);
+    --site-shadow-soft: 0 10px 26px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background:
+        radial-gradient(circle at 90% 0%, rgba(19, 176, 162, 0.12), transparent 34%),
+        radial-gradient(circle at 8% 14%, rgba(13, 110, 253, 0.12), transparent 36%),
+        var(--site-bg);
+    color: var(--site-text);
+}
+
+section {
+    position: relative;
+}
+
+.bg-light-gray {
+    background-color: transparent;
+}
+
+section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.navbar-default {
+    background: color-mix(in srgb, var(--site-surface) 82%, transparent);
+    border-bottom: 1px solid var(--site-border);
+    box-shadow: var(--site-shadow-soft);
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+    color: var(--site-text);
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: var(--site-brand);
+}
+
+.navbar-default.navbar-shrink {
+    background: color-mix(in srgb, var(--site-surface) 90%, transparent);
+}
+
+.theme-toggle {
+    margin-top: 10px;
+    border: 1px solid var(--site-border);
+    background: var(--site-surface-elevated);
+    color: var(--site-text);
+    box-shadow: var(--site-shadow-soft);
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+    color: #fff;
+    background: linear-gradient(135deg, var(--site-brand), var(--site-accent));
+    border-color: transparent;
+}
+
+/* Make links visibly clickable everywhere, including modal content and timeline text */
+a {
+    color: var(--site-link);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, var(--site-link) 55%, transparent);
+    font-weight: 600;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+    color: var(--site-link-hover);
+    text-decoration-color: currentColor;
+}
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.portfolio-link:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--site-brand) 55%, white 45%);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+p,
+.timeline .timeline-body > p,
+.portfolio-caption p,
+.text-muted,
+.scholar-sync-note,
+.publication-count,
+.pub-page-indicator {
+    color: var(--site-muted);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-heading,
+.portfolio-caption h4,
+.metric-value,
+.pub-row-title,
+.research-narrative h3 {
+    color: var(--site-text);
+}
+
+.metric-card,
+.research-narrative,
+.publication-compact-list,
+.gallery-card,
+.portfolio-caption,
+.pub-card-alt {
+    background: var(--site-surface);
+    border: 1px solid var(--site-border);
+    box-shadow: var(--site-shadow-soft);
+}
+
+.portfolio-item .portfolio-link {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--site-shadow-soft);
+}
+
+.portfolio-item .portfolio-link img {
+    transition: transform 0.28s ease;
+}
+
+.portfolio-item .portfolio-link:hover img,
+.portfolio-item .portfolio-link:focus img {
+    transform: scale(1.03);
+}
+
+.portfolio-hover {
+    background: linear-gradient(160deg, rgba(13, 110, 253, 0.78), rgba(19, 176, 162, 0.7)) !important;
+}
+
+.portfolio-caption {
+    border-radius: 0 0 14px 14px;
+}
+
+.publication-section {
+    background:
+        linear-gradient(180deg, color-mix(in srgb, var(--site-bg-soft) 70%, transparent), transparent),
+        transparent;
+}
+
+.publication-controls input,
+.publication-controls select,
+#pub-page-size {
+    background: var(--site-surface-elevated);
+    color: var(--site-text);
+    border: 1px solid var(--site-border);
+}
+
+.publication-controls input:focus,
+.publication-controls select:focus,
+#pub-page-size:focus {
+    border-color: var(--site-brand);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--site-brand) 26%, transparent);
+}
+
+.timeline:before {
+    background-color: var(--site-border);
+}
+
+.timeline > li .timeline-image {
+    border-color: var(--site-border);
+    background: linear-gradient(145deg, var(--site-brand), var(--site-accent));
+    box-shadow: var(--site-shadow-soft);
+}
+
+/* Full modal makeover */
+.modal-backdrop.in {
+    opacity: 0.72;
+}
+
+.portfolio-modal .modal-content {
+    background:
+        radial-gradient(circle at 85% 12%, color-mix(in srgb, var(--site-brand) 24%, transparent), transparent 34%),
+        radial-gradient(circle at 8% 82%, color-mix(in srgb, var(--site-accent) 20%, transparent), transparent 30%),
+        var(--site-bg-soft);
+    color: var(--site-text);
+    padding: 88px 0 76px;
+}
+
+.portfolio-modal .modal-body {
+    background: var(--site-surface);
+    border: 1px solid var(--site-border);
+    border-radius: 20px;
+    padding: 34px 28px;
+    box-shadow: var(--site-shadow);
+}
+
+.portfolio-modal .modal-content h2 {
+    margin-bottom: 12px;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    letter-spacing: 0.3px;
+    text-transform: none;
+}
+
+.portfolio-modal .modal-content h3,
+.portfolio-modal .modal-content h4 {
+    text-transform: none;
+    color: var(--site-text);
+}
+
+.portfolio-modal .modal-content p,
+.portfolio-modal .modal-content li,
+.portfolio-modal .modal-content figcaption {
+    color: var(--site-muted);
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+.portfolio-modal .modal-content img {
+    border-radius: 12px;
+    border: 1px solid var(--site-border);
+    box-shadow: var(--site-shadow-soft);
+    margin-bottom: 24px;
+}
+
+.portfolio-modal .modal-content figure {
+    background: var(--site-surface-elevated);
+    border: 1px solid var(--site-border);
+    border-radius: 14px;
+    padding: 12px;
+    margin: 10px 0 20px;
+}
+
+.portfolio-modal .modal-content ul.list-inline,
+.portfolio-modal .modal-content ul:not(.social-buttons) {
+    background: color-mix(in srgb, var(--site-surface-elevated) 90%, transparent);
+    border: 1px solid var(--site-border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 22px;
+}
+
+.portfolio-modal .close-modal {
+    top: 18px;
+    right: 20px;
+    width: 54px;
+    height: 54px;
+    border-radius: 999px;
+    border: 1px solid var(--site-border);
+    background: var(--site-surface);
+    box-shadow: var(--site-shadow-soft);
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: 1;
+    background: var(--site-surface-elevated);
+}
+
+.portfolio-modal .close-modal .lr {
+    height: 30px;
+    margin-left: 26px;
+    margin-top: 11px;
+    background-color: var(--site-text);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+    height: 30px;
+    background-color: var(--site-text);
+}
+
+.portfolio-modal .btn-default,
+.portfolio-modal .btn-primary,
+.publication-footer .btn,
+.scholar-cta-wrap .btn {
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background: linear-gradient(135deg, var(--site-brand), var(--site-accent));
+    color: #fff;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0.2px;
+    box-shadow: var(--site-shadow-soft);
+}
+
+.portfolio-modal .btn-default:hover,
+.portfolio-modal .btn-primary:hover,
+.publication-footer .btn:hover,
+.scholar-cta-wrap .btn:hover,
+.portfolio-modal .btn-default:focus,
+.portfolio-modal .btn-primary:focus,
+.publication-footer .btn:focus,
+.scholar-cta-wrap .btn:focus {
+    filter: brightness(1.04);
+    color: #fff;
+}
+
+section#contact,
+footer,
+.bg-black {
+    background:
+        linear-gradient(160deg, color-mix(in srgb, var(--site-bg-soft) 88%, transparent), var(--site-bg)) !important;
+}
+
+ul.social-buttons li a {
+    background: var(--site-surface-elevated);
+    color: var(--site-text);
+    border: 1px solid var(--site-border);
+}
+
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+    color: #fff;
+    border-color: transparent;
+    background: linear-gradient(135deg, var(--site-brand), var(--site-accent));
+}
+
+@media (max-width: 767px) {
+    .portfolio-modal .modal-content {
+        padding: 74px 0 48px;
+    }
+
+    .portfolio-modal .modal-body {
+        border-radius: 14px;
+        padding: 22px 16px;
+    }
+
+    .portfolio-modal .close-modal {
+        width: 46px;
+        height: 46px;
+        right: 10px;
+        top: 10px;
+    }
+
+    .portfolio-modal .close-modal .lr {
+        margin-left: 22px;
+        margin-top: 9px;
+    }
+}
+
 
