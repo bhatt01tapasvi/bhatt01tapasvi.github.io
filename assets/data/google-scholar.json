@@ -6,9 +6,7 @@
     "total_citations": null,
     "h_index": null,
     "i10_index": null,
-    "last_synced_utc": "2026-04-03T08:57:30.664292+00:00",
-    "last_sync_attempt_utc": "2026-04-03T10:55:33.055768+00:00",
-    "sync_error": "HTTPError: 403 Client Error: Forbidden for url: https://scholar.google.com/citations?user=6h51W0EAAAAJ&hl=en&view_op=list_works&sortby=pubdate"
+    "last_synced_utc": "2026-04-03T11:39:47.531317+00:00"
   },
   "publications": []
 }
