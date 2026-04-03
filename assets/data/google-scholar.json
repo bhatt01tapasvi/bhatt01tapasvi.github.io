@@ -6,9 +6,7 @@
     "total_citations": 50,
     "h_index": 3,
     "i10_index": 2,
-    "last_synced_utc": "2026-04-03T13:07:43.708686+00:00",
-    "last_sync_attempt_utc": "2026-04-03T14:43:31.221321+00:00",
-    "sync_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.google.com/sorry/index?continue=https://scholar.google.com/citations%3Fuser%3D6h51W0EAAAAJ%26hl%3Den%26view_op%3Dlist_works%26sortby%3Dpubdate&hl=en&q=EgRA7LvxGJKkv84GIi5d8gIxSwnIbLKF3hscVrfUi12uFqe_NBQ3B9cAJ9Uai6yJIAghAeYC7XLuxyGuMgJyUloBQw"
+    "last_synced_utc": "2026-04-03T15:40:13.522539+00:00"
   },
   "publications": [
     {
