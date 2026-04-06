@@ -1,14 +1,109 @@
 {
   "profile": {
-    "name": "",
+    "name": "Tapasvi Bhatt",
     "user_id": "6h51W0EAAAAJ",
     "url": "https://scholar.google.com/citations?user=6h51W0EAAAAJ&hl=en",
-    "total_citations": null,
-    "h_index": null,
-    "i10_index": null,
-    "last_synced_utc": "2026-04-06T11:54:53.863970+00:00",
-    "last_sync_attempt_utc": "2026-04-06T13:15:18.156162+00:00",
-    "sync_error": "HTTPError: 403 Client Error: Forbidden for url: https://scholar.google.com/citations?user=6h51W0EAAAAJ&hl=en&view_op=list_works&sortby=pubdate"
+    "total_citations": 50,
+    "h_index": 3,
+    "i10_index": 2,
+    "last_synced_utc": "2026-04-06T14:50:33.685729+00:00"
   },
-  "publications": []
+  "publications": [
+    {
+      "title": "Passive enhancement of sub-zero temperature retention in eutectic cold boxes: An experimental assessment of coatings and multilayer foil insulation",
+      "authors": "H Saeedipour, T Bhatt, EYK Ng, N Sachdeva, A Chakraborty, CT Howe",
+      "venue": "International Journal of Thermal Sciences 220, 110418, 2026",
+      "year": 2026,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6h51W0EAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=6h51W0EAAAAJ:roLk4NBRz8UC"
+    },
+    {
+      "title": "Microchannel Heat Exchangers",
+      "authors": "N Maurya, N Jain, T Bhatt, S Kumar, S Bhattacharyya",
+      "venue": "Advanced Applications in Heat Exchanger Technologies, 220-240, 2026",
+      "year": 2026,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6h51W0EAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=6h51W0EAAAAJ:_FxGoFyzp5QC"
+    },
+    {
+      "title": "Effect of mechanical vibration and its influence on thermal performance of a nanofluid heat exchanger",
+      "authors": "S Bhattacharyya, T Bhatt, DK Vishwakarma, AC Benim, J Abraham",
+      "venue": "Numerical Heat Transfer, Part A: Applications 86 (16), 5492-5515, 2025",
+      "year": 2025,
+      "citations": 3,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6h51W0EAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=6h51W0EAAAAJ:9yKSN-GCB0IC"
+    },
+    {
+      "title": "Sustaining Vaccine Potency in Cold Chain Logistics: Numerical Analysis of Extended Cooling Duration in Glycerol-Infused n-Tetradecane Phase-Change Materials",
+      "authors": "T Bhatt, N Jain, E Yin Kwee Ng",
+      "venue": "Fluids 10 (2), 32, 2025",
+      "year": 2025,
+      "citations": 2,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6h51W0EAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=6h51W0EAAAAJ:eQOLeE2rZwMC"
+    },
+    {
+      "title": "Numerical analysis of magnetic nanofluid flow in electronic cooling systems under magnetic influence: S. Bhattacharyya et al.",
+      "authors": "S Bhattacharyya, B Souayeh, J Saad, Z Alherz, N Jain, T Bhatt",
+      "venue": "Journal of Thermal Analysis and Calorimetry 150 (8), 6589-6609, 2025",
+      "year": 2025,
+      "citations": 1,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6h51W0EAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=6h51W0EAAAAJ:WF5omc3nYNoC"
+    },
+    {
+      "title": "MkAtt-SDN2GO: Multi-kernel Attentive-SDN2GO Network for Protein Function Prediction in Humans",
+      "authors": "K Jhawar, T Bhatt, R Sunil, W Lipo",
+      "venue": "bioRxiv, 2025.11. 02.686093, 2025",
+      "year": 2025,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6h51W0EAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=6h51W0EAAAAJ:hqOjcs7Dif8C"
+    },
+    {
+      "title": "8 Microchannel Heat Exchangers",
+      "authors": "N Maurya, N Jain, T Bhatt, S Kumar, S Bhattacharyya",
+      "venue": "Advanced Applications in Heat Exchanger Technologies: AI, Machine Learning\u00a0\u2026, 2025",
+      "year": 2025,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6h51W0EAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=6h51W0EAAAAJ:ufrVoPGSRksC"
+    },
+    {
+      "title": "Exergy and Entropy Analysis of Heat Exchanger Under Mechanical Vibration and Magnetic Field",
+      "authors": "T Bhatt, J Shah, N Jain, S Bhattacharyya",
+      "venue": "ASME Journal of Heat and Mass Transfer 147 (1), 011901, 2025",
+      "year": 2025,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6h51W0EAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=6h51W0EAAAAJ:YsMSGLbcyi4C"
+    },
+    {
+      "title": "CRYOMOVE: Cold chain real-time management of vaccine delivery using PCM and deep learning",
+      "authors": "T Bhatt, M Baser, A Tyagi, EYK Ng",
+      "venue": "Applied Thermal Engineering 255, 123962, 2024",
+      "year": 2024,
+      "citations": 19,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6h51W0EAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=6h51W0EAAAAJ:qjMakFHDy7sC"
+    },
+    {
+      "title": "Improving electric vehicle battery cooling efficiency with nanofluid and vibration integration: a novel thermal management approach",
+      "authors": "S Bhattacharyya, T Bhatt, AE Abed, R Bennacer",
+      "venue": "Journal of Thermal Analysis and Calorimetry 149 (17), 9937-9953, 2024",
+      "year": 2024,
+      "citations": 2,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6h51W0EAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=6h51W0EAAAAJ:IjCSPb-OGe4C"
+    },
+    {
+      "title": "Mini-channel cooling system for solar PV Panels with hybrid magnetic nanofluid and magnetic field",
+      "authors": "S Bhattacharyya, N Jain, T Bhatt, H Yasmin, M Sharifpur",
+      "venue": "Results in Engineering 20, 101473, 2023",
+      "year": 2023,
+      "citations": 23,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6h51W0EAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=6h51W0EAAAAJ:u5HHmVD_uO8C"
+    },
+    {
+      "title": "Heat Transfer Augmentation in a Mini-channel Using Magnetic Nanofluid and Magnetic Vortex",
+      "authors": "S Bhattacharyya, N Jain, T Bhatt, S Ghosh, AC Benim",
+      "venue": "International Conference on Computational Heat and Mass Transfer, 3-11, 2023",
+      "year": 2023,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6h51W0EAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=6h51W0EAAAAJ:Y0pCki6q_DkC"
+    }
+  ]
 }
