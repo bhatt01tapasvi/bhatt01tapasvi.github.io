@@ -80,7 +80,7 @@
 
         var syncInfo = document.getElementById("scholar-sync-info");
         if (syncInfo) {
-            syncInfo.innerHTML = 'Last synced: <strong>' + formatSyncDate(profile.last_synced_utc) + '</strong> | Auto refresh: hourly via GitHub Actions';
+            syncInfo.innerHTML = 'Last synced: <strong>' + formatSyncDate(profile.last_synced_utc) + '</strong> | Auto refresh: monthly via GitHub Actions (manual run available)';
         }
     }
 

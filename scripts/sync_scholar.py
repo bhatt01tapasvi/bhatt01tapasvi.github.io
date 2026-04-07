@@ -11,6 +11,44 @@ from bs4 import BeautifulSoup
 BASE_URL = "https://scholar.google.com/citations"
 USER_ID = os.getenv("GOOGLE_SCHOLAR_USER_ID", "6h51W0EAAAAJ")
 OUTPUT_FILE = Path("assets/data/google-scholar.json")
+LAST_GOOD_FILE = Path("assets/data/google-scholar.last-good.json")
+
+
+def load_json_file(path):
+    if not path.exists():
+        return None
+
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+
+
+def is_acceptable_snapshot(data):
+    if not isinstance(data, dict):
+        return False
+
+    publications = data.get("publications")
+    if not isinstance(publications, list) or not publications:
+        return False
+
+    profile = data.get("profile")
+    if not isinstance(profile, dict):
+        return False
+
+    return True
+
+
+def attach_sync_error(data, now_utc, message):
+    payload = dict(data)
+    profile = dict(payload.get("profile") or {})
+    profile.setdefault("user_id", USER_ID)
+    profile.setdefault("url", f"https://scholar.google.com/citations?user={USER_ID}&hl=en")
+    profile["last_sync_attempt_utc"] = now_utc
+    profile["sync_error"] = message
+    payload["profile"] = profile
+    payload.setdefault("publications", [])
+    return payload
 
 
 def fetch_html(session, params):
@@ -123,12 +161,15 @@ def main():
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 
-    existing_data = None
-    if OUTPUT_FILE.exists():
-        try:
-            existing_data = json.loads(OUTPUT_FILE.read_text(encoding="utf-8"))
-        except (json.JSONDecodeError, OSError):
-            existing_data = None
+    existing_data = load_json_file(OUTPUT_FILE)
+    last_good_data = load_json_file(LAST_GOOD_FILE)
+
+    if is_acceptable_snapshot(existing_data):
+        last_known_good = existing_data
+    elif is_acceptable_snapshot(last_good_data):
+        last_known_good = last_good_data
+    else:
+        last_known_good = None
 
     try:
         with requests.Session() as session:
@@ -151,18 +192,44 @@ def main():
             "profile": profile,
             "publications": publications,
         }
-        OUTPUT_FILE.write_text(json.dumps(data, indent=2), encoding="utf-8")
-        print(f"Synced {len(publications)} publications to {OUTPUT_FILE}")
+
+        if is_acceptable_snapshot(data):
+            OUTPUT_FILE.write_text(json.dumps(data, indent=2), encoding="utf-8")
+            LAST_GOOD_FILE.write_text(json.dumps(data, indent=2), encoding="utf-8")
+            print(f"Synced {len(publications)} publications to {OUTPUT_FILE}")
+        elif last_known_good:
+            now_utc = datetime.now(timezone.utc).isoformat()
+            preserved = attach_sync_error(
+                last_known_good,
+                now_utc,
+                "Empty Scholar scrape result (possible bot-block or parse drift). Preserved last known good snapshot.",
+            )
+            OUTPUT_FILE.write_text(json.dumps(preserved, indent=2), encoding="utf-8")
+            print("Warning: Empty Scholar scrape result. Preserved last known good snapshot.")
+        else:
+            now_utc = datetime.now(timezone.utc).isoformat()
+            fallback = {
+                "profile": {
+                    "name": "",
+                    "user_id": USER_ID,
+                    "url": f"https://scholar.google.com/citations?user={USER_ID}&hl=en",
+                    "total_citations": None,
+                    "h_index": None,
+                    "i10_index": None,
+                    "last_synced_utc": None,
+                    "last_sync_attempt_utc": now_utc,
+                    "sync_error": "Empty Scholar scrape result and no known-good snapshot available.",
+                },
+                "publications": [],
+            }
+            OUTPUT_FILE.write_text(json.dumps(fallback, indent=2), encoding="utf-8")
+            print("Warning: Empty Scholar scrape result and no known-good snapshot available.")
     except requests.RequestException as exc:
         now_utc = datetime.now(timezone.utc).isoformat()
-        if existing_data:
-            existing_data.setdefault("profile", {})
-            existing_data["profile"].setdefault("user_id", USER_ID)
-            existing_data["profile"].setdefault("url", f"https://scholar.google.com/citations?user={USER_ID}&hl=en")
-            existing_data["profile"]["last_sync_attempt_utc"] = now_utc
-            existing_data["profile"]["sync_error"] = f"{type(exc).__name__}: {exc}"
-            OUTPUT_FILE.write_text(json.dumps(existing_data, indent=2), encoding="utf-8")
-            print(f"Warning: Scholar sync blocked ({exc}). Kept existing data from {OUTPUT_FILE}.")
+        if last_known_good:
+            preserved = attach_sync_error(last_known_good, now_utc, f"{type(exc).__name__}: {exc}")
+            OUTPUT_FILE.write_text(json.dumps(preserved, indent=2), encoding="utf-8")
+            print(f"Warning: Scholar sync blocked ({exc}). Preserved last known good snapshot in {OUTPUT_FILE}.")
         else:
             fallback = {
                 "profile": {
