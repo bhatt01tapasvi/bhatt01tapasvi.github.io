@@ -18,7 +18,6 @@
         "img/about/jsw.jpg",
         "img/about/study.jpg",
         "img/about/ta.jpg",
-        "img/portfolio/japan_NTU5.jpg",
         "img/portfolio/biking.png",
         "img/portfolio/chess.png",
         "img/portfolio/ohms.jpg",
