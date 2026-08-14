@@ -1490,13 +1490,20 @@ section,
 .poster-shade {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 8%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.05) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.75) 42%, rgba(0, 0, 0, 0.15) 78%, rgba(0, 0, 0, 0.05) 100%);
 }
 
 .poster-content {
     position: relative;
     z-index: 3;
     color: #fff;
+    background: rgba(10, 12, 20, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin: -14px -16px -22px;
 }
 
 .poster-tag {
@@ -1543,6 +1550,19 @@ section,
 .poster-card.duo-5 .poster-tint { background: linear-gradient(160deg, #43cea2, #185a9d); }
 .poster-card.duo-6 .poster-tint { background: linear-gradient(160deg, #ee0979, #ff6a00); }
 .poster-card.duo-7 .poster-tint { background: linear-gradient(160deg, #7b2ff7, #00c6ff); }
+
+/* Poster text must stay white on the photo regardless of site theme */
+.portfolio-modal .modal-content .poster-content h4,
+.portfolio-modal .modal-content .poster-content p,
+.portfolio-modal .modal-content .poster-content li {
+    color: #fff;
+}
+
+.portfolio-modal .modal-content .poster-content a {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.6);
+}
 
 @media (max-width: 575px) {
     .poster-card {
