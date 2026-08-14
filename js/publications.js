@@ -4,27 +4,6 @@
     var currentPage = 1;
     var allPublications = [];
 
-    var galleryImages = [
-        "img/about/asme.jpg",
-        "img/about/bits.jpg",
-        "img/about/bpcl.jpg",
-        "img/about/ff7.JPG",
-        "img/portfolio/japan2.JPG",
-        "img/portfolio/japan_NTU3.jpg",
-        "img/about/IMG-20250708-WA0014.jpg",
-        "img/about/IMG-20250708-WA0015.jpg",
-        "img/about/IMG-20250708-WA0016.jpg",
-        "img/about/IMG-20250708-WA0023.jpg",
-        "img/about/jsw.jpg",
-        "img/about/study.jpg",
-        "img/about/ta.jpg",
-        "img/portfolio/biking.png",
-        "img/portfolio/chess.png",
-        "img/portfolio/ohms.jpg",
-        "img/portfolio/teaching.jpg",
-        "img/portfolio/japan_NTU2.jpg",
-    ];
-
     function numberOrDash(value) {
         if (value === null || value === undefined || value === "") {
             return "-";
@@ -219,24 +198,6 @@
         }
     }
 
-    function renderGallery() {
-        var galleryContainer = document.getElementById("gallery-grid");
-        if (!galleryContainer) {
-            return;
-        }
-
-        var cards = galleryImages.map(function (path) {
-            var filename = path.split("/").pop();
-            return [
-                '<figure class="gallery-card">',
-                '<img src="' + path + '" alt="' + filename + '" loading="lazy" data-gallery-item="true" tabindex="0">',
-                '</figure>'
-            ].join("");
-        });
-
-        galleryContainer.innerHTML = cards.join("");
-    }
-
     function setupPublicationControls() {
         var searchInput = document.getElementById("pub-search");
         var yearSelect = document.getElementById("pub-year-filter");
@@ -290,66 +251,6 @@
         // Alternate layout does not use expandable rows.
     }
 
-    function setupGalleryLightbox() {
-        var lightbox = document.getElementById("gallery-lightbox");
-        var lightboxImage = document.getElementById("gallery-lightbox-image");
-        var lightboxCaption = document.getElementById("gallery-lightbox-caption");
-        var closeButton = document.getElementById("gallery-lightbox-close");
-        var galleryContainer = document.getElementById("gallery-grid");
-
-        if (!lightbox || !lightboxImage || !lightboxCaption || !galleryContainer) {
-            return;
-        }
-
-        function closeLightbox() {
-            lightbox.classList.remove("is-open");
-            lightbox.setAttribute("aria-hidden", "true");
-            lightboxImage.src = "";
-            lightboxCaption.textContent = "";
-        }
-
-        galleryContainer.addEventListener("click", function (event) {
-            var target = event.target;
-            if (!target || target.getAttribute("data-gallery-item") !== "true") {
-                return;
-            }
-
-            lightboxImage.src = target.src;
-            lightboxImage.alt = target.alt;
-            lightboxCaption.textContent = "";
-            lightbox.classList.add("is-open");
-            lightbox.setAttribute("aria-hidden", "false");
-        });
-
-        galleryContainer.addEventListener("keydown", function (event) {
-            var target = event.target;
-            if (!target || target.getAttribute("data-gallery-item") !== "true") {
-                return;
-            }
-
-            if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                target.click();
-            }
-        });
-
-        if (closeButton) {
-            closeButton.addEventListener("click", closeLightbox);
-        }
-
-        lightbox.addEventListener("click", function (event) {
-            if (event.target === lightbox) {
-                closeLightbox();
-            }
-        });
-
-        document.addEventListener("keydown", function (event) {
-            if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
-                closeLightbox();
-            }
-        });
-    }
-
     function renderScholarError() {
         var listContainer = document.getElementById("publication-list");
         if (listContainer) {
@@ -380,7 +281,5 @@
             });
     }
 
-    renderGallery();
-    setupGalleryLightbox();
     initializeScholar();
 })();

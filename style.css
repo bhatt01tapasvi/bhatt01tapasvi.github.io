@@ -1200,84 +1200,6 @@ body {
     margin-top: 16px;
 }
 
-.gallery-section {
-    background-color: #f8fbfd;
-}
-
-.gallery-grid {
-    columns: 4 220px;
-    column-gap: 14px;
-}
-
-.gallery-card {
-    break-inside: avoid;
-    margin: 0 0 14px;
-    border: 1px solid #dfeaf0;
-    border-radius: 10px;
-    overflow: hidden;
-    background: #fff;
-}
-
-.gallery-card img {
-    width: 100%;
-    display: block;
-    cursor: zoom-in;
-}
-
-.gallery-card figcaption {
-    font-size: 12px;
-    color: #6c7d86;
-    padding: 8px 10px;
-}
-
-#gallery-grid figcaption,
-.gallery-lightbox p {
-    display: none;
-}
-
-.gallery-lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(5, 9, 15, 0.88);
-    z-index: 9999;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    flex-direction: column;
-}
-
-.gallery-lightbox.is-open {
-    display: flex;
-}
-
-.gallery-lightbox img {
-    max-width: min(1100px, 92vw);
-    max-height: 78vh;
-    border-radius: 10px;
-    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.45);
-}
-
-.gallery-lightbox p {
-    margin-top: 12px;
-    color: #dbe7f0;
-    font-size: 14px;
-}
-
-.gallery-lightbox-close {
-    position: absolute;
-    top: 18px;
-    right: 20px;
-    width: 44px;
-    height: 44px;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    background: rgba(255, 255, 255, 0.08);
-    color: #fff;
-    font-size: 28px;
-    line-height: 1;
-}
-
 @media (max-width: 991px) {
     .research-pillars {
         grid-template-columns: 1fr;
@@ -1379,13 +1301,11 @@ section,
 .portfolio-modal .modal-content,
 .metric-card,
 .publication-compact-list,
-.gallery-card,
 .research-narrative {
     box-shadow: var(--shadow);
 }
 
 .bg-light-gray,
-.gallery-section,
 .publication-section {
     background: transparent;
 }
@@ -1393,7 +1313,6 @@ section,
 .portfolio-caption,
 .metric-card,
 .publication-compact-list,
-.gallery-card,
 .research-narrative {
     background: var(--surface);
     border-color: var(--line);
@@ -1841,7 +1760,6 @@ h6,
 .metric-card,
 .research-narrative,
 .publication-compact-list,
-.gallery-card,
 .portfolio-caption,
 .pub-card-alt {
     background: var(--site-surface);
