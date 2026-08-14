@@ -1609,55 +1609,26 @@
                             <h2>Cold Chain Logistics in Real Time</h2>
                             <div class="left-align">
                                 <hr class="star-primary">
-                                <p>This work is about cold-chain reliability for vaccines and food-grade payloads. Core stack: thermal modeling + IoT telemetry + ML forecasting. Goal: detect risk early and prevent thermal excursions before quality drops.</p>
-            
-                                <h3>CRYOMOVE: Cold-Chain Prediction Stack</h3>
-                                <p>Centerpiece is <strong>CRYOMOVE</strong>, an ML-driven prediction stack for PCM behavior in real time. This is built for proactive ops decisions, not passive dashboard watching.</p>
-                                
-                                <h4>How CRYOMOVE Works:</h4>
-                                <ul>
-                                    <li><strong>AI-Powered Predictions:</strong> An Artificial Neural Network, trained on extensive ANSYS Fluent simulation data, accurately predicts PCM melt times based on live temperature readings</li>
-                                    <li><strong>Real-Time Monitoring:</strong> Continuous temperature sensing provides instant feedback on cold chain status</li>
-                                    <li><strong>Proactive Interventions:</strong> The system enables preventive action before temperature excursions occur, ensuring vaccine integrity</li>
-                                    <li><strong>Cloud-Based Intelligence:</strong> Deployed on cloud platforms for scalable, accessible monitoring and dynamic decision-making</li>
-                                    <li><strong>Versatile Applications:</strong> Beyond vaccines, the system adapts to food preservation and other perishable goods across industries</li>
-                                </ul>
+                                <p>Vaccines and other temperature-sensitive goods lose their potency the moment they leave the safe temperature range. Most transport boxes rely on phase change materials, or PCM, to hold that range without power. My work looks at how to keep these boxes cold for longer, how to know when they are about to fail, and how to build them from cleaner materials. Five papers so far, each tackling a different piece of the problem.</p>
 
-                                <h3>Experimental Progress</h3>
-                                <p>We run full simulation-to-test loops. Not just CFD figures. Actual box builds, material checks, and stress-case validation.</p>
-                                
-                                <h4>Current Achievements:</h4>
-                                <ul>
-                                    <li><strong>Extended Performance:</strong> Successfully extended cold box performance to 6-7 days, nearly doubling the industry standard of 3-4 days</li>
-                                    <li><strong>Advanced Materials Testing:</strong> Evaluating insulation foils and thermal paints for stronger thermal protection</li>
-                                    <li><strong>Environmental Control:</strong> Investigating the effects of humidifiers and desiccants on cold box performance</li>
-                                    <li><strong>Glycerol-Modified PCMs:</strong> Developing enhanced phase change materials for superior thermal regulation</li>
-                                </ul>
+                                <h3>CRYOMOVE: predicting when the ice runs out</h3>
+                                <p>PCM does not melt at a fixed rate. It depends on the outside temperature, which keeps changing during a delivery. Re-running a full CFD simulation every time the temperature shifts is too slow to be useful. So we trained a small neural network on ANSYS Fluent simulation data to learn the melt fraction curve instead. Sensors on the box send live temperature readings to the cloud every 10 minutes, the model predicts how much longer the PCM has before it melts, and cold chain managers get a warning before the box actually fails, not after. Published in <a href="https://doi.org/10.1016/j.applthermaleng.2024.123962">Applied Thermal Engineering</a>.</p>
 
-                                <h3>Next Build Phase</h3>
-                                <p>Next phase is stronger forecasting and robust deployment under noisy field conditions.</p>
-                                
-                                <h4>Advanced Neural Network Development:</h4>
-                                <ul>
-                                    <li><strong>Physics-Informed Neural Networks (PINNs):</strong> Integrating fundamental physical laws with machine learning for unprecedented accuracy</li>
-                                    <li><strong>Recurrent Neural Networks (RNNs):</strong> Enhanced time-series forecasting for complex temperature patterns</li>
-                                    <li><strong>Real-World Training Data:</strong> Incorporating diverse, realistic temperature profiles from various environmental conditions</li>
-                                </ul>
+                                <h3>Making the PCM melt slower</h3>
+                                <p>One direct way to extend cold life is to slow down the PCM itself. We added 5% glycerol to n-tetradecane, a common cold chain PCM, and ran numerical simulations to see what changed. The additive stretched the safe cooling window from 123 hours to about 144 hours, a 20-hour gain, and entropy analysis showed the mixture stayed thermally stable for longer too. A simple, cheap tweak with a real payoff. Published in <a href="https://doi.org/10.3390/fluids10020032">Fluids</a>.</p>
 
-                                <h4>Dynamic Environmental Integration:</h4>
-                                <p>The ultimate goal is a fully integrated system that considers:</p>
-                                <ul>
-                                    <li>Real-time traffic data affecting transport times</li>
-                                    <li>Weather conditions impacting thermal loads</li>
-                                    <li>Geographic mapping for route optimization</li>
-                                    <li>Dynamic environmental factors for predictive performance modeling</li>
-                                </ul>
+                                <h3>Better insulation, no electricity needed</h3>
+                                <p>PCM only works well if the box around it is not leaking heat. We tested epoxy coatings and multilayer aluminium foil insulation on eutectic cold boxes under tropical conditions (32-34°C, 75-85% humidity) over a full week. Dual-layer foil cut heat gain by 57%, and the coated boxes held sub-5°C temperatures for 7 days versus the usual 2-3, all without any power. It is a low-cost fix that matters most in places with unreliable electricity. Published in the <a href="https://doi.org/10.1016/j.ijthermalsci.2025.110418">International Journal of Thermal Sciences</a>.</p>
 
-                                <h3>Why This Matters</h3>
-                                <p>Impact is direct: better vaccine potency retention, safer medicine delivery, and lower food spoilage. The stack is designed to scale from local clinics to full logistics networks.</p>
+                                <h3>Faster simulations without losing accuracy</h3>
+                                <p>Full 3D CFD gets the physics right but is too slow for quick design iteration. We built a reduced-order model using the Lattice Boltzmann Method (LBM) that runs a fast 2D GPU simulation and adds a physics-informed correction for the 3D heat paths it misses. The correction is calibrated once on a real box and then reused across different payloads in the same enclosure, no re-tuning needed. Tested against our own HDPE cold-box experiments plus an independent published dataset, it matched real temperatures to within 0.06-0.48 K while running far cheaper than full CFD. Preprint on <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=12575086">SSRN</a>.</p>
 
-                                <p>In short, this is predictive thermal logistics with real ops value.</p>
-            
+                                <h3>Growing the insulation instead of manufacturing it</h3>
+                                <p>Most cold chain insulation is foam, which is energy-intensive to make and does not biodegrade. We grew mycelium from Ganoderma lucidum on waste cardboard, rice husk, and oats to bind them into a bio-fiber envelope. It insulates about as well as foam (thermal conductivity of 0.05 W/m·K), is hydrophobic, fire-resistant, and fully biodegradable, with 6x lower carbon emissions and 4.2x lower energy demand than typical cold chain materials. We paired it with a digital twin for real-time monitoring, since a bio-material's performance can vary more than a manufactured foam's. Still early-stage: the results hold for the prototype sizes and conditions we tested, and scaling it up is ongoing work.</p>
+
+                                <h3>Where this is headed</h3>
+                                <p>The common thread across all five is the same: keep the payload cold for longer, know exactly when it is at risk, and do it with materials and methods that scale to real logistics networks, not just a lab bench. Next up is combining the faster LBM simulations with the bio-fiber envelopes and folding both into the CRYOMOVE prediction stack.</p>
+
                                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
                         </div>
