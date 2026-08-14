@@ -1550,6 +1550,7 @@ section,
 .poster-card.duo-5 .poster-tint { background: linear-gradient(160deg, #43cea2, #185a9d); }
 .poster-card.duo-6 .poster-tint { background: linear-gradient(160deg, #ee0979, #ff6a00); }
 .poster-card.duo-7 .poster-tint { background: linear-gradient(160deg, #7b2ff7, #00c6ff); }
+.poster-card.duo-8 .poster-tint { background: linear-gradient(160deg, #ff7e5f, #1e3c72); }
 
 /* Poster text must stay white on the photo regardless of site theme */
 .portfolio-modal .modal-content .poster-content h4,
