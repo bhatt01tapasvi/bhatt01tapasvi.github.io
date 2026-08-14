@@ -1524,11 +1524,11 @@ section,
 }
 
 /* Keep row alignment stable for each section grid. */
-#research .portfolio-item:nth-child(3n + 1),
 #misc .portfolio-item:nth-child(3n + 1) {
     clear: left;
 }
 
+#research .portfolio-item:nth-child(4n + 1),
 #projects .portfolio-item:nth-child(4n + 1) {
     clear: left;
 }
@@ -1538,14 +1538,14 @@ section,
         margin: 8px 15px;
     }
 
-    #research .portfolio-item:nth-child(3n + 1),
     #misc .portfolio-item:nth-child(3n + 1),
+    #research .portfolio-item:nth-child(4n + 1),
     #projects .portfolio-item:nth-child(4n + 1) {
         clear: none;
     }
 
-    #research .portfolio-item:nth-child(2n + 1),
     #misc .portfolio-item:nth-child(2n + 1),
+    #research .portfolio-item:nth-child(2n + 1),
     #projects .portfolio-item:nth-child(2n + 1) {
         clear: left;
     }
