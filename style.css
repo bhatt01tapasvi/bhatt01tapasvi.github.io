@@ -14,7 +14,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     color: #333;
 }
 
@@ -103,8 +103,7 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
 
@@ -129,8 +128,7 @@ h6 {
 
 .btn-primary {
     border-color: #b8cef5;
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #fff;
     background-color: #b8cef5;
@@ -176,70 +174,13 @@ fieldset[disabled] .btn-primary.active {
     background-color: #fff;
 }
 
-.btn-xl {
-    padding: 20px 40px;
-    border-color: #b8cef5;
-    border-radius: 3px;
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: #fff;
-    background-color: #b8cef5;
-}
-
-.btn-xl:hover,
-.btn-xl:focus,
-.btn-xl:active,
-.btn-xl.active,
-.open .dropdown-toggle.btn-xl {
-    border-color: #b8cef5;
-    color: #fff;
-    background-color: #a2c0dc;
-}
-
-.btn-xl:active,
-.btn-xl.active,
-.open .dropdown-toggle.btn-xl {
-    background-image: none;
-}
-
-.btn-xl.disabled,
-.btn-xl[disabled],
-fieldset[disabled] .btn-xl,
-.btn-xl.disabled:hover,
-.btn-xl[disabled]:hover,
-fieldset[disabled] .btn-xl:hover,
-.btn-xl.disabled:focus,
-.btn-xl[disabled]:focus,
-fieldset[disabled] .btn-xl:focus,
-.btn-xl.disabled:active,
-.btn-xl[disabled]:active,
-fieldset[disabled] .btn-xl:active,
-.btn-xl.disabled.active,
-.btn-xl[disabled].active,
-fieldset[disabled] .btn-xl.active {
-    border-color: #b8cef5;
-    background-color: #b8cef5;
-}
-
-.btn-xl .badge {
-    color: #b8cef5;
-    background-color: #fff;
-}
-
 .navbar-default {
     border-color: transparent;
     background-color: #222;
 }
 
-@font-face {
-  src: url("css/reactor7/Reactor7.woff");
-  font-family: 'Reactor7';
-}
-
 .navbar-default .navbar-brand {
-    font-family: "Reactor7","Helvetica Neue",Helvetica,Arial;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     color: #b8cef5;
 }
 
@@ -269,10 +210,9 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .nav li a {
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
-    letter-spacing: 1px;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0;
     color: #fff;
     -webkit-transition: all ease .35s;
     -moz-transition: all ease .35s;
@@ -328,87 +268,38 @@ fieldset[disabled] .btn-xl.active {
     }
 }
 
-header {
-    text-align: center;
-    color: #fff;
-    background-attachment: scroll;
-    /*background-image: url('/img/header-bg.jpg');*/
-    background-position: center center;
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-header .intro-text {
-    padding-top: 100px;
-    padding-bottom: 50px;
-}
-
-header .intro-text .intro-lead-in {
-    margin-bottom: 25px;
-    font-family: "Dosis", "Helvetica Neue", Helvetica,Arial,sans-serif;
-    font-size: 22px;
-    line-height: 22px;
-}
-
-header .intro-text .intro-heading {
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 50px;
-}
-
-@media(min-width:768px) {
-    header .intro-text {
-        padding-top: 400px;
-        padding-bottom: 100px;
-    }
-
-    header .intro-text .intro-lead-in {
-        margin-bottom: 50px;
-        font-family: "Dosis", "Helvetica Neue", Helvetica,Arial,sans-serif;
-        font-size: 24px;
-        line-height: 35px;
-        margin-left: 275px;
-        margin-right: 275px;
-    }
-
-    header .intro-text .intro-heading {
-        margin-bottom: 50px;
-        text-transform: uppercase;
-        font-family: Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 75px;
-        font-weight: 700;
-        line-height: 75px;
-    }
-}
-
 section {
-    padding: 100px 0;
+    padding: 56px 0;
 }
 
 section h2.section-heading {
     margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 40px;
+    margin-bottom: 8px;
+    font-size: 28px;
+    letter-spacing: -0.015em;
+    text-align: left;
 }
 
 section h3.section-subheading {
-    margin-bottom: 75px;
+    margin-bottom: 40px;
     text-transform: none;
-    font-family: "Dosis", "Helvetica Neue", Helvetica,Arial,sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     font-size: 16px;
-    font-style: italic;
+    font-style: normal;
     font-weight: 400;
+    text-align: left;
+    max-width: 60ch;
 }
 
 @media(min-width:768px) {
     section {
-        padding: 150px 0;
+        padding: 72px 0;
+    }
+}
+
+@media(min-width:992px) {
+    section {
+        padding: 96px 0;
     }
 }
 
@@ -480,7 +371,7 @@ section h3.section-subheading {
 
 #portfolio .portfolio-item .portfolio-caption p {
     margin: 0;
-    font-family: "Dosis", "Helvetica Neue", Helvetica,Arial,sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-style: italic;
 }
@@ -695,112 +586,21 @@ section h3.section-subheading {
     }
 }
 
-.team-member {
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.team-member img {
-    margin: 0 auto;
-    border: 7px solid #fff;
-}
-
-.team-member h4 {
-    margin-top: 25px;
-    margin-bottom: 0;
-    text-transform: none;
-}
-
-.team-member p {
-    margin-top: 0;
-}
-
-aside.clients img {
-    margin: 50px auto;
-}
-
-section#contact {
-    background-color: #222;
-    /*background-image: url('/img/map-image.png');*/
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-section#contact .section-heading {
-    color: #fff;
-}
-
-section#contact .form-group {
-    margin-bottom: 25px;
-}
-
-section#contact .form-group input,
-section#contact .form-group textarea {
-    padding: 20px;
-}
-
-section#contact .form-group input.form-control {
-    height: auto;
-}
-
-section#contact .form-group textarea.form-control {
-    height: 236px;
-}
-
-section#contact .form-control:focus {
-    border-color: #b8cef5;
-    box-shadow: none;
-}
-
-section#contact::-webkit-input-placeholder {
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    color: #bbb;
-}
-
-section#contact:-moz-placeholder {
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    color: #bbb;
-}
-
-section#contact::-moz-placeholder {
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    color: #bbb;
-}
-
-section#contact:-ms-input-placeholder {
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    color: #bbb;
-}
-
-section#contact .text-danger {
-    color: #e74c3c;
-}
-
 footer {
     padding: 25px 0;
     text-align: center;
 }
 
 footer span.copyright {
-    text-transform: uppercase;
     text-transform: none;
-    font-family: Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     line-height: 40px;
 }
 
 footer ul.quicklinks {
     margin-bottom: 0;
-    text-transform: uppercase;
     text-transform: none;
-    font-family: Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     line-height: 40px;
 }
 
@@ -858,7 +658,7 @@ ul.social-buttons li a:active {
 
 .portfolio-modal .modal-content p.item-intro {
     margin: 20px 0 30px;
-    font-family: "Dosis", "Helvetica Neue", Helvetica,Arial,sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-style: italic;
 }
@@ -929,113 +729,7 @@ body {
     webkit-tap-highlight-color: #b8cef5;
 }
 
-.research-pillars {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
-    margin-top: 16px;
-}
 
-.research-pillars article {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 12px;
-    padding: 16px;
-}
-
-.metric-label {
-    display: block;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #a6845a;
-}
-
-.metric-value {
-    display: block;
-    margin-top: 6px;
-    font-size: 28px;
-    font-weight: 700;
-    color: #3f2d17;
-}
-
-@media (max-width: 991px) {
-    .research-pillars {
-        grid-template-columns: 1fr;
-    }
-}
-
-:root {
-    --bg: #f5f7fb;
-    --surface: #ffffff;
-    --surface-soft: #eef3fb;
-    --text: #202938;
-    --muted: #66748a;
-    --line: #d8e0ec;
-    --brand: #2f80ed;
-    --brand-2: #12b3a8;
-    --nav-bg: rgba(255, 255, 255, 0.92);
-    --shadow: 0 14px 35px rgba(18, 35, 66, 0.08);
-}
-
-[data-theme="dark"] {
-    --bg: #0c111b;
-    --surface: #121a27;
-    --surface-soft: #0f1724;
-    --text: #e6edf8;
-    --muted: #9fb0ca;
-    --line: #24334c;
-    --brand: #63a1ff;
-    --brand-2: #21d4bb;
-    --nav-bg: rgba(10, 16, 27, 0.9);
-    --shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
-}
-
-body {
-    background: radial-gradient(circle at top right, rgba(47, 128, 237, 0.1), transparent 40%), var(--bg);
-    color: var(--text);
-    transition: background-color 0.25s ease, color 0.25s ease;
-}
-
-.navbar-default {
-    background: var(--nav-bg);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--line);
-}
-
-.navbar-default .navbar-brand,
-.navbar-default .navbar-nav > li > a {
-    color: var(--text);
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-brand:hover {
-    color: var(--brand);
-}
-
-.theme-toggle {
-    margin-top: 12px;
-    border: 1px solid var(--line);
-    background: var(--surface);
-    color: var(--text);
-    border-radius: 999px;
-    padding: 6px 12px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.3px;
-}section,
-.portfolio-modal .modal-content {
-    box-shadow: var(--shadow);
-}.bg-light-gray {
-    background: transparent;
-}.portfolio-caption {
-    background: var(--surface);
-    border-color: var(--line);
-}.text-muted,
-.portfolio-caption p,
-.timeline-body .text-muted {
-    color: var(--muted);
-}
 
 /* Music poster wall: a colorful, tilted collage of tracks */
 .music-wall-intro {
@@ -1124,7 +818,7 @@ body {
 }
 
 .poster-content h4 {
-    font-size: 1.6rem;
+    font-size: 26px;
     font-weight: 900;
     letter-spacing: -0.02em;
     margin: 0 0 8px;
@@ -1183,29 +877,7 @@ body {
     .poster-card:focus-within {
         transform: none !important;
     }
-}.metric-value,
-.portfolio-caption h4 {
-    color: var(--text);
-}.metric-label {
-    color: var(--muted);
 }
-
-.portfolio-modal .modal-content {
-    background: var(--surface);
-    color: var(--text);
-}
-
-.portfolio-modal .modal-content p,
-.portfolio-modal .modal-content li,
-.portfolio-modal .modal-content figcaption {
-    color: var(--muted);
-}
-
-.portfolio-modal .close-modal .lr,
-.portfolio-modal .close-modal .lr .rl {
-    background-color: var(--text);
-}
-
 .portfolio-item {
     margin: 0 0 22px;
 }
@@ -1277,13 +949,13 @@ body {
 
 /* Final visual refresh: unified palette, stronger link affordance, modern modal UI */
 :root {
-    --site-bg: #f4f7fb;
-    --site-bg-soft: #e9eff7;
+    --site-bg: #f2f4f7;
+    --site-bg-soft: #e8ecf2;
     --site-surface: #ffffff;
     --site-surface-elevated: #ffffff;
     --site-text: #1a2230;
     --site-muted: #5b687b;
-    --site-border: #d2dceb;
+    --site-border: #dce2ea;
     --site-brand: #0d6efd;
     --site-brand-strong: #0757d1;
     --site-accent: #13b0a2;
@@ -1407,7 +1079,8 @@ h6,
 .portfolio-caption h4,
 .metric-value {
     color: var(--site-text);
-}.portfolio-caption {
+}
+.portfolio-caption {
     background: var(--site-surface);
     border: 1px solid var(--site-border);
     box-shadow: var(--site-shadow-soft);
@@ -1457,8 +1130,8 @@ section h3.section-subheading {
 
 .portfolio-modal .modal-content {
     background:
-        radial-gradient(circle at 85% 12%, color-mix(in srgb, var(--site-brand) 24%, transparent), transparent 34%),
-        radial-gradient(circle at 8% 82%, color-mix(in srgb, var(--site-accent) 20%, transparent), transparent 30%),
+        radial-gradient(circle at 85% 12%, color-mix(in srgb, var(--site-brand) 22%, transparent), transparent 34%),
+        radial-gradient(circle at 8% 82%, color-mix(in srgb, var(--site-brand) 12%, transparent), transparent 30%),
         var(--site-bg-soft);
     color: var(--site-text);
     padding: 88px 0 76px;
@@ -1474,7 +1147,7 @@ section h3.section-subheading {
 
 .portfolio-modal .modal-content h2 {
     margin-bottom: 12px;
-    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-size: clamp(35px, 4vw, 51px);
     letter-spacing: 0.3px;
     text-transform: none;
 }
@@ -1543,7 +1216,8 @@ section h3.section-subheading {
 .portfolio-modal .close-modal .lr .rl {
     height: 30px;
     background-color: var(--site-text);
-}.portfolio-modal .btn-default,
+}
+.portfolio-modal .btn-default,
 .portfolio-modal .btn-primary {
     border-radius: 10px;
     border: 1px solid transparent;
@@ -1553,7 +1227,8 @@ section h3.section-subheading {
     text-transform: none;
     letter-spacing: 0.2px;
     box-shadow: var(--site-shadow-soft);
-}.portfolio-modal .btn-default:hover,
+}
+.portfolio-modal .btn-default:hover,
 .portfolio-modal .btn-primary:hover,
 .portfolio-modal .btn-default:focus,
 .portfolio-modal .btn-primary:focus {
@@ -1723,13 +1398,13 @@ ul.social-buttons li a:active {
 }
 
 [data-theme="dark"] .portfolio-modal .modal-content ul.item-details > li {
-    background: linear-gradient(145deg, rgba(255, 159, 67, 0.12), rgba(94, 161, 255, 0.08));
-    border-color: color-mix(in srgb, var(--site-accent) 44%, var(--site-border));
+    background: color-mix(in srgb, var(--site-brand) 10%, transparent);
+    border-color: color-mix(in srgb, var(--site-brand) 40%, var(--site-border));
 }
 
 [data-theme="dark"] .portfolio-modal .modal-content ul:not(.social-buttons):not(.item-details) > li {
-    background: linear-gradient(145deg, rgba(255, 159, 67, 0.08), rgba(94, 161, 255, 0.06));
-    border-color: color-mix(in srgb, var(--site-accent) 38%, var(--site-border));
+    background: color-mix(in srgb, var(--site-brand) 7%, transparent);
+    border-color: color-mix(in srgb, var(--site-brand) 34%, var(--site-border));
 }
 
 @media (max-width: 767px) {
@@ -1829,27 +1504,14 @@ ul.social-buttons li a:active {
     border: 1px solid transparent;
 }
 
-.news-tag.tag-award {
-    background: color-mix(in srgb, #d4a017 18%, var(--site-surface));
-    color: #8a6100;
-    border-color: color-mix(in srgb, #d4a017 40%, var(--site-border));
-}
-
-[data-theme="dark"] .news-tag.tag-award {
-    color: #f0c96b;
-    background: color-mix(in srgb, #d4a017 22%, var(--site-surface));
-}
-
-.news-tag.tag-media {
-    background: color-mix(in srgb, var(--site-brand) 16%, var(--site-surface));
-    color: var(--site-brand-strong);
-    border-color: color-mix(in srgb, var(--site-brand) 38%, var(--site-border));
-}
-
+.news-tag.tag-award,
+.news-tag.tag-media,
 .news-tag.tag-upcoming {
-    background: var(--site-surface-elevated);
-    color: var(--site-muted);
-    border-color: var(--site-border);
+    background: rgba(20, 24, 32, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.28);
 }
 
 .news-body {
@@ -1869,7 +1531,7 @@ ul.social-buttons li a:active {
 
 .news-body h4 {
     margin: 0 0 8px;
-    font-size: 1.15rem;
+    font-size: 18px;
     font-weight: 800;
     color: var(--site-text);
     line-height: 1.3;
@@ -1954,7 +1616,7 @@ ul.social-buttons li a:active {
 
 @media (min-width: 992px) {
     :root {
-        --sidebar-w: 272px;
+        --sidebar-w: 248px;
     }
 
     .site-sidebar {
@@ -1964,9 +1626,9 @@ ul.social-buttons li a:active {
         z-index: 1030;
         display: flex;
         flex-direction: column;
-        width: 272px;
+        width: 248px;
         height: 100vh;
-        padding: 26px 16px 20px;
+        padding: 24px 14px 18px;
         background: var(--site-surface);
         border-right: 1px solid var(--site-border);
         /* Safety valve only: the rail is sized to fit, but a very short
@@ -1981,7 +1643,7 @@ ul.social-buttons li a:active {
     }
 
     body.index {
-        padding-left: 272px;
+        padding-left: 248px;
     }
 
     /* Identity block */
@@ -2000,12 +1662,12 @@ ul.social-buttons li a:active {
     }
 
     .sidebar-avatar {
-        width: 78px;
-        height: 78px;
+        width: 56px;
+        height: 56px;
         border-radius: 50%;
         object-fit: cover;
         border: 2px solid var(--site-border);
-        margin-bottom: 12px;
+        margin-bottom: 10px;
         transition: border-color 0.2s ease;
     }
 
@@ -2085,7 +1747,7 @@ ul.social-buttons li a:active {
     .sidebar-nav li.active a::before {
         content: "";
         position: absolute;
-        left: -16px;
+        left: -14px;
         top: 50%;
         transform: translateY(-50%);
         width: 3px;
@@ -2187,17 +1849,17 @@ ul.social-buttons li a:active {
 /* Wider rail once there is room to spare. */
 @media (min-width: 1600px) {
     .site-sidebar {
-        width: 300px;
-        padding-left: 22px;
-        padding-right: 22px;
+        width: 272px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     body.index {
-        padding-left: 300px;
+        padding-left: 272px;
     }
 
     .sidebar-nav li.active a::before {
-        left: -22px;
+        left: -20px;
     }
 }
 
