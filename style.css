@@ -1943,3 +1943,260 @@ ul.social-buttons li a:active {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================================
+   Desktop sidebar (>=992px). Fixed rail: it never scrolls,
+   only the content to its right does.
+   ============================================================ */
+.site-sidebar {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    :root {
+        --sidebar-w: 272px;
+    }
+
+    .site-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1030;
+        display: flex;
+        flex-direction: column;
+        width: 272px;
+        height: 100vh;
+        padding: 26px 16px 20px;
+        background: var(--site-surface);
+        border-right: 1px solid var(--site-border);
+        /* Safety valve only: the rail is sized to fit, but a very short
+           viewport should never make the CV or theme toggle unreachable. */
+        overflow-y: auto;
+        scrollbar-width: thin;
+    }
+
+    /* Sidebar replaces the top bar on desktop. */
+    .navbar-fixed-top {
+        display: none !important;
+    }
+
+    body.index {
+        padding-left: 272px;
+    }
+
+    /* Identity block */
+    .sidebar-identity {
+        display: block;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-bottom: 6px;
+        border-bottom: 1px solid var(--site-border);
+        text-decoration: none;
+    }
+
+    .sidebar-identity:hover,
+    .sidebar-identity:focus {
+        text-decoration: none;
+    }
+
+    .sidebar-avatar {
+        width: 78px;
+        height: 78px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--site-border);
+        margin-bottom: 12px;
+        transition: border-color 0.2s ease;
+    }
+
+    .sidebar-identity:hover .sidebar-avatar {
+        border-color: var(--site-brand);
+    }
+
+    .sidebar-name {
+        display: block;
+        font-size: 15.5px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        color: var(--site-text);
+        line-height: 1.25;
+    }
+
+    .sidebar-role {
+        display: block;
+        margin-top: 3px;
+        font-size: 11.5px;
+        font-weight: 600;
+        color: var(--site-muted);
+        letter-spacing: 0.01em;
+    }
+
+    /* Nav */
+    .sidebar-nav {
+        flex: 1;
+        min-height: 0;
+        padding-top: 12px;
+    }
+
+    .sidebar-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar-nav li {
+        margin-bottom: 2px;
+    }
+
+    .sidebar-nav a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-size: 13.5px;
+        font-weight: 600;
+        color: var(--site-muted);
+        text-decoration: none;
+        transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .sidebar-nav a i {
+        width: 17px;
+        font-size: 14px;
+        text-align: center;
+        opacity: 0.85;
+    }
+
+    .sidebar-nav a:hover,
+    .sidebar-nav a:focus {
+        background: var(--site-surface-elevated);
+        color: var(--site-text);
+        text-decoration: none;
+    }
+
+    .sidebar-nav li.active a {
+        background: color-mix(in srgb, var(--site-brand) 12%, transparent);
+        color: var(--site-brand-strong);
+    }
+
+    /* Accent bar on the active item */
+    .sidebar-nav li.active a::before {
+        content: "";
+        position: absolute;
+        left: -16px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 19px;
+        border-radius: 0 3px 3px 0;
+        background: var(--site-brand);
+    }
+
+    .sidebar-nav li.active a i {
+        opacity: 1;
+    }
+
+    /* Footer utilities */
+    .sidebar-foot {
+        padding-top: 16px;
+        border-top: 1px solid var(--site-border);
+    }
+
+    .sidebar-cv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 9px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--site-border);
+        background: var(--site-surface-elevated);
+        color: var(--site-text);
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .sidebar-cv:hover,
+    .sidebar-cv:focus {
+        background: var(--site-brand);
+        border-color: var(--site-brand);
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .sidebar-social {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        margin: 12px 0 10px;
+    }
+
+    .sidebar-social a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        color: var(--site-muted);
+        font-size: 15px;
+        text-decoration: none;
+        transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .sidebar-social a:hover,
+    .sidebar-social a:focus {
+        background: var(--site-surface-elevated);
+        color: var(--site-brand-strong);
+        text-decoration: none;
+    }
+
+    .sidebar-theme {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 7px 12px;
+        border-radius: 8px;
+        border: 1px solid transparent;
+        background: transparent;
+        color: var(--site-muted);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .sidebar-theme:hover,
+    .sidebar-theme:focus {
+        background: var(--site-surface-elevated);
+        color: var(--site-text);
+    }
+
+    /* Modals are full-viewport overlays and intentionally cover the rail. */
+    .portfolio-modal.modal {
+        z-index: 1050;
+    }
+}
+
+/* Wider rail once there is room to spare. */
+@media (min-width: 1600px) {
+    .site-sidebar {
+        width: 300px;
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    body.index {
+        padding-left: 300px;
+    }
+
+    .sidebar-nav li.active a::before {
+        left: -22px;
+    }
+}

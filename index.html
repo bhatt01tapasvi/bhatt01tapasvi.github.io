@@ -33,6 +33,43 @@
 
     <body id="page-top" class="index">
 
+    <!-- Desktop-only fixed sidebar -->
+    <aside id="site-sidebar" class="site-sidebar">
+        <a class="sidebar-identity page-scroll" href="#page-top">
+            <img class="sidebar-avatar" src="./img/tapasvi-profile.png" alt="Tapasvi Bhatt">
+            <span class="sidebar-name">Tapasvi Bhatt</span>
+            <span class="sidebar-role">PhD Scholar, NTU Singapore</span>
+        </a>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a class="page-scroll" href="#page-top"><i class="fa fa-home" aria-hidden="true"></i><span>Home</span></a></li>
+                <li><a class="page-scroll" href="#services"><i class="fa fa-th-large" aria-hidden="true"></i><span>Skills</span></a></li>
+                <li><a class="page-scroll" href="#news"><i class="fa fa-newspaper-o" aria-hidden="true"></i><span>News</span></a></li>
+                <li><a class="page-scroll" href="#research"><i class="fa fa-flask" aria-hidden="true"></i><span>Research</span></a></li>
+                <li><a class="page-scroll" href="#projects"><i class="fa fa-cubes" aria-hidden="true"></i><span>Projects</span></a></li>
+                <li><a class="page-scroll" href="#misc"><i class="fa fa-music" aria-hidden="true"></i><span>Misc</span></a></li>
+                <li><a class="page-scroll" href="#about"><i class="fa fa-clock-o" aria-hidden="true"></i><span>Story</span></a></li>
+                <li><a class="page-scroll" href="#contact"><i class="fa fa-envelope-o" aria-hidden="true"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-foot">
+            <a class="sidebar-cv" href="files/CV_Tapasvi_Bhatt (Sept 2024).pdf" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i><span>Curriculum Vitae</span>
+            </a>
+            <div class="sidebar-social">
+                <a href="https://github.com/bhatt01tapasvi" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/tapasvi-bhatt" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                <a href="https://scholar.google.com/citations?user=6h51W0EAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><i class="fa fa-graduation-cap"></i></a>
+                <a href="https://www.youtube.com/@BhattTapasvi" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a>
+            </div>
+            <button class="sidebar-theme" type="button" data-theme-toggle aria-label="Toggle dark mode">
+                <i class="fa fa-moon-o" aria-hidden="true"></i><span data-theme-label>Dark</span>
+            </button>
+        </div>
+    </aside>
+
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -78,10 +115,10 @@
                         <a href="https://www.youtube.com/@BhattTapasvi" target="_blank">YouTube</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="files/CV_Tapasvi_Bhatt (Sept 2024).pdf" target="_blank">CV</a>
+                        <a href="files/CV_Tapasvi_Bhatt (Sept 2024).pdf" target="_blank" rel="noopener noreferrer">CV</a>
                     </li>
                     <li>
-                        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
+                        <button id="theme-toggle" class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"><span data-theme-label>Dark</span></button>
                     </li>
 
                 </ul>
@@ -1991,6 +2028,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="/js/agency.js"></script>
     <script src="/js/theme-toggle.js"></script>
+    <script src="/js/sidebar-nav.js"></script>
 
     <!-- Modal JavaScript -->
     <script>

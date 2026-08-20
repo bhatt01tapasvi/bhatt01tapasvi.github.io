@@ -1,16 +1,30 @@
 (function () {
     var storageKey = "site-theme";
     var root = document.documentElement;
-    var toggleButton = document.getElementById("theme-toggle");
+    var toggleButtons = [].slice.call(document.querySelectorAll("[data-theme-toggle]"));
 
     function applyTheme(theme) {
         var activeTheme = theme === "dark" ? "dark" : "light";
         root.setAttribute("data-theme", activeTheme);
 
-        if (toggleButton) {
-            toggleButton.textContent = activeTheme === "dark" ? "Light" : "Dark";
-            toggleButton.setAttribute("aria-label", activeTheme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-        }
+        var nextLabel = activeTheme === "dark" ? "Light" : "Dark";
+        var ariaLabel = activeTheme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+
+        toggleButtons.forEach(function (button) {
+            var label = button.querySelector("[data-theme-label]");
+            if (label) {
+                label.textContent = nextLabel;
+            } else {
+                button.textContent = nextLabel;
+            }
+
+            var icon = button.querySelector("i.fa");
+            if (icon) {
+                icon.className = activeTheme === "dark" ? "fa fa-sun-o" : "fa fa-moon-o";
+            }
+
+            button.setAttribute("aria-label", ariaLabel);
+        });
     }
 
     function getStoredTheme() {
@@ -32,12 +46,12 @@
     var preferred = getStoredTheme();
     applyTheme(preferred || "dark");
 
-    if (toggleButton) {
-        toggleButton.addEventListener("click", function () {
+    toggleButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
             var current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
             var next = current === "dark" ? "light" : "dark";
             applyTheme(next);
             setStoredTheme(next);
         });
-    }
+    });
 })();
