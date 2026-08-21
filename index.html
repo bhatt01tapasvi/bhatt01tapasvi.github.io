@@ -1,13 +1,32 @@
 <!DOCTYPE html>
-<html data-theme="dark">
+<html>
 
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tapasvi Bhatt</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Tapasvi Bhatt's personal website">
-    <link rel="canonical" href="http://localhost:4000/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tapasvi Bhatt is a PhD researcher at NTU Singapore working on cold-chain thermal systems: phase change materials, insulation, CFD, and machine learning models that predict thermal failure.">
+    <link rel="canonical" href="https://bhatt01tapasvi.github.io/">
+
+    <script>
+        (function () {
+            var stored = null;
+            try { stored = localStorage.getItem("site-theme"); } catch (e) {}
+            var theme = stored || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tapasvi Bhatt">
+    <meta property="og:description" content="PhD researcher at NTU Singapore working on cold-chain thermal systems: phase change materials, insulation, CFD, and machine learning models that predict thermal failure.">
+    <meta property="og:url" content="https://bhatt01tapasvi.github.io/">
+    <meta property="og:image" content="https://bhatt01tapasvi.github.io/img/portfolio/tapasvi-headshot.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tapasvi Bhatt">
+    <meta name="twitter:description" content="PhD researcher at NTU Singapore working on cold-chain thermal systems: phase change materials, insulation, CFD, and machine learning models that predict thermal failure.">
+    <meta name="twitter:image" content="https://bhatt01tapasvi.github.io/img/portfolio/tapasvi-headshot.png">
 
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -32,7 +51,7 @@
     <!-- Desktop-only fixed sidebar -->
     <aside id="site-sidebar" class="site-sidebar">
         <a class="sidebar-identity page-scroll" href="#page-top">
-            <img class="sidebar-avatar" src="./img/tapasvi-profile.png" alt="Tapasvi Bhatt">
+            <img class="sidebar-avatar" src="img/portfolio/tapasvi-headshot.png" alt="Tapasvi Bhatt">
             <span class="sidebar-name">Tapasvi Bhatt</span>
             <span class="sidebar-role">PhD Scholar, NTU Singapore</span>
         </a>
@@ -40,19 +59,19 @@
         <nav class="sidebar-nav">
             <ul>
                 <li><a class="page-scroll" href="#page-top"><i class="fa fa-home" aria-hidden="true"></i><span>Home</span></a></li>
-                <li><a class="page-scroll" href="#services"><i class="fa fa-th-large" aria-hidden="true"></i><span>Skills</span></a></li>
-                <li><a class="page-scroll" href="#news"><i class="fa fa-newspaper-o" aria-hidden="true"></i><span>News</span></a></li>
                 <li><a class="page-scroll" href="#research"><i class="fa fa-flask" aria-hidden="true"></i><span>Research</span></a></li>
+                <li><a class="page-scroll" href="#experience"><i class="fa fa-briefcase" aria-hidden="true"></i><span>Experience</span></a></li>
+                <li><a class="page-scroll" href="#teaching"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>Teaching</span></a></li>
+                <li><a class="page-scroll" href="#awards"><i class="fa fa-newspaper-o" aria-hidden="true"></i><span>Awards</span></a></li>
                 <li><a class="page-scroll" href="#projects"><i class="fa fa-cubes" aria-hidden="true"></i><span>Projects</span></a></li>
-                <li><a class="page-scroll" href="#misc"><i class="fa fa-music" aria-hidden="true"></i><span>Misc</span></a></li>
-                <li><a class="page-scroll" href="#about"><i class="fa fa-clock-o" aria-hidden="true"></i><span>Story</span></a></li>
+                <li><a class="page-scroll" href="#about"><i class="fa fa-clock-o" aria-hidden="true"></i><span>Background</span></a></li>
                 <li><a class="page-scroll" href="#contact"><i class="fa fa-envelope-o" aria-hidden="true"></i><span>Contact</span></a></li>
             </ul>
         </nav>
 
         <div class="sidebar-foot">
-            <a class="sidebar-cv" href="files/CV_Tapasvi_Bhatt (Sept 2024).pdf" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i><span>Curriculum Vitae</span>
+            <a class="sidebar-cv" href="outside.html">
+                <i class="fa fa-compass" aria-hidden="true"></i><span>Outside the lab</span>
             </a>
             <div class="sidebar-social">
                 <a href="https://github.com/bhatt01tapasvi" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa fa-github"></i></a>
@@ -87,31 +106,28 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Skills</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#news">News</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#research">Research</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#experience">Experience</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#teaching">Teaching</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#awards">Awards</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#projects">Projects</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#misc">Misc</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">Story</a>
+                        <a class="page-scroll" href="#about">Background</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/@BhattTapasvi" target="_blank">YouTube</a>
-                    </li>
-                    <li>
-                        <a href="files/CV_Tapasvi_Bhatt (Sept 2024).pdf" target="_blank" rel="noopener noreferrer">CV</a>
+                        <a href="outside.html">Outside the lab</a>
                     </li>
                     <li>
                         <button id="theme-toggle" class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"><span data-theme-label>Dark</span></button>
@@ -125,92 +141,248 @@
     </nav>
 
     <!-- Intro Section -->
-    <section id = "intro" class="bg-black">
+    <section id="top" class="hero-section">
         <div class="container">
-            <div class="row">
-                <div class="intro-text">
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                    </div>
-               
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-    
-                        <br>
-                        <br>
-    
-                        <!-- Profile Image - Centered and Resized -->
-                        <p class="intro-profile-wrap" align="center">
-                            <img src="./img/tapasvi-profile.png" 
-                                 alt="Tapasvi Profile" 
-                                 class="intro-profile-image">
-                        </p>
-    
-                        <br><br>
-    
-                        <p class="text-intro intro-lead">Hey, I am Tapasvi. I did Mechanical from BITS Pilani, where I worked with <a href="https://www.bits-pilani.ac.in/pilani/suvanjan-bhattacharyya/" target="_blank">Dr. Suvanjan Bhattacharyya</a> on thermal systems. Right now I am doing my PhD in Mechanical and Aerospace at NTU Singapore with <a href="https://scholar.google.com/citations?user=9QW1LYAAAAAJ&hl=en" target="_blank">Prof. Eddie</a>. My day-to-day stack is cold-chain logistics, PCM behavior, sensor telemetry, and ML forecasting. Basically heat transfer core plus real-world deployment mode.</p>
-    
-                        <br>
-    
-                        <p class="intro-contact">Hit me at <a href="mailto:tapasvi001@e.ntu.edu.sg">tapasvi001 |at| e.ntu.edu.sg</a>.</p>
-    
+            <div class="row hero-row">
+                <div class="col-lg-7 col-md-7">
+                    <p class="hero-eyebrow">PhD Researcher, Mechanical &amp; Aerospace Engineering, NTU Singapore</p>
+                    <h1>Tapasvi Bhatt</h1>
+                    <p class="hero-lede">I work on keeping vaccines and other temperature-sensitive goods cold without power: phase change materials, passive insulation, and CFD simulation, tied together with machine learning models that flag a cold-chain failure before it happens. Earlier work covered heat transfer enhancement with magnetic nanofluids and vibration, under <a href="https://www.bits-pilani.ac.in/pilani/suvanjan-bhattacharyya/" target="_blank" rel="noopener noreferrer">Dr. Suvanjan Bhattacharyya</a> at BITS Pilani. Now at NTU Singapore with <a href="https://scholar.google.com/citations?user=9QW1LYAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Prof. Eddie Yin Kwee Ng</a>.</p>
+                    <p class="hero-chip"><i class="fa fa-trophy" aria-hidden="true"></i> Mettler-Toledo Innovator Award 2026 &mdash; one of two global winners</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="mailto:tapasvi001@e.ntu.edu.sg">Email me</a>
+                        <a class="btn btn-default" href="#research">See the research</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>    
-
-
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Main Things I Am Into</h2>
-                    <h3 class="section-subheading text-muted">Research, music, chess, and bike rides. This is the core vibe.</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-3 col-sm-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-flask fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Research</h4>
-                    <p class="text-muted">Heat transfer, cold-chain intelligence, CFD, and ML pipelines. Deep tech with real deployment focus.</p>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-music fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Music</h4>
-                    <p class="text-muted">Music is my reset button. Vocals, guitar, keys, and random jam sessions whenever lab life gets too intense.</p>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Chess</h4>
-                    <p class="text-muted">I play chess on lichess because open-source energy is elite. You can catch me at <a href="https://lichess.org/bhatt01tapasvi" target="_blank">my lichess profile</a>.</p>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-motorcycle fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Bike Rides</h4>
-                    <p class="text-muted">Late-night rides, highway flow, and pure throttle therapy. Two wheels keep my head clear.</p>
+                <div class="col-lg-5 col-md-5 hero-photo-col">
+                    <img class="hero-photo" src="img/portfolio/tapasvi-headshot.png" alt="Tapasvi Bhatt">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="news">
+    <!-- Focus Section -->
+    <section id="focus">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">News &amp; Achievements</h2>
-                    <h3 class="section-subheading text-muted">Awards, press coverage, and the occasional podcast.</h3>
+                <div class="col-lg-12">
+                    <h2 class="section-heading">What I work on</h2>
+                    <h3 class="section-subheading text-muted">Three threads that run through the research below.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 focus-card-col">
+                    <div class="focus-card">
+                        <h4>Thermal Systems &amp; Phase Change Materials</h4>
+                        <p>Formulating and testing the materials that hold a cold chain together: PCM additives, passive insulation, and hardware validated under tropical conditions, not just in simulation.</p>
+                        <div class="focus-tags">
+                            <span>PCM Formulation</span>
+                            <span>Passive Insulation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 focus-card-col">
+                    <div class="focus-card">
+                        <h4>Simulation &amp; Modelling</h4>
+                        <p>CFD in ANSYS Fluent for the physics, and a reduced-order Lattice Boltzmann model when full CFD is too slow for fast design iteration.</p>
+                        <div class="focus-tags">
+                            <span>ANSYS Fluent</span>
+                            <span>Lattice Boltzmann</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 focus-card-col">
+                    <div class="focus-card">
+                        <h4>Machine Learning for Physical Systems</h4>
+                        <p>Neural networks trained on simulation data to predict how a physical system will behave in real time, fast enough to act on before something fails.</p>
+                        <div class="focus-tags">
+                            <span>Neural Networks</span>
+                            <span>IoT Telemetry</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Work Section -->
+    <section id="research" class="section--panel">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading">Research</h2>
+                    <h3 class="section-subheading text-muted">Keeping temperature-sensitive goods cold without power: materials, simulation, and failure prediction.</h3>
+                </div>
+            </div>
+
+            <div class="row research-lead-row">
+                <div class="col-md-5">
+                    <img class="research-lead-photo" src="img/portfolio/research-cryomove.jpg" alt="Neural network concept for cold-chain failure prediction">
+                </div>
+                <div class="col-md-7">
+                    <h3 class="research-lead-title">Cold-chain thermal systems</h3>
+                    <p>Vaccines and other temperature-sensitive goods have to stay within a narrow range from factory to clinic, often without reliable power along the way. My work covers the full chain: the phase change material that holds the temperature, the insulation around it, and a neural network (CRYOMOVE) trained on ANSYS Fluent simulation data that reads live sensor data and predicts a temperature failure before it happens, not after.</p>
+                    <ul class="research-outcomes">
+                        <li>Passive insulation holds sub-5&deg;C for 7 days versus the usual 2-3, with no power input</li>
+                        <li>Dual-layer foil insulation cuts heat gain by 57%</li>
+                        <li>A 5% glycerol additive extends the safe cooling window by roughly 20 hours</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row research-card-row">
+                <div class="col-md-6 research-card-col">
+                    <div class="research-card">
+                        <img src="img/portfolio/research-pcm.jpg" alt="Phase change material sample">
+                        <div class="research-card-body">
+                            <h4>PCM Formulation</h4>
+                            <p>Adding 5% glycerol to n-tetradecane, a common cold-chain PCM, stretches the safe cooling window from about 123 to about 144 hours, a simple material change with no new hardware.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 research-card-col">
+                    <div class="research-card">
+                        <img src="img/portfolio/research-insulation.jpg" alt="Multilayer foil insulation">
+                        <div class="research-card-body">
+                            <h4>Passive Insulation</h4>
+                            <p>Epoxy coatings and multilayer aluminium foil on eutectic cold boxes, tested at 32-34&deg;C and 75-85% humidity. Dual-layer foil cuts heat gain by 57% with no power input.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 research-card-col">
+                    <div class="research-card">
+                        <img src="img/portfolio/research-simulation.jpg" alt="Reduced-order simulation visualization">
+                        <div class="research-card-body">
+                            <h4>Fast Simulation</h4>
+                            <p>A reduced-order Lattice Boltzmann model that runs a fast 2D GPU simulation with a physics-informed correction for the 3D heat paths full CFD would otherwise be needed for.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 research-card-col">
+                    <div class="research-card">
+                        <img src="img/portfolio/research-biomaterials.jpg" alt="Mycelium bio-based insulation material">
+                        <div class="research-card-body">
+                            <h4>Bio-Based Materials</h4>
+                            <p>Mycelium grown on waste cardboard, rice husk, and oats into a bio-fiber insulation envelope: hydrophobic, fire-resistant, fully biodegradable, and comparable to foam on insulating performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="research-earlier">
+                        <h4>Earlier work</h4>
+                        <div class="research-earlier-row">
+                            <img src="img/portfolio/vibration_magnet_channel_effect.gif" alt="Magnetic nanofluid vibration simulation">
+                            <p>Heat transfer enhancement in mini-channel coolers using magnetic nanofluids and vibration, published in <a href="https://doi.org/10.1016/j.rineng.2023.101473" target="_blank" rel="noopener noreferrer">Results in Engineering</a> and <a href="https://doi.org/10.1080/10407782.2024.2382492" target="_blank" rel="noopener noreferrer">Numerical Heat Transfer</a>, with Dr. Suvanjan Bhattacharyya at BITS Pilani.</p>
+                        </div>
+                        <div class="research-earlier-row">
+                            <img src="img/portfolio/piv.gif" alt="Particle image velocimetry flow field">
+                            <p>Particle image velocimetry and cross-correlation tracking for flow field reconstruction and collective motion in biological swarms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="scholar-strip">
+                        <div class="scholar-stat"><span class="scholar-num">12</span><span class="scholar-label">Publications</span></div>
+                        <div class="scholar-stat"><span class="scholar-num">50</span><span class="scholar-label">Citations</span></div>
+                        <div class="scholar-stat"><span class="scholar-num">3</span><span class="scholar-label">h-index</span></div>
+                        <div class="scholar-strip-link">
+                            <a href="https://scholar.google.com/citations?user=6h51W0EAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">View full profile on Google Scholar &rarr;</a>
+                            <span class="scholar-asof">as of August 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading">Industry experience</h2>
+                    <h3 class="section-subheading text-muted">Where the physics met a live plant.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="exp-list">
+                        <div class="exp-row">
+                            <div class="exp-date">May&ndash;Jul 2022</div>
+                            <div class="exp-body">
+                                <h4>Thermal Power Plant Intern <span class="exp-org">&middot; JSW Energy, Mumbai</span></h4>
+                                <ul>
+                                    <li>Identified boiler tube leakage prevention measures for JSW Energy's thermal plants, projected at up to USD 16 million in annual savings.</li>
+                                    <li>Two of the proposed measures were implemented by JSW Energy.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="exp-row">
+                            <div class="exp-date">May&ndash;Jun 2020</div>
+                            <div class="exp-body">
+                                <h4>Machine Learning Intern <span class="exp-org">&middot; Bharat Petroleum Corporation Limited, Mumbai</span></h4>
+                                <ul>
+                                    <li>Built regression and neural-network models to predict unit performance for the diesel hydrodesulphurisation and fluid catalytic cracking units.</li>
+                                    <li>Owned the pipeline end to end: cleaning plant data, feature engineering, training, and validating against live readings. One model was approved and put into production.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="exp-row">
+                            <div class="exp-date">Nov&ndash;Dec 2023</div>
+                            <div class="exp-body">
+                                <h4>Project Associate <span class="exp-org">&middot; Indian Institute of Science (IISc)</span></h4>
+                                <ul>
+                                    <li>Short research stint bridging into cold-chain thermal work ahead of the PhD at NTU.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Section -->
+    <section id="teaching" class="section--panel">
+        <div class="container">
+            <div class="row teaching-row">
+                <div class="col-md-7">
+                    <p class="section-eyebrow">Teaching</p>
+                    <h2 class="section-heading">Heat Transfer Tutorials, NTU Singapore</h2>
+                    <p>I run a recorded tutorial series for the Heat Transfer course at NTU, covering thermal resistances and fins, the lumped capacitance model, forced and natural convection, internal flow, and heat exchangers. Lecture notes are open on GitHub. Before NTU, I was a teaching assistant for Mechanisms and Machines at BITS Pilani (Fall 2021), working alongside <a href="https://in.linkedin.com/in/mallar-dasgupta-285237233" target="_blank" rel="noopener noreferrer">Mallar Dasgupta</a>.</p>
+                    <ul class="teaching-list">
+                        <li><strong>Fall 2025 &amp; Spring 2025</strong> &mdash; Heat Transfer, NTU Singapore</li>
+                        <li><strong>Fall 2024</strong> &mdash; Fluid Mechanics, NTU Singapore</li>
+                        <li><strong>Fall 2021</strong> &mdash; Mechanisms and Machines (TA), BITS Pilani</li>
+                    </ul>
+                    <div class="teaching-actions">
+                        <a class="btn btn-primary" href="https://www.youtube.com/playlist?list=PL1SY5NzQUT1k48yDNJFPJyiEqj06x3Poy" target="_blank" rel="noopener noreferrer">Watch the playlist</a>
+                        <a class="btn btn-default" href="https://github.com/bhatt01tapasvi/Heat-Transfer-Fall-2025-" target="_blank" rel="noopener noreferrer">Lecture notes on GitHub</a>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <a class="teaching-thumb-link" href="https://www.youtube.com/playlist?list=PL1SY5NzQUT1k48yDNJFPJyiEqj06x3Poy" target="_blank" rel="noopener noreferrer">
+                        <img class="teaching-thumb" src="img/teaching/heat-transfer-thumb.jpg" alt="Heat Transfer lecture recording: boundary layer derivation">
+                        <span class="teaching-thumb-play"><i class="fa fa-play" aria-hidden="true"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading">Awards and press</h2>
+                    <h3 class="section-subheading text-muted">Third-party validation for the work above.</h3>
                 </div>
             </div>
             <div class="row">
@@ -225,27 +397,14 @@
                             <div class="news-body">
                                 <span class="news-date">May 2026</span>
                                 <h4>Mettler-Toledo Innovator Award</h4>
-                                <p>One of two global winners in 2026, USD 20,000 prize, for biodegradable mycelium insulation and thermal/digital modelling work in cold-chain logistics. Sharing the honor with Prof. Carlos Díaz Marín (Stanford).</p>
+                                <p>One of two global winners in 2026, USD 20,000 prize, for biodegradable mycelium insulation and thermal/digital modelling work in cold-chain logistics. Sharing the honor with Prof. Carlos D&iacute;az Mar&iacute;n (Stanford).</p>
                                 <a href="#portfolioModalMT" data-toggle="modal" class="news-link">Full story &rarr;</a>
                             </div>
                         </div>
 
                         <div class="news-card">
-                            <div class="news-photo-wrap" style="--bg-img:url('img/news/lower-street-podcast.jpg')">
-                                <img class="news-photo" src="img/news/lower-street-podcast.jpg" alt="Recording the Lower Street podcast episode over video call">
-                                <span class="news-tag tag-upcoming">Upcoming</span>
-                            </div>
-                            <div class="news-body">
-                                <span class="news-date">2026</span>
-                                <h4>Mycelium Work on the Lower Street Podcast</h4>
-                                <p>The bio-fiber insulation work got picked up by Lower Street for a podcast episode. Recorded, not yet released.</p>
-                                <span class="news-pending">Link coming once it's live</span>
-                            </div>
-                        </div>
-
-                        <div class="news-card">
-                            <div class="news-photo-wrap" style="--bg-img:url('img/news/japan-award.jpg')">
-                                <img class="news-photo" src="img/news/japan-award.jpg" alt="Best Innovation award certificate from University of Tokyo summer camp">
+                            <div class="news-photo-wrap" style="--bg-img:url('img/news/utokyo-award.jpg')">
+                                <img class="news-photo" src="img/news/utokyo-award.jpg" alt="Presenting the plastic separation system methodology at the University of Tokyo summer camp">
                                 <span class="news-tag tag-award">Award</span>
                             </div>
                             <div class="news-body">
@@ -266,6 +425,19 @@
                                 <h4>Chinese Media Coverage</h4>
                                 <p>Thermal imaging work for breast cancer detection featured on Chinese TV and in print.</p>
                                 <a href="https://www.8world.com/in-depth/morning-express/health-breast-cancer-detection-2602821" target="_blank" rel="noopener noreferrer" class="news-link">Watch coverage &rarr;</a>
+                            </div>
+                        </div>
+
+                        <div class="news-card">
+                            <div class="news-photo-wrap" style="--bg-img:url('img/news/lower-street-podcast.jpg')">
+                                <img class="news-photo" src="img/news/lower-street-podcast.jpg" alt="Recording the Lower Street podcast episode over video call">
+                                <span class="news-tag tag-upcoming">Upcoming</span>
+                            </div>
+                            <div class="news-body">
+                                <span class="news-date">2026</span>
+                                <h4>Mycelium Work on the Lower Street Podcast</h4>
+                                <p>The bio-fiber insulation work was picked up by <a href="https://lowerstreet.co/" target="_blank" rel="noopener noreferrer">Lower Street</a>, a London-based podcast production company, for an upcoming episode. Recorded, not yet released.</p>
+                                <span class="news-pending">Link coming once it's live</span>
                             </div>
                         </div>
 
@@ -299,132 +471,12 @@
         </div>
     </section>
 
-    <!-- Work Section -->
-    <section id="research" class="bg-light-gray">
+    <section id="projects">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Research</h2>
-                    <h3 class="section-subheading text-muted">Heat transfer, flow physics, and cold chain intelligence, from simulation to the field.</h3>
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal15" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/vibration_magnet_channel_effect.gif" class="img-responsive img-centered" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Heat Transfer Enhancement</h4>
-                        <p class="text-muted">Magnetic nanofluids and vibration to push more heat out of mini-channel coolers</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal14" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/piv.gif" class="img-responsive img-centered" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Particle Image Velocimetry</h4>
-                        <p class="text-muted">Tracking flow fields and collective motion frame by frame</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal13" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/research-cryomove.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>CRYOMOVE</h4>
-                        <p class="text-muted">A neural network predicts when a vaccine box will fail, before it does</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal16" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/research-pcm.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>PCM Formulation</h4>
-                        <p class="text-muted">Tweaking the ice itself so it melts slower and holds temperature longer</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal17" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/research-insulation.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Passive Insulation</h4>
-                        <p class="text-muted">Coatings and foil layers that keep boxes cold for a week, no power needed</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal18" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/research-simulation.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Fast Simulation</h4>
-                        <p class="text-muted">GPU flow models that get 3D accuracy for a fraction of the compute cost</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal19" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/research-biomaterials.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Bio-Based Materials</h4>
-                        <p class="text-muted">Growing insulation out of mushroom roots and farm waste instead of foam</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="projects" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12">
                     <h2 class="section-heading">Projects</h2>
-                    <h3 class="section-subheading text-muted">Build logs from classes, labs, collabs, and random 2am idea sprints.</h3>
+                    <h3 class="section-subheading text-muted">Course projects, collaborations, and side builds.</h3>
                 </div>
             </div>
             <div class="row">
@@ -439,13 +491,13 @@
                         <img src="img/portfolio/japan5_resized.png" class="img-responsive img-centered" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Plastic Segregator: U_Tokyo</h4>
-                        <p class="text-muted">Waste Segregation, Plastic Differentiation</p>
+                        <h4>Plastic Segregator, UTokyo</h4>
+                        <p class="text-muted">3-in-1 waste sorting system, built at the UTokyo summer camp</p>
                     </div>
                 </div>
             
                 <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="https://github.com/joon-ko/interval" class="portfolio-link" data-toggle="modal">
+                    <a href="https://github.com/joon-ko/interval" class="portfolio-link" target="_blank" rel="noopener noreferrer">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -460,7 +512,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="https://github.com/ndevasia/AirGuitar" class="portfolio-link" data-toggle="modal">
+                    <a href="https://github.com/ndevasia/AirGuitar" class="portfolio-link" target="_blank" rel="noopener noreferrer">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -475,7 +527,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="https://devpost.com/software/pixel-hero" class="portfolio-link" data-toggle="modal">
+                    <a href="https://devpost.com/software/pixel-hero" class="portfolio-link" target="_blank" rel="noopener noreferrer">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -490,7 +542,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="https://github.com/ndevasia/final-fantasy-network" class="portfolio-link" data-toggle="modal">
+                    <a href="https://github.com/ndevasia/final-fantasy-network" class="portfolio-link" target="_blank" rel="noopener noreferrer">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -505,7 +557,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="https://github.com/bhatt01tapasvi/Horn_and_Schunck_Python_Implementation" class="portfolio-link" data-toggle="modal">
+                    <a href="https://github.com/bhatt01tapasvi/Horn_and_Schunck_Python_Implementation" class="portfolio-link" target="_blank" rel="noopener noreferrer">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -524,78 +576,19 @@
     </section>
 
     <!--Miscellaneous section-->
-    <section id="misc" class="bg-light-gray">
+    <!-- Outside the lab -->
+    <section id="outside" class="section--panel section--compact">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Miscellaneous</h2>
-                    <h3 class="section-subheading text-muted">Side quests that keep me sane: music, bikes, and teaching mode.</h3>
-                </div>
-            </div>
-            <div class="row">
-
-                <!-- <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal11" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
+                <div class="col-lg-12">
+                    <div class="outside-card">
+                        <div class="outside-card-text">
+                            <h3>Outside the lab</h3>
+                            <p>Music, motorcycles, and chess live on a separate page, since they don't belong next to a job application.</p>
                         </div>
-                        <img src="img/portfolio/streaming.png" class="img-responsive img-centered" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Streaming</h4>
-                        <p class="text-muted">Twitch, Content creation</p>
-                    </div>
-                </div> -->
-            
-
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/ohms.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Music</h4>
-                        <p class="text-muted">Singing, Guitar, Acapella</p>
+                        <a class="btn btn-default" href="outside.html">Take a look &rarr;</a>
                     </div>
                 </div>
-
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/biking_cropped.png" class="img-responsive img-centered" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Bike Rides</h4>
-                        <p class="text-muted">Night, Speed, Thrill</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/teaching.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Teaching</h4>
-                        <p class="text-muted">HT, FM, M&M</p>
-                    </div>
-                </div>
-                
-            
             </div>
         </div>
     </section>
@@ -604,39 +597,25 @@
     <section id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">The Ride So Far</h2>
-                    <h3 class="section-subheading text-muted">Quick timeline. More updates soon.</h3>
+                <div class="col-lg-12">
+                    <h2 class="section-heading">Background</h2>
+                    <h3 class="section-subheading text-muted">Education and the path here.</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <ul class="timeline">
+                    <ul class="timeline timeline-single">
                         <li>
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="img/about/bits.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2018</h4>
-                                    <h4 class="subheading">Joined BITS Pilani</h4>
+                                    <h4>2018&ndash;2023</h4>
+                                    <h4 class="subheading">BE Mechanical, BITS Pilani</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Started engineering at BITS Pilani. Thought cracking JEE would auto-solve life. It did not.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/gif.gif" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2019</h4>
-                                    <h4 class="subheading">Grade Crash</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Grades crashed, motivation crashed, then recovery arc started. Had to actually study for real.</p>
+                                    <p class="text-muted">CGPA 8.4/10. Worked with Dr. Suvanjan Bhattacharyya on heat transfer enhancement through most of the degree.</p>
                                 </div>
                             </div>
                         </li>
@@ -647,52 +626,38 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Summer 2020</h4>
-                                    <h4 class="subheading">Intern at Bharat Petroleum Corporation Limited</h4>
+                                    <h4 class="subheading">Machine Learning Intern, BPCL</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">First real industry stint at BPCL Mumbai. Learned refinery workflows, some ML, and how to stay calm in live plant environments.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/asme.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2020-2022</h4>
-                                    <h4 class="subheading">Chairperson, ASME BITS Pilani</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Led a 35 to 40 member team. Ran water-rocket events and pushed ASME's first online global event during lockdown.</p>
+                                    <p class="text-muted">Refinery ML models at Bharat Petroleum Corporation Limited, Mumbai. Detail in the Experience section above.</p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/ta.jpg" alt="">
+                                <img class="img-circle img-responsive" src="img/about/asme.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Fall 2021</h4>
-                                    <h4 class="subheading">Teaching Assistant</h4>
+                                    <h4>2020&ndash;2022</h4>
+                                    <h4 class="subheading">Chairperson, ASME BITS Pilani</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Teaching assistant for Mechanisms and Machines at BITS. This photo's from NTU where we did a skit instead of slides. I'm the one in the helmet, <a href="https://in.linkedin.com/in/mallar-dasgupta-285237233" target="_blank" rel="noopener noreferrer">Mallar</a> played the professor.</p>
+                                    <p class="text-muted">Led a 35 to 40 member team and ran ASME's first online global event, with participation from 23 countries and ASME's CEO Thomas Costabile.</p>
                                 </div>
                             </div>
                         </li>
-                        <li class="timeline-inverted">
+                        <li>
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="img/about/jsw.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>May-Jul 2022</h4>
-                                    <h4 class="subheading">Intern at JSW Energy Ltd</h4>
+                                    <h4>May&ndash;Jul 2022</h4>
+                                    <h4 class="subheading">Thermal Power Plant Intern, JSW Energy</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Summer at JSW Energy across Mumbai and Barmer. Worked on thermal plant and boiler performance with cost-saving proposals.</p>
+                                    <p class="text-muted">Boiler tube leakage prevention across Mumbai and Barmer plants. Detail in the Experience section above.</p>
                                 </div>
                             </div>
                         </li>
@@ -702,26 +667,11 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Nov-Dec 2023</h4>
-                                    <h4 class="subheading">Project Associate at IISc</h4>
+                                    <h4>Nov&ndash;Dec 2023</h4>
+                                    <h4 class="subheading">Project Associate, IISc</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Short stint at IISc as project associate. Learned fast, pivoted fast, moved on with clarity.</p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/firstSingapore.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>Jan 2024</h4>
-                                    <h4 class="subheading">First Time in Singapore</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">First time in Singapore with my friend Abhishek. Two Indians trying to decode a new country, one meal at a time.</p>
+                                    <p class="text-muted">Short research stint at the Indian Institute of Science, bridging into the cold-chain thermal work that became the PhD at NTU.</p>
                                 </div>
                             </div>
                         </li>
@@ -731,19 +681,12 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2024-Present</h4>
-                                    <h4 class="subheading">PhD Student at NTU Singapore</h4>
+                                    <h4>2024&ndash;Present</h4>
+                                    <h4 class="subheading">PhD, Mechanical &amp; Aerospace Engineering, NTU Singapore</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Started PhD at NTU in Mechanical and Aerospace. Also tutoring Fluid Dynamics and Heat Transfer with full concept-first mode.</p>
+                                    <p class="text-muted">Cold-chain thermal systems with Prof. Eddie Yin Kwee Ng. Also declined funded PhD offers from the University of Minnesota (Distinguished Scholar Award) and UT Austin (Cockrell School Fellowship) to take this position.</p>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>To Be
-                                    <br>Continued
-                                    <br>...</h4>
                             </div>
                         </li>
                     </ul>
@@ -755,17 +698,16 @@
     <section id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12">
                     <h2 class="section-heading">Contact</h2>
-
-                    <p class="contact-note">Open to collabs, research chats, and random nerdy ideas.</p>
+                    <p class="contact-note">Open to research collaborations and industry conversations.</p>
                     <p class="contact-mail"><a href="mailto:tapasvi001@e.ntu.edu.sg">tapasvi001 |at| e.ntu.edu.sg</a></p>
                     <p class="contact-location">Nanyang Technological University | Singapore</p>
-                        <br><br><ul class="list-inline social-buttons">
-                        <li><a href="https://github.com/bhatt01tapasvi" target="_blank"><i class="fa fa-github"></i></a>
+                    <ul class="list-inline social-buttons">
+                        <li><a href="https://github.com/bhatt01tapasvi" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa fa-github"></i></a>
                         </li>
-                        <li><a href="https://www.linkedin.com/in/tapasvi-bhatt" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="https://scholar.google.com/citations?user=6h51W0EAAAAJ&hl=en" target="_blank"><i class="fa fa-graduation-cap"></i></a>
+                        <li><a href="https://www.linkedin.com/in/tapasvi-bhatt" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://scholar.google.com/citations?user=6h51W0EAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><i class="fa fa-graduation-cap"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -798,273 +740,6 @@
 
      <!-- Portfolio Modals -->
  
-    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                  <div class="col-lg-10 col-lg-offset-1">
-                    <div class="modal-body">
-                                            <h2>Bike Rides</h2>
-                      <div class="left-align">
-                        <hr class="star-primary">
-                                                <p>I have been into bikes since Jaipur days. First ride was a Hero Glamour 125cc. Not a beast, but pure vibe. I learned basic wrenching there: carb, plugs, engine tone, all that garage stuff.</p>
-                                                <p>Then came Ignitor. Better pull, smoother shifts, and many Jaipur to Pilani runs. That machine got stolen later, still hurts.</p>
-                                                <p>Now in Singapore I ride a Honda CB190X. License cap is 200cc, so this is my max-spec legal setup here. For me it is perfect: upright ergonomics, stable suspension, clean throttle response, and chill long-run comfort. Late-night empty roads are elite therapy mode.</p>
-                                                <p>Sometimes I record rides too. Sample below.</p>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/CBJwe_eEXx4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                      </div>
-                      <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <h2>Music</h2>
-                            <div class="left-align">
-                                <hr class="star-primary">
-                                <p>Music has been a long side quest. I started with harmonium and vocals as a kid, paused for a while, then came back hard with keys and guitar in college. Mostly self-driven grind, jam-heavy learning, and random stage gigs.</p>
-                                
-                                <h3>Performances (Public and Personal)</h3>
-                                
-                                <div class="portfolio-list">
-                                    <ul>
-                                        <li>
-                                            Here is me performing Despacito at BITS. My sidekick here is 
-                                            <a href="https://www.linkedin.com/in/umang-jain-09273b1aa/" target="_blank" rel="noopener noreferrer">Umang Jain</a>.
-                                        </li>
-
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Md-GjchfDAo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                                        <li>
-                                            (The ones who are hilariously shouting out curses in Hindi in the background are my wingmates: 
-                                            <a href="https://www.linkedin.com/in/siddharth-gupta3001/" target="_blank" rel="noopener noreferrer">Siddharth Gupta (aka Siddhu/Rajjo)</a>, 
-                                            <a href="https://www.linkedin.com/in/ananya-varma-8b7157186/" target="_blank" rel="noopener noreferrer">Ananya Varma (aka Madhya Pradesh)</a>, 
-                                            <a href="https://www.linkedin.com/in/muhtashim-rafiqi-9483ab187/" target="_blank" rel="noopener noreferrer">Muhtashim Rafiqi (aka Mushi)</a>, and 
-                                            <a href="https://www.linkedin.com/in/pranav-pranav/" target="_blank" rel="noopener noreferrer">Pranav (Naam hi kaafi hai, haina?)</a>).
-                                        </li>
-                                        <br>
-                                        <li>
-                                            Here is a sample from my late-night no-sleep recording sessions.
-                                        </li>
-
-                                            <iframe width="315" height="560" src="https://www.youtube.com/embed/Bcnjws-iEIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                                        <br>
-
-                                        <li>The song: Labon Ko. I've added the guitar, the vocals and the beatboxing (weird) layers separately.
-                                        <br>
-                                        <audio controls>
-                                          <source src="files/with drumsBass.mp3" type="audio/mpeg">
-                                        Your browser does not support the audio element.
-                                        </audio>
-                                        </li>
-
-                                        <li>
-                                            I have tons of clips like this with guitar, keys, vocals, and beatbox attempts. I will keep updating this section.
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <h3>The Cover Wall</h3>
-                                <p class="music-wall-intro">Not one session, not one night. These are separate recordings from different days, sometimes solo and sometimes because someone showed up and got roped into it. A couple of these I recorded twice, on different days, because I wasn't done arguing with myself about how the song should go. Consider it an ongoing, unglamorous archive rather than a discography.</p>
-
-                                <div class="music-wall">
-                                    <div class="poster-card duo-1" style="--tilt: -2deg">
-                                        <img class="poster-photo" src="img/portfolio/music/kaise-hua.jpg" alt="">
-                                        <div class="poster-tint"></div>
-                                        <div class="poster-shade"></div>
-                                        <div class="poster-content">
-                                            <span class="poster-tag">Solo</span>
-                                            <h4>Kaise Hua</h4>
-                                            <p>Just guitar and vocals, recorded on its own on an ordinary evening. No band, no plan.</p>
-                                            <audio controls preload="none">
-                                                <source src="files/music/kaise-hua.mp3" type="audio/mpeg">
-                                            Your browser does not support the audio element.
-                                            </audio>
-                                        </div>
-                                    </div>
-
-                                    <div class="poster-card duo-2 tall" style="--tilt: 1.5deg">
-                                        <img class="poster-photo" src="img/portfolio/music/darkhaast-solo.jpg" alt="">
-                                        <div class="poster-tint"></div>
-                                        <div class="poster-shade"></div>
-                                        <div class="poster-content">
-                                            <span class="poster-tag">Solo · Voice Recorder</span>
-                                            <h4>Darkhaast</h4>
-                                            <p>A quiet solo take, recorded alone into a plain voice recorder. Raw, no multitrack, no cleanup.</p>
-                                            <audio controls preload="none">
-                                                <source src="files/music/darkhaast-solo.m4a" type="audio/mp4">
-                                            Your browser does not support the audio element.
-                                            </audio>
-                                        </div>
-                                    </div>
-
-                                    <div class="poster-card duo-3" style="--tilt: -1.5deg">
-                                        <img class="poster-photo" src="img/portfolio/music/darkhaast-mushi.jpg" alt="">
-                                        <div class="poster-tint"></div>
-                                        <div class="poster-shade"></div>
-                                        <div class="poster-content">
-                                            <span class="poster-tag">Retake</span>
-                                            <h4>Darkhaast, Again</h4>
-                                            <p>A separate recording, made later, after
-                                                <a href="https://www.linkedin.com/in/muhtashim-rafiqi-9483ab187/" target="_blank" rel="noopener noreferrer">Mushi</a> visited and I decided the first take wasn't it.</p>
-                                            <audio controls preload="none">
-                                                <source src="files/music/darkhaast-with-mushi.mp3" type="audio/mpeg">
-                                            Your browser does not support the audio element.
-                                            </audio>
-                                        </div>
-                                    </div>
-
-                                    <div class="poster-card duo-4" style="--tilt: 2deg">
-                                        <img class="poster-photo" src="img/portfolio/music/dooron-dooron-1.jpg" alt="">
-                                        <div class="poster-tint"></div>
-                                        <div class="poster-shade"></div>
-                                        <div class="poster-content">
-                                            <span class="poster-tag">Cover · Take 1</span>
-                                            <h4>Dooron Dooron</h4>
-                                            <p>A cover of Paresh Pahuja's song. First attempt at one that's harder to sing well than it sounds.</p>
-                                            <audio controls preload="none">
-                                                <source src="files/music/dooron-dooron-take1.m4a" type="audio/mp4">
-                                            Your browser does not support the audio element.
-                                            </audio>
-                                        </div>
-                                    </div>
-
-                                    <div class="poster-card duo-5 tall" style="--tilt: -1deg">
-                                        <img class="poster-photo" src="img/portfolio/music/dooron-dooron-2.jpg" alt="">
-                                        <div class="poster-tint"></div>
-                                        <div class="poster-shade"></div>
-                                        <div class="poster-content">
-                                            <span class="poster-tag">Cover · Take 2</span>
-                                            <h4>Dooron Dooron, Take 2</h4>
-                                            <p>A second pass at the same cover, a different day, because I wasn't fully sold on the first one.</p>
-                                            <audio controls preload="none">
-                                                <source src="files/music/dooron-dooron-take2.m4a" type="audio/mp4">
-                                            Your browser does not support the audio element.
-                                            </audio>
-                                        </div>
-                                    </div>
-
-                                    <div class="poster-card duo-6" style="--tilt: 1deg">
-                                        <img class="poster-photo" src="img/portfolio/music/haareya.jpg" alt="">
-                                        <div class="poster-tint"></div>
-                                        <div class="poster-shade"></div>
-                                        <div class="poster-content">
-                                            <span class="poster-tag">Solo · High Pitch</span>
-                                            <h4>Haareya</h4>
-                                            <p>A later re-take, pitched a full register above where I'd normally sing it, recorded on its own just to see if I could.</p>
-                                            <audio controls preload="none">
-                                                <source src="files/music/haareya-high-pitch.m4a" type="audio/mp4">
-                                            Your browser does not support the audio element.
-                                            </audio>
-                                        </div>
-                                    </div>
-
-                                    <div class="poster-card duo-7" style="--tilt: -2.5deg">
-                                        <img class="poster-photo" src="img/portfolio/music/tere-liye.jpg" alt="">
-                                        <div class="poster-tint"></div>
-                                        <div class="poster-shade"></div>
-                                        <div class="poster-content">
-                                            <span class="poster-tag">Solo</span>
-                                            <h4>Tere Liye</h4>
-                                            <p>A quiet solo cover, recorded on its own. No other takes of this one.</p>
-                                            <audio controls preload="none">
-                                                <source src="files/music/tere-liye.m4a" type="audio/mp4">
-                                            Your browser does not support the audio element.
-                                            </audio>
-                                        </div>
-                                    </div>
-
-                                    <div class="poster-card duo-8 tall" style="--tilt: 2.5deg">
-                                        <img class="poster-photo" src="img/portfolio/music/aasa-kooda.jpg" alt="">
-                                        <div class="poster-tint"></div>
-                                        <div class="poster-shade"></div>
-                                        <div class="poster-content">
-                                            <span class="poster-tag">Solo · Tamil Cover</span>
-                                            <h4>Aasa Kooda</h4>
-                                            <p>A raw, unpolished solo take on the Tamil song. Recorded on its own, no cleanup, no second take.</p>
-                                            <audio controls preload="none">
-                                                <source src="files/music/aasa-kooda.mp3" type="audio/mpeg">
-                                            Your browser does not support the audio element.
-                                            </audio>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div></div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <h2>Teaching</h2>
-                            <div class="left-align">
-                                <hr class="star-primary">
-                                <p>Teaching keeps my fundamentals sharp. My flow is simple: concept map first, equations next, then problem-solving reps till the logic sticks.</p>
-            
-                                <h3>My Teaching Adventures</h3>
-                                <ul>
-                                    <li><strong>Fall 2021: Mechanisms and Machines, BITS Pilani</strong><br>
-                                        TA for this course at BITS Pilani. Recordings got lost, but that semester taught me how to explain tough mechanics in plain language.</li>
-                                    <li><strong>2021-2022: AutoCAD Sessions, BITS Pilani</strong><br>
-                                        Led some AutoCAD workshops. Majorly as a part of the M&M course.</li>
-                                    <li><strong>Fall 2024: Fluid Mechanics, NTU Singapore</strong><br>
-                                        Took in-person sessions at NTU with interactive discussions and real-world case breakdowns.</li>
-                                    <li><strong>Spring 2025: Heat Transfer, NTU Singapore</strong><br>
-                                        Ran Heat Transfer classes at NTU with a problem-first style and concept clarity focus.</li>
-                                    <li><strong>Fall 2025: Heat Transfer (Round Two), NTU Singapore</strong><br>
-                                        Back with Heat Transfer at NTU. Going all in to make it a party. Check the <a href="https://www.youtube.com/embed/videoseries?list=PL1SY5NzQUT1k48yDNJFPJyiEqj06x3Poy" target="_blank">YouTube playlist</a> for the Fall 2025 tutorials!</li>
-                                </ul>
-            
-                                <h3>Fall 2025 Heat Transfer Playlist</h3>
-                                <h3><a href="https://github.com/bhatt01tapasvi/Heat-Transfer-Fall-2025-" target="_blank">Lecture Notes</a></h3>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL1SY5NzQUT1k48yDNJFPJyiEqj06x3Poy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            
-                                <p>More notes and tutorial drops coming every semester.</p>
-            
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -1156,10 +831,6 @@
                             </figure>
 
                             <figure>
-                                <img src="img/portfolio/japan_NTU5.jpg" class="img-responsive" alt="Working session">
-                            </figure>
-
-                            <figure>
                                 <img src="img/portfolio/japan_NTU6.jpg" class="img-responsive" alt="Final presentation">
                             </figure>
 
@@ -1172,213 +843,6 @@
             </div>
         </div>
     </div>
-    </div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModal14" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <h2>Particle Image Velocimetry</h2>
-                            <div class="left-align">
-                                <hr class="star-primary">
-                                <p>I use PIV pipelines with Vicsek-model thinking and cross-correlation tracking to study collective motion. Focus areas are flow field reconstruction, velocity coherence, and emergent dynamics in biological swarms.</p>
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModal15" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <h2>Heat Transfer Enhancement</h2>
-                            <div class="left-align">
-                                <hr class="star-primary">
-                                <p>This work targets high-performance cooling in mini-channel systems for solar, EV thermal management, and industrial exchangers. The toolbox includes magnetic nanofluids, vibration control, and external magnetic forcing.</p>
-                                <p>We study how vibration frequency and magnetic field strength reshape boundary layers and secondary flows. Target is higher heat transfer with controlled pressure penalty. Results are published in <a href="https://doi.org/10.1016/j.rineng.2023.101473">Results in Engineering</a> and <a href="https://doi.org/10.1080/10407782.2024.2382492">Numerical Heat Transfer</a>.</p>
-                                <p>We also run exergy analysis to track energy quality, not only temperature reduction. End goal is robust thermal design that survives real operating constraints.</p>
-                                <ul class="list-inline item-details">
-                                    <li><b>Timeline</b>: January 2022 - Present</li>
-                                    <li><b>Mentors</b>: Dr. Suvanjan Bhattacharyya</li>
-                                    <li><b>Collaborators</b>: Naman Jain, Ali Cemal Benim</li>
-                                </ul>
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModal13" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <h2>CRYOMOVE: Predicting Cold Chain Failure</h2>
-                            <div class="left-align">
-                                <hr class="star-primary">
-                                <p>PCM, or phase change material, is what keeps a vaccine box cold without power. The problem is that it does not melt at a fixed rate. It depends on the outside temperature, which keeps changing during a delivery. Re-running a full CFD simulation every time the temperature shifts is too slow to be useful in the field.</p>
-                                <p>So instead, we trained a small neural network on simulation data to learn the melt curve directly. Sensors on the box send live temperature readings to the cloud every 10 minutes, the model predicts how much longer the PCM has before it melts, and cold chain managers get a warning before the box actually fails, not after. It is built to extend beyond vaccines too, into food and general cold storage.</p>
-                                <ul class="list-inline item-details">
-                                    <li><b>Methods</b>: ANSYS Fluent, artificial neural networks, IoT telemetry, cloud inference</li>
-                                    <li><b>Collaborators</b>: Manit Baser, Abhishek Tyagi, Prof. Eddie Yin Kwee Ng</li>
-                                </ul>
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModal16" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <h2>PCM Formulation</h2>
-                            <div class="left-align">
-                                <hr class="star-primary">
-                                <p>One direct way to keep a cold box cold for longer is to slow down the ice itself. We added a small amount of glycerol, about 5%, to n-tetradecane, a common cold chain PCM, and ran numerical simulations to see what changed.</p>
-                                <p>The additive stretched the safe cooling window from about 123 hours to about 144 hours, roughly 20 extra hours, and the mixture stayed thermally stable for longer too. It is a simple, cheap tweak to the material itself, no new hardware needed, with a real payoff for how long a vaccine stays safe in transit.</p>
-                                <ul class="list-inline item-details">
-                                    <li><b>Methods</b>: Numerical simulation, entropy analysis, n-tetradecane + glycerol PCM</li>
-                                    <li><b>Collaborators</b>: Naman Jain, Prof. Eddie Yin Kwee Ng</li>
-                                </ul>
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModal17" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <h2>Passive Insulation</h2>
-                            <div class="left-align">
-                                <hr class="star-primary">
-                                <p>PCM only works well if the box around it is not leaking heat. We tested epoxy coatings and multilayer aluminium foil insulation on eutectic cold boxes under tropical conditions, 32-34°C and 75-85% humidity, over a full week.</p>
-                                <p>Dual-layer foil cut heat gain by 57%, and the coated boxes held sub-5°C temperatures for 7 days versus the usual 2-3 days that most unpowered boxes manage. All of it with no electricity, which matters most in places where power is not reliable.</p>
-                                <ul class="list-inline item-details">
-                                    <li><b>Methods</b>: Experimental thermal testing, epoxy coatings, multilayer foil insulation</li>
-                                    <li><b>Collaborators</b>: Hamid Saeedipour, Nikhil Sachdeva, Antara Chakraborty, Chew Tong Howe, Prof. Eddie Yin Kwee Ng</li>
-                                </ul>
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModal18" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <h2>Fast Simulation</h2>
-                            <div class="left-align">
-                                <hr class="star-primary">
-                                <p>Full 3D CFD gets the physics right but is too slow for quick design iteration. We built a reduced-order model using the Lattice Boltzmann Method that runs a fast 2D GPU simulation and adds a physics-informed correction for the 3D heat paths it misses.</p>
-                                <p>The correction is calibrated once on a real box and then reused across different payloads in the same enclosure, no re-tuning needed. Tested against real cold-box experiments plus an independent dataset, it matched real temperatures closely while running far cheaper than full CFD, making it practical for fast design iteration.</p>
-                                <ul class="list-inline item-details">
-                                    <li><b>Methods</b>: Lattice Boltzmann Method, GPU simulation, physics-informed correction</li>
-                                    <li><b>Collaborators</b>: Soham Jain, Prof. Eddie Yin Kwee Ng</li>
-                                </ul>
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModal19" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <h2>Bio-Based Materials</h2>
-                            <div class="left-align">
-                                <hr class="star-primary">
-                                <p>Most cold chain insulation is foam: energy-intensive to make, and it does not biodegrade. We grew mycelium from Ganoderma lucidum on waste cardboard, rice husk, and oats, and let the fungus bind the waste into a bio-fiber envelope.</p>
-                                <p>It insulates about as well as foam, is hydrophobic, fire-resistant, and fully biodegradable, with far lower carbon emissions and energy demand than typical cold chain materials. We paired it with a digital twin for real-time monitoring, since a bio-material's performance can vary more than a manufactured foam's. Still early-stage: results hold for the prototype sizes and conditions tested so far, and scaling it up is ongoing work.</p>
-                                <ul class="list-inline item-details">
-                                    <li><b>Methods</b>: Mycelium biofabrication, digital twin monitoring, materials characterization</li>
-                                    <li><b>Collaborators</b>: Deepak Sharma, Prof. Eddie Yin Kwee Ng, Prof. Hortense Le Ferrand</li>
-                                </ul>
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <div class="portfolio-modal modal fade" id="portfolioModalMT" tabindex="-1" role="dialog" aria-hidden="true">
@@ -1400,7 +864,7 @@
 
                                 <div class="row" style="margin-bottom:14px">
                                     <div class="col-xs-6 text-center">
-                                        <img src="img/portfolio/tapasvi-headshot.jpg" class="img-circle img-responsive" alt="Tapasvi Bhatt" style="margin:0 auto; max-width:120px;">
+                                        <img src="img/portfolio/tapasvi-headshot.png" class="img-circle img-responsive" alt="Tapasvi Bhatt" style="margin:0 auto; max-width:120px;">
                                         <p style="margin-top:6px"><strong>Tapasvi Bhatt</strong><br><small>PhD Scholar, NTU</small></p>
                                     </div>
                                     <div class="col-xs-6 text-center">
@@ -1451,8 +915,6 @@
     <script src="/js/cbpAnimatedHeader.js"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="/js/jqBootstrapValidation.js"></script>
-    <script src="/js/contact_me.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="/js/agency.js"></script>
