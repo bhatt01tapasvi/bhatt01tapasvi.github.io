@@ -1,5 +1,6 @@
 (function () {
     var items = [].slice.call(document.querySelectorAll(".hero-ticker-item"));
+    var captions = [].slice.call(document.querySelectorAll(".hero-ticker-caption"));
     var dots = [].slice.call(document.querySelectorAll(".hero-ticker-dot"));
     if (items.length < 2) {
         return;
@@ -13,15 +14,21 @@
         items[0].classList.add("is-active");
     }
 
+    function setActive(index, active) {
+        if (items[index]) {
+            items[index].classList.toggle("is-active", active);
+        }
+        if (captions[index]) {
+            captions[index].classList.toggle("is-active", active);
+        }
+        if (dots[index]) {
+            dots[index].classList.toggle("is-active", active);
+        }
+    }
+
     setInterval(function () {
-        items[current].classList.remove("is-active");
-        if (dots[current]) {
-            dots[current].classList.remove("is-active");
-        }
+        setActive(current, false);
         current = (current + 1) % items.length;
-        items[current].classList.add("is-active");
-        if (dots[current]) {
-            dots[current].classList.add("is-active");
-        }
+        setActive(current, true);
     }, 3000);
 })();
