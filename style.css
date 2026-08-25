@@ -1934,6 +1934,10 @@ ul.social-buttons li a:active {
     gap: 32px 0;
 }
 
+.hero-photo-col {
+    flex: 1 1 260px;
+}
+
 .hero-eyebrow {
     font-size: 15px;
     font-weight: 600;
@@ -1968,6 +1972,7 @@ ul.social-buttons li a:active {
     position: relative;
     display: block;
     width: 100%;
+    min-width: 220px;
     max-width: 420px;
     aspect-ratio: 1 / 1;
     margin: 0 auto;
@@ -2112,9 +2117,6 @@ ul.social-buttons li a:active {
     transform: scale(1.3);
 }
 
-.hero-photo-col {
-    width: 100%;
-}
 
 /* ---------- Focus ---------- */
 .focus-card-col {
