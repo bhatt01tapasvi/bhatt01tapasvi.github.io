@@ -1957,12 +1957,19 @@ ul.social-buttons li a:active {
     margin: 0 0 20px;
 }
 
+.hero-bottom-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
 .hero-ticker {
     display: block;
-    width: 148px;
-    margin: 0 0 24px;
+    width: 92px;
+    flex-shrink: 0;
     text-decoration: none;
-    border-radius: 14px;
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(15, 23, 42, 0.14);
     border: 1px solid var(--site-border);
@@ -2006,10 +2013,10 @@ ul.social-buttons li a:active {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 16px 8px 14px;
-    font-size: 9.5px;
+    padding: 14px 6px 10px;
+    font-size: 8.5px;
     font-weight: 600;
-    line-height: 1.25;
+    line-height: 1.2;
     letter-spacing: 0.01em;
     color: #fff;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
@@ -2044,8 +2051,12 @@ ul.social-buttons li a:active {
 }
 
 @media (max-width: 480px) {
+    .hero-bottom-row {
+        gap: 12px;
+    }
+
     .hero-ticker {
-        width: 116px;
+        width: 76px;
     }
 }
 
