@@ -1810,6 +1810,11 @@ ul.social-buttons li a:active {
         transition: background-color 0.15s ease, color 0.15s ease;
     }
 
+    .sidebar-social a i {
+        position: relative;
+        left: 1px;
+    }
+
     .sidebar-social a:hover,
     .sidebar-social a:focus {
         background: var(--site-surface-elevated);
