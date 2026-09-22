@@ -1,0 +1,10 @@
+<svg width="220" height="90" viewBox="0 0 220 90" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0,10)">
+    <circle cx="30" cy="30" r="28" fill="#0f3d2e"/>
+    <path d="M30 12c9 6 14 14 14 22 0 8-6.3 14-14 14s-14-6-14-14c0-8 5-16 14-22z" fill="#3fb87f"/>
+    <path d="M30 18v32M30 30c-5 0-9-3-9-9M30 40c6 0 11-4 11-10" stroke="#0f3d2e" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+  <text x="70" y="38" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="1" fill="#12202c">SCEV</text>
+  <text x="70" y="58" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="0.3" fill="#4a5b68">SINGAPORE CLIMATE</text>
+  <text x="70" y="71" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="0.3" fill="#4a5b68">&amp; ENERGY VENTURES</text>
+</svg>
