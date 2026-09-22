@@ -1,0 +1,38 @@
+<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#123a63"/>
+      <stop offset="100%" stop-color="#0a2440"/>
+    </linearGradient>
+    <linearGradient id="phase" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2740" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#5ea1ff" stop-opacity="0.28"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="18" fill="url(#bgGrad2)"/>
+
+  <!-- moving sharp interface, two phases -->
+  <path d="M0 96 C 30 80, 50 112, 80 92 S 130 70, 160 88 L160 160 L0 160 Z" fill="url(#phase)"/>
+  <path d="M0 96 C 30 80, 50 112, 80 92 S 130 70, 160 88" fill="none" stroke="#8dbbff" stroke-width="2.5"/>
+
+  <!-- neural operator graph tracing the interface -->
+  <g stroke="#eaf0ff" stroke-width="1.6" opacity="0.85">
+    <line x1="26" y1="40" x2="56" y2="88"/>
+    <line x1="26" y1="40" x2="80" y2="30"/>
+    <line x1="56" y1="88" x2="80" y2="30"/>
+    <line x1="56" y1="88" x2="104" y2="66"/>
+    <line x1="80" y1="30" x2="104" y2="66"/>
+    <line x1="80" y1="30" x2="128" y2="38"/>
+    <line x1="104" y1="66" x2="128" y2="38"/>
+    <line x1="104" y1="66" x2="136" y2="90"/>
+    <line x1="128" y1="38" x2="136" y2="90"/>
+  </g>
+  <g fill="#5ea1ff" stroke="#eaf0ff" stroke-width="1.2">
+    <circle cx="26" cy="40" r="5"/>
+    <circle cx="80" cy="30" r="5"/>
+    <circle cx="128" cy="38" r="5"/>
+    <circle cx="56" cy="88" r="5"/>
+    <circle cx="104" cy="66" r="5"/>
+    <circle cx="136" cy="90" r="5"/>
+  </g>
+</svg>
