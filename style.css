@@ -1608,6 +1608,35 @@ ul.social-buttons li a:active {
     border: 1px solid transparent;
 }
 
+/* Condensed variant: badge inline with title, one meta line */
+.pub-list--compact .pub-item {
+    padding: 10px 4px;
+}
+
+.pub-list--compact .pub-body h4 {
+    margin: 0 0 3px;
+    font-size: 14.5px;
+    line-height: 1.35;
+}
+
+.pub-list--compact .pub-status {
+    margin: 0 0 0 8px;
+    vertical-align: middle;
+    font-size: 9.5px;
+    padding: 2px 7px;
+}
+
+.pub-list--compact .pub-meta {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--site-muted);
+}
+
+.pub-list--compact .pub-link {
+    font-size: 12.5px;
+}
+
 .pub-status.is-published {
     background: color-mix(in srgb, #1fa971 16%, transparent);
     color: #1a8f5e;
