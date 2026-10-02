@@ -1496,7 +1496,7 @@ ul.social-buttons li a:active {
 }
 
 .news-photo-wrap.logo-card--scev {
-    background: #123c35;
+    background: #ffffff;
 }
 
 .news-photo-wrap.logo-card::before {
@@ -2067,6 +2067,17 @@ ul.social-buttons li a:active {
 
 .hero-ticker-item.is-active {
     opacity: 1;
+}
+
+.hero-ticker-item--scev::before {
+    inset: 0;
+    background: #ffffff;
+    filter: none;
+    transform: none;
+}
+
+.hero-ticker-item--scev > img {
+    padding: 28px;
 }
 
 .hero-ticker-item::before {
