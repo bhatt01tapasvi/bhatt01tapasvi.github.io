@@ -2284,6 +2284,10 @@ ul.social-buttons li a:active {
 }
 
 .research-card-col {
+    width: 100%;
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
     min-width: 0;
 }
 
@@ -2306,7 +2310,8 @@ ul.social-buttons li a:active {
 .research-card img {
     width: 96px;
     height: 96px;
-    object-fit: cover;
+    object-fit: contain;
+    background: var(--site-surface-elevated);
     border-radius: 6px;
     border: 1px solid var(--site-border);
     flex-shrink: 0;
