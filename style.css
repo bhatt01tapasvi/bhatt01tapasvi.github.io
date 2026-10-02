@@ -1495,6 +1495,10 @@ ul.social-buttons li a:active {
     background: #ffffff;
 }
 
+.news-photo-wrap.logo-card--scev {
+    background: #123c35;
+}
+
 .news-photo-wrap.logo-card::before {
     content: none;
 }
@@ -2265,16 +2269,17 @@ ul.social-buttons li a:active {
 }
 
 .research-card-row {
-    margin: 0 -10px 8px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin: 0 0 8px;
 }
 
 .research-card-col {
-    padding: 0 10px;
-    margin-bottom: 20px;
+    min-width: 0;
 }
 
 .research-card {
-    height: 100%;
     display: flex;
     align-items: flex-start;
     gap: 14px;
@@ -2291,8 +2296,8 @@ ul.social-buttons li a:active {
 }
 
 .research-card img {
-    width: 48px;
-    height: 48px;
+    width: 96px;
+    height: 96px;
     object-fit: cover;
     border-radius: 6px;
     border: 1px solid var(--site-border);
@@ -2316,6 +2321,18 @@ ul.social-buttons li a:active {
     line-height: 1.5;
     color: var(--site-muted);
     margin: 0;
+}
+
+@media (max-width: 991px) {
+    .research-card-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .research-card-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ---------- Scholar strip ---------- */
