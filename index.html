@@ -34,7 +34,7 @@
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -64,7 +64,6 @@
                 <li><a class="page-scroll" href="#teaching"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>Teaching</span></a></li>
                 <li><a class="page-scroll" href="#awards"><i class="fa fa-newspaper-o" aria-hidden="true"></i><span>Awards</span></a></li>
                 <li><a class="page-scroll" href="#projects"><i class="fa fa-cubes" aria-hidden="true"></i><span>Projects</span></a></li>
-                <li><a class="page-scroll" href="#about"><i class="fa fa-clock-o" aria-hidden="true"></i><span>Background</span></a></li>
                 <li><a class="page-scroll" href="#contact"><i class="fa fa-envelope-o" aria-hidden="true"></i><span>Contact</span></a></li>
             </ul>
         </nav>
@@ -119,9 +118,6 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#projects">Projects</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">Background</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -209,50 +205,6 @@
                             <span class="hero-ticker-dot"></span>
                         </span>
                     </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Focus Section -->
-    <section id="focus">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="section-heading">What I work on</h2>
-                    <h3 class="section-subheading text-muted">Three threads that run through my research.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 focus-card-col">
-                    <div class="focus-card">
-                        <h4>Thermal Systems &amp; Phase Change Materials</h4>
-                        <p>Formulating and testing the materials that hold a cold chain together: PCM additives, passive insulation, and hardware validated under tropical conditions, not just in simulation.</p>
-                        <div class="focus-tags">
-                            <span>PCM Formulation</span>
-                            <span>Passive Insulation</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 focus-card-col">
-                    <div class="focus-card">
-                        <h4>Simulation &amp; Modelling</h4>
-                        <p>CFD in ANSYS Fluent for the physics, and a reduced-order Lattice Boltzmann model when full CFD is too slow for fast design iteration.</p>
-                        <div class="focus-tags">
-                            <span>ANSYS Fluent</span>
-                            <span>Lattice Boltzmann</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 focus-card-col">
-                    <div class="focus-card">
-                        <h4>Machine Learning for Physical Systems</h4>
-                        <p>Neural networks trained on simulation data to predict how a physical system will behave in real time, fast enough to act on before something fails.</p>
-                        <div class="focus-tags">
-                            <span>Neural Networks</span>
-                            <span>IoT Telemetry</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -423,7 +375,7 @@
                 <div class="col-lg-12">
                     <div class="news-grid">
 
-                        <div class="news-card">
+                        <div class="news-card news-card--interactive">
                             <div class="news-photo-wrap" style="--bg-img:url('img/news/mettler-toledo-1.jpg')">
                                 <img class="news-photo" src="img/news/mettler-toledo-1.jpg" alt="Receiving the Mettler-Toledo Innovator Award in the lab">
                                 <span class="news-tag tag-award">Award</span>
@@ -431,12 +383,12 @@
                             <div class="news-body">
                                 <span class="news-date">May 2026</span>
                                 <h4>Mettler-Toledo Innovator Award</h4>
-                                <p>One of two global winners in 2026, USD 20,000 prize, for biodegradable mycelium insulation and thermal/digital modelling work in cold-chain logistics. Sharing the honor with Prof. Carlos D&iacute;az Mar&iacute;n (Stanford).</p>
+                                <p>One of two global winners in 2026, with a USD 20,000 prize, for biodegradable mycelium insulation and thermal/digital modelling work in cold-chain logistics.</p>
                                 <a href="#portfolioModalMT" data-toggle="modal" class="news-link">Full story &rarr;</a>
                             </div>
                         </div>
 
-                        <div class="news-card">
+                        <div class="news-card news-card--interactive">
                             <div class="news-photo-wrap" style="--bg-img:url('img/news/utokyo-award.jpg')">
                                 <img class="news-photo" src="img/news/utokyo-award.jpg" alt="Presenting the plastic separation system methodology at the University of Tokyo summer camp">
                                 <span class="news-tag tag-award">Award</span>
@@ -579,7 +531,7 @@
             <div class="row">
 
                 <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal12" class="portfolio-link" data-toggle="modal">
+                    <a href="#portfolioModal12" class="portfolio-link" data-toggle="modal" style="--tile-image:url('img/portfolio/japan5_resized.png')">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -594,7 +546,7 @@
                 </div>
             
                 <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="https://github.com/joon-ko/interval" class="portfolio-link" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/joon-ko/interval" class="portfolio-link" target="_blank" rel="noopener noreferrer" style="--tile-image:url('img/portfolio/interval.png')">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -609,7 +561,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="https://github.com/ndevasia/AirGuitar" class="portfolio-link" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/ndevasia/AirGuitar" class="portfolio-link" target="_blank" rel="noopener noreferrer" style="--tile-image:url('img/portfolio/airguitar.JPG')">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -624,7 +576,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="https://devpost.com/software/pixel-hero" class="portfolio-link" target="_blank" rel="noopener noreferrer">
+                    <a href="https://devpost.com/software/pixel-hero" class="portfolio-link" target="_blank" rel="noopener noreferrer" style="--tile-image:url('img/portfolio/radLED.jpg')">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -639,7 +591,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="https://github.com/ndevasia/final-fantasy-network" class="portfolio-link" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/ndevasia/final-fantasy-network" class="portfolio-link" target="_blank" rel="noopener noreferrer" style="--tile-image:url('img/portfolio/ffn.jpg')">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -654,7 +606,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-6 portfolio-item">
-                    <a href="https://github.com/bhatt01tapasvi/Horn_and_Schunck_Python_Implementation" class="portfolio-link" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/bhatt01tapasvi/Horn_and_Schunck_Python_Implementation" class="portfolio-link" target="_blank" rel="noopener noreferrer" style="--tile-image:url('img/portfolio/horn-schunk_resized.png')">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -690,116 +642,16 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="section-heading">Background</h2>
-                    <h3 class="section-subheading text-muted">Education and the path here.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline timeline-single">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/ntu.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2024&ndash;Present</h4>
-                                    <h4 class="subheading">PhD, Mechanical &amp; Aerospace Engineering, NTU Singapore</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Cold-chain thermal systems with Prof. Eddie Yin Kwee Ng. Also declined funded PhD offers from the University of Minnesota (Distinguished Scholar Award) and UT Austin (Cockrell School Fellowship) to take this position.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/iisc.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>Nov&ndash;Dec 2023</h4>
-                                    <h4 class="subheading">Project Associate, IISc</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Short research stint at the Indian Institute of Science, bridging into the cold-chain thermal work that became the PhD at NTU.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/jsw.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>May&ndash;Jul 2022</h4>
-                                    <h4 class="subheading">Thermal Power Plant Intern, JSW Energy</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Root-cause analysis and mitigation strategies for boiler tube leakages at JSW Energy.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/asme.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2020&ndash;2022</h4>
-                                    <h4 class="subheading">Chairperson, ASME BITS Pilani</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Led a 35 to 40 member team and ran ASME's first online global event, with participation from 23 countries and ASME's CEO Thomas Costabile.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/bpcl.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>Summer 2020</h4>
-                                    <h4 class="subheading">Machine Learning Intern, BPCL</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Machine-learning models for process optimization across two refinery units at BPCL.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/bits.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2018&ndash;2023</h4>
-                                    <h4 class="subheading">BE Mechanical, BITS Pilani</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">CGPA 8.4/10. Worked with Dr. Suvanjan Bhattacharyya on heat transfer enhancement through most of the degree.</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="section-heading">Contact</h2>
-                    <p class="contact-note">Open to research collaborations and industry conversations.</p>
-                    <p class="contact-mail"><a href="mailto:tapasvi001@e.ntu.edu.sg">tapasvi001 |at| e.ntu.edu.sg</a></p>
-                    <p class="contact-location">Nanyang Technological University | Singapore</p>
+                    <div class="contact-details">
+                        <p class="contact-note">Open to research collaborations and industry conversations.</p>
+                        <p class="contact-mail"><a href="mailto:tapasvi001@e.ntu.edu.sg">tapasvi001 |at| e.ntu.edu.sg</a></p>
+                        <p class="contact-location">Nanyang Technological University | Singapore</p>
+                    </div>
                     <ul class="list-inline social-buttons">
                         <li><a href="https://github.com/bhatt01tapasvi" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa fa-github"></i></a>
                         </li>
@@ -965,8 +817,6 @@
                                         <p style="margin-top:6px"><strong>Tapasvi Bhatt</strong><br><small>PhD Scholar, NTU</small></p>
                                     </div>
                                     <div class="col-xs-6 text-center">
-                                        <img src="img/portfolio/carlos.jpg" class="img-circle img-responsive" alt="Carlos Díaz Marín" style="margin:0 auto; max-width:120px;">
-                                        <p style="margin-top:6px"><strong>Carlos Díaz Marín</strong><br><small>Assistant Prof., Stanford</small></p>
                                     </div>
                                 </div>
 
@@ -986,9 +836,7 @@
 
                                 <p class="text-muted">Supervisors on this project: <strong>Dr. Deepak, Prof. Hortense, and Prof. Eddie</strong>. Big thanks for the push and keeping the work grounded.</p>
 
-                                <p class="text-muted">Also on the announcement: <a href="https://profiles.stanford.edu/carlos-diaz-marin" target="_blank">Prof. Carlos Díaz Marín (Stanford)</a>. Nice to be on the same platform as a Stanford PI — kind of surreal during my PhD. Our projects are separate; this is just a cool shared moment.</p>
-
-                                <p class="text-muted">Links: <a href="https://www.linkedin.com/feed/update/urn:li:activity:7459524997976424448/" target="_blank">METTLER TOLEDO LinkedIn</a> · <a href="https://www.mt.com/innovator-award" target="_blank">mt.com/innovator-award</a> · <a href="https://profiles.stanford.edu/carlos-diaz-marin" target="_blank">Carlos — Stanford</a></p>
+                                <p class="text-muted">Links: <a href="https://www.linkedin.com/feed/update/urn:li:activity:7459524997976424448/" target="_blank">METTLER TOLEDO LinkedIn</a> · <a href="https://www.mt.com/innovator-award" target="_blank">mt.com/innovator-award</a></p>
 
                                 <p class="text-muted">Field pilots coming Q3 2026 in SE Asia — short tests, then scale if the data behaves. Low drama, high impact.</p>
                             </div>
