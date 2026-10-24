@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="light">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -13,14 +13,6 @@
     <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <script>
-        (function () {
-            var stored = null;
-            try { stored = localStorage.getItem("site-theme"); } catch (e) {}
-            var theme = stored || "light";
-            document.documentElement.setAttribute("data-theme", theme);
-        })();
-    </script>
     <script src="/js/outside-gate.js"></script>
 </head>
 
@@ -57,9 +49,6 @@
                 <a href="https://scholar.google.com/citations?user=6h51W0EAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><i class="fa fa-graduation-cap"></i></a>
                 <a href="https://www.youtube.com/@BhattTapasvi" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a>
             </div>
-            <button class="sidebar-theme" type="button" data-theme-toggle aria-label="Toggle dark mode">
-                <i class="fa fa-moon-o" aria-hidden="true"></i><span data-theme-label>Dark</span>
-            </button>
         </div>
     </aside>
 
@@ -81,9 +70,6 @@
                     <li><a href="index.html#research">Research</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                     <li><a href="outside.html">Outside the lab</a></li>
-                    <li>
-                        <button id="theme-toggle" class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"><span data-theme-label>Dark</span></button>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -293,7 +279,6 @@
     <script src="/js/jquery.easing.min.js"></script>
     <script src="/js/classie.js"></script>
     <script src="/js/cbpAnimatedHeader.js"></script>
-    <script src="/js/theme-toggle.js"></script>
 
 </body>
 
