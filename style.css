@@ -1761,3 +1761,64 @@ body.index .video-embed-wrap iframe {
         margin-top: 22px;
     }
 }
+
+html[data-theme="dark"] {
+    --paper: #17131a;
+    --ink: #d8d0dc;
+    --ink-strong: #fff8ff;
+    --blue: #c09ad0;
+    --blue-dark: #e0b9ee;
+    --line: #4a3c50;
+}
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] body.index,
+html[data-theme="dark"] body.index section,
+html[data-theme="dark"] body.index section.section--panel {
+    background-color: var(--paper);
+    color: var(--ink);
+}
+
+html[data-theme="dark"] .navbar,
+html[data-theme="dark"] .navbar.navbar-default,
+html[data-theme="dark"] body.index .navbar-fixed-top {
+    background: rgba(23, 19, 26, .96);
+}
+
+html[data-theme="dark"] .hero-lede,
+html[data-theme="dark"] .focus-card p,
+html[data-theme="dark"] .research-card-body p,
+html[data-theme="dark"] .news-body p,
+html[data-theme="dark"] .outside-card p,
+html[data-theme="dark"] .timeline-body p,
+html[data-theme="dark"] .exp-body li,
+html[data-theme="dark"] .teaching-row p,
+html[data-theme="dark"] .poster-content p {
+    color: rgba(216, 208, 220, .82);
+}
+
+html[data-theme="dark"] .focus-card,
+html[data-theme="dark"] .research-card,
+html[data-theme="dark"] .news-card,
+html[data-theme="dark"] .outside-card,
+html[data-theme="dark"] .scholar-strip,
+html[data-theme="dark"] .portfolio-caption {
+    background: #211b25;
+}
+
+html[data-theme="dark"] .research-card img,
+html[data-theme="dark"] .news-photo-wrap,
+html[data-theme="dark"] .portfolio-item .portfolio-link,
+html[data-theme="dark"] #projects .portfolio-link,
+html[data-theme="dark"] .video-embed-wrap {
+    background: #2a2130;
+}
+
+html[data-theme="dark"] body.index #projects .portfolio-item,
+html[data-theme="dark"] .poster-card {
+    background: #211b25;
+}
+
+html[data-theme="dark"] .section-subheading {
+    color: rgba(216, 208, 220, .78);
+}

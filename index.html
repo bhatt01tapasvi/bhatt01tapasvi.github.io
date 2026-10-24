@@ -13,7 +13,7 @@
         (function () {
             var stored = null;
             try { stored = localStorage.getItem("site-theme"); } catch (e) {}
-            var theme = stored || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            var theme = stored || "light";
             document.documentElement.setAttribute("data-theme", theme);
         })();
     </script>
@@ -423,30 +423,6 @@
                                 <span class="news-date">2026</span>
                                 <h4>Mycelium Work on the Lower Street Podcast</h4>
                                 <p>The bio-fiber insulation work was picked up by <a href="https://lowerstreet.co/" target="_blank" rel="noopener noreferrer">Lower Street</a>, a London-based podcast production company, for a feature episode.</p>
-                            </div>
-                        </div>
-
-                        <div class="news-card">
-                            <div class="news-photo-wrap logo-card">
-                                <img class="news-photo" src="img/portfolio/umn_logo.png" alt="University of Minnesota logo">
-                                <span class="news-tag tag-award">Award</span>
-                            </div>
-                            <div class="news-body">
-                                <span class="news-date">January 2024</span>
-                                <h4>Distinguished Scholar Award, UMN</h4>
-                                <p>Offered by the Mechanical Engineering Department, University of Minnesota Twin Cities.</p>
-                            </div>
-                        </div>
-
-                        <div class="news-card">
-                            <div class="news-photo-wrap logo-card">
-                                <img class="news-photo" src="img/portfolio/University_of_Texas_at_Austin_seal.svg.png" alt="University of Texas at Austin seal">
-                                <span class="news-tag tag-award">Award</span>
-                            </div>
-                            <div class="news-body">
-                                <span class="news-date">January 2024</span>
-                                <h4>Cockrell School of Engineering Fellowship</h4>
-                                <p>Offered by the Walker Department of Mechanical Engineering, University of Texas at Austin.</p>
                             </div>
                         </div>
 

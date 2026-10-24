@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="dark">
+<html data-theme="light">
 
 <head>
     <meta charset="utf-8">
@@ -17,7 +17,7 @@
         (function () {
             var stored = null;
             try { stored = localStorage.getItem("site-theme"); } catch (e) {}
-            var theme = stored || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            var theme = stored || "light";
             document.documentElement.setAttribute("data-theme", theme);
         })();
     </script>

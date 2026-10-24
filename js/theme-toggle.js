@@ -43,16 +43,8 @@
         }
     }
 
-    function getSystemTheme() {
-        try {
-            return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        } catch (error) {
-            return "light";
-        }
-    }
-
     var preferred = getStoredTheme();
-    applyTheme(preferred || getSystemTheme());
+    applyTheme(preferred || "light");
 
     toggleButtons.forEach(function (button) {
         button.addEventListener("click", function () {
